@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Redirecting...</title>
+  <script>
+    // GitHub Pages 404.html fallback for React Router SPA
+    // Simple redirect to index.html - React Router will handle the routing
+    var basePath = '/alchemy-lens-website';
+    var currentPath = window.location.pathname;
+    var search = window.location.search;
+    var hash = window.location.hash;
+    
+    // Build redirect URL preserving the path for React Router
+    var redirectUrl = basePath + '/index.html' + search + hash;
+    window.location.replace(redirectUrl);
+  </script>
+  <noscript>
+    <meta http-equiv="refresh" content="0; url=/alchemy-lens-website/" />
+  </noscript>
+</head>
+<body>
+  <p>If you are not redirected automatically, <a href="/alchemy-lens-website/">click here</a>.</p>
+</body>
+</html>
+
