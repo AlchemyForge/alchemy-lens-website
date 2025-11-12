@@ -1,0 +1,703 @@
+import type { Route } from "./+types/home";
+import directorsImage from "../assets/68ded4c98e130e416f7fb1c1_field team-p-500.jpg";
+import projectManagersImage from "../assets/download.jpg";
+import fieldTeamsImage from "../assets/Image-of-construction-workers-training-on-site-2-800x445.jpeg";
+import step1Image from "../assets/Screenshot 2025-11-12 201406.png";
+import step2Image from "../assets/Screenshot_12-11-2025_20931_localhost.jpeg";
+import step3Image from "../assets/Screenshot_12-11-2025_201457_localhost.jpeg";
+
+export function meta({}: Route.MetaArgs) {
+  return [
+    { title: "Alchemy Forge - Reveal, Transmute, Forge results" },
+    {
+      name: "description",
+      content:
+        "Construction teams finish on time when every signal lines up. Alchemy Lens turns schedules, consents, supplier ETA's and site notes into early, explainable calls.",
+    },
+  ];
+}
+
+export default function Home() {
+  return (
+    <div className="min-h-screen bg-white">
+      {/* Navigation */}
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-100">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <div className="flex items-center justify-between h-16">
+            <div className="flex items-center gap-8">
+              <a
+                href="/"
+                className="text-3xl font-bold text-slate-600"
+                style={{
+                  fontFamily: "var(--font-heading)",
+                  letterSpacing: "0.05em",
+                }}
+              >
+                Alchemy Forge
+              </a>
+              <div className="hidden md:flex items-center gap-8">
+                <a
+                  href="#about"
+                  className="text-gray-700 hover:text-gray-900 font-medium"
+                >
+                  About
+                </a>
+                <a
+                  href="#solutions"
+                  className="text-gray-700 hover:text-gray-900 font-medium"
+                >
+                  Solutions
+                </a>
+                <a
+                  href="#how-it-works"
+                  className="text-gray-700 hover:text-gray-900 font-medium"
+                >
+                  How it Works
+                </a>
+                <a
+                  href="#contact"
+                  className="text-gray-700 hover:text-gray-900 font-medium"
+                >
+                  Contact
+                </a>
+              </div>
+            </div>
+            <div className="flex items-center">
+              <a
+                href="/login"
+                className="px-6 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg font-semibold ai-glow-hover transition-all"
+              >
+                Login
+              </a>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      {/* Hero Section */}
+      <section className="relative pt-32 pb-20 px-6 lg:px-8 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-50 via-blue-50 to-purple-50 tech-grid"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/5 via-purple-600/5 to-cyan-600/5"></div>
+        <div className="max-w-7xl mx-auto relative z-10">
+          <div className="text-center max-w-4xl mx-auto">
+            <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold mb-6 text-gray-900 leading-tight">
+              Reveal, Transmute, Forge results.
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-600 mb-8 leading-relaxed">
+              Construction teams finish on time when every signal lines up.
+              Alchemy Lens turns schedules, consents, supplier ETA's and site
+              notes into early, explainable calls.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="#contact"
+                className="px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-xl font-semibold text-lg ai-glow-hover transition-all relative overflow-hidden group"
+              >
+                <span className="relative z-10">See Alchemy Lens in Action</span>
+                <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-cyan-600 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Problem Section */}
+      <section id="about" className="py-20 px-6 lg:px-8 bg-white">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-4">
+              The Problem We Solve
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Construction teams capture huge amounts of data, but most of it
+              goes unused and decisions arrive too late.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8 mb-12">
+            <div className="bg-gradient-to-br from-red-50 to-orange-50 p-8 rounded-2xl border border-red-100">
+              <div className="text-5xl font-bold text-red-600 mb-2">95%</div>
+              <p className="text-gray-700 leading-relaxed">
+                Construction data goes unused, which leaves teams reacting
+                instead of preventing issues.{" "}
+                <span className="text-sm text-gray-500">
+                  (Source: Autodesk + FMI)
+                </span>
+              </p>
+            </div>
+            <div className="bg-gradient-to-br from-orange-50 to-yellow-50 p-8 rounded-2xl border border-orange-100">
+              <div className="text-5xl font-bold text-orange-600 mb-2">
+                $1.85 Trillion
+              </div>
+              <p className="text-gray-700 leading-relaxed">
+                Lost globally in 2020 due to bad data and poor data practices in
+                construction.{" "}
+                <span className="text-sm text-gray-500">
+                  (Source: Autodesk + FMI)
+                </span>
+              </p>
+            </div>
+            <div className="bg-gradient-to-br from-yellow-50 to-amber-50 p-8 rounded-2xl border border-yellow-100">
+              <div className="text-5xl font-bold text-amber-600 mb-2">30%</div>
+              <p className="text-gray-700 leading-relaxed">
+                Projects finish on time and on budget. Fewer than one third meet
+                plan.{" "}
+                <span className="text-sm text-gray-500">
+                  (Source: KPMG Global Construction Survey 2015)
+                </span>
+              </p>
+            </div>
+          </div>
+
+          <div className="text-center py-12">
+            <p className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight max-w-5xl mx-auto">
+              We fix this by turning raw signals into explainable, early
+              decisions with a clear next step.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Built for Your Team Section */}
+      <section id="solutions" className="py-20 px-6 lg:px-8 bg-gray-900">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-4">
+              Built for your team
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              AI-powered insights for directors, managers, and field teams.
+              Unify data, anticipate risks, and drive execution with clarity.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="bg-gray-800 rounded-2xl border border-gray-700 overflow-hidden">
+              <img
+                src={directorsImage}
+                alt="Directors reviewing construction plans on site"
+                className="w-full h-48 object-cover"
+              />
+              <div className="p-8">
+                <h3 className="text-2xl font-bold text-white mb-3">
+                  Directors
+                </h3>
+                <h4 className="text-lg font-semibold text-gray-300 mb-4">
+                  Portfolio command center
+                </h4>
+                <p className="text-gray-400 italic">
+                  margin & risk at a glance
+                </p>
+              </div>
+            </div>
+
+            <div className="bg-gray-800 rounded-2xl border border-gray-700 overflow-hidden">
+              <img
+                src={projectManagersImage}
+                alt="Project managers collaborating on a construction site"
+                className="w-full h-48 object-cover"
+              />
+              <div className="p-8">
+                <h3 className="text-2xl font-bold text-white mb-3">
+                  Project Managers
+                </h3>
+                <h4 className="text-lg font-semibold text-gray-300 mb-4">
+                  AI-augmented daily brief
+                </h4>
+                <p className="text-gray-400 italic">top risks & next steps</p>
+              </div>
+            </div>
+
+            <div className="bg-gray-800 rounded-2xl border border-gray-700 overflow-hidden">
+              <img
+                src={fieldTeamsImage}
+                alt="Field team coordinating work on-site"
+                className="w-full h-48 object-cover"
+              />
+              <div className="p-8">
+                <h3 className="text-2xl font-bold text-white mb-3">
+                  Field Teams
+                </h3>
+                <h4 className="text-lg font-semibold text-gray-300 mb-4">
+                  Digital Foreman app
+                </h4>
+                <p className="text-gray-400 italic">
+                  voice/photo capture, clean handovers
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* How it Works Section */}
+      <section id="how-it-works" className="py-20 px-6 lg:px-8 bg-white">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-4">
+              How it works
+            </h2>
+          </div>
+
+          <div className="space-y-16">
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+              <div>
+                <div className="inline-block px-4 py-2 bg-gradient-to-r from-blue-100 to-purple-100 text-blue-700 rounded-full font-semibold mb-4 border border-blue-200/50">
+                  Step 1
+                </div>
+                <h3 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                  <span className="text-slate-600">Reveal</span> the same truth.
+                </h3>
+                <p className="text-xl text-gray-600 leading-relaxed">
+                  We unify scattered signals, schedules, consents, supplier
+                  ETAs, and site notes, turning them into a single source of
+                  truth.
+                </p>
+              </div>
+              <div className="overflow-hidden">
+                <img
+                  src={step1Image}
+                  alt="Reveal - Unified data visualization"
+                  className="w-full h-auto object-cover"
+                />
+              </div>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+              <div className="order-2 md:order-1">
+                <div className="overflow-hidden">
+                  <img
+                    src={step2Image}
+                    alt="Transmute - AI-powered insights"
+                    className="w-full h-auto object-cover"
+                  />
+                </div>
+              </div>
+              <div className="order-1 md:order-2">
+                <div className="inline-block px-4 py-2 bg-gradient-to-r from-purple-100 to-cyan-100 text-purple-700 rounded-full font-semibold mb-4 border border-purple-200/50">
+                  Step 2
+                </div>
+                <h3 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                  <span className="text-slate-600">Transmute</span> your
+                  business.
+                </h3>
+                <p className="text-xl text-gray-600 leading-relaxed">
+                  Our human-augmented AI turns that unified data into predictive
+                  foresight, enabling smarter decisions with quantified
+                  outcomes.
+                </p>
+              </div>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+              <div>
+                <div className="inline-block px-4 py-2 bg-gradient-to-r from-cyan-100 to-blue-100 text-cyan-700 rounded-full font-semibold mb-4 border border-cyan-200/50">
+                  Step 3
+                </div>
+                <h3 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                  <span className="text-slate-600">Forge</span> your legacy.
+                </h3>
+                <p className="text-xl text-gray-600 leading-relaxed">
+                  We empower your team to act with confidence, creating an
+                  audit-ready trail of every decision to forge plans that last.
+                </p>
+              </div>
+              <div className="overflow-hidden">
+                <img
+                  src={step3Image}
+                  alt="Forge - Actionable decisions"
+                  className="w-full h-auto object-cover"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Pricing Section */}
+      <section id="pricing" className="py-20 px-6 lg:px-8 bg-gray-50">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-4">
+              Pricing
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Choose the plan that fits your team size and needs
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {/* Individual Tier */}
+            <div className="bg-white rounded-2xl border-2 border-gray-200 p-8 hover:border-blue-500 transition-all flex flex-col">
+              <div className="mb-6">
+                <h3 className="text-2xl font-bold text-gray-900 mb-2">Individual</h3>
+                <div className="flex items-baseline">
+                  <span className="text-4xl font-bold text-gray-900">$99</span>
+                  <span className="text-gray-600 ml-2">/month</span>
+                </div>
+              </div>
+              <ul className="space-y-4 mb-8 flex-grow">
+                <li className="flex items-start">
+                  <svg className="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                  </svg>
+                  <span className="text-gray-600">1 user</span>
+                </li>
+                <li className="flex items-start">
+                  <svg className="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                  </svg>
+                  <span className="text-gray-600">Unlimited projects</span>
+                </li>
+                <li className="flex items-start">
+                  <svg className="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                  </svg>
+                  <span className="text-gray-600">AI-powered insights</span>
+                </li>
+                <li className="flex items-start">
+                  <svg className="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                  </svg>
+                  <span className="text-gray-600">Email support</span>
+                </li>
+              </ul>
+              <a
+                href="#contact"
+                className="block w-full text-center px-6 py-3 bg-gray-100 text-gray-900 rounded-lg font-semibold hover:bg-gray-200 transition-colors"
+              >
+                Get Started
+              </a>
+            </div>
+
+            {/* Small Team Tier */}
+            <div className="bg-white rounded-2xl border-2 border-blue-500 p-8 hover:border-blue-600 transition-all relative flex flex-col">
+              <div className="absolute top-0 right-0 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-1 rounded-bl-lg rounded-tr-2xl text-sm font-semibold">
+                Popular
+              </div>
+              <div className="mb-6">
+                <h3 className="text-2xl font-bold text-gray-900 mb-2">Small Team</h3>
+                <div className="flex items-baseline">
+                  <span className="text-4xl font-bold text-gray-900">$299</span>
+                  <span className="text-gray-600 ml-2">/month</span>
+                </div>
+                <p className="text-sm text-gray-500 mt-1">Up to 3 users</p>
+              </div>
+              <ul className="space-y-4 mb-8 flex-grow">
+                <li className="flex items-start">
+                  <svg className="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                  </svg>
+                  <span className="text-gray-600">Up to 3 users</span>
+                </li>
+                <li className="flex items-start">
+                  <svg className="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                  </svg>
+                  <span className="text-gray-600">Unlimited projects</span>
+                </li>
+                <li className="flex items-start">
+                  <svg className="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                  </svg>
+                  <span className="text-gray-600">Advanced AI insights</span>
+                </li>
+                <li className="flex items-start">
+                  <svg className="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                  </svg>
+                  <span className="text-gray-600">Priority support</span>
+                </li>
+                <li className="flex items-start">
+                  <svg className="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                  </svg>
+                  <span className="text-gray-600">Team collaboration tools</span>
+                </li>
+              </ul>
+              <a
+                href="#contact"
+                className="block w-full text-center px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg font-semibold ai-glow-hover transition-all"
+              >
+                Get Started
+              </a>
+            </div>
+
+            {/* Large Team Tier */}
+            <div className="bg-white rounded-2xl border-2 border-gray-200 p-8 hover:border-blue-500 transition-all flex flex-col">
+              <div className="mb-6">
+                <h3 className="text-2xl font-bold text-gray-900 mb-2">Large Team</h3>
+                <div className="flex items-baseline">
+                  <span className="text-4xl font-bold text-gray-900">$799</span>
+                  <span className="text-gray-600 ml-2">/month</span>
+                </div>
+                <p className="text-sm text-gray-500 mt-1">Up to 10 users</p>
+              </div>
+              <ul className="space-y-4 mb-8 flex-grow">
+                <li className="flex items-start">
+                  <svg className="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                  </svg>
+                  <span className="text-gray-600">Up to 10 users</span>
+                </li>
+                <li className="flex items-start">
+                  <svg className="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                  </svg>
+                  <span className="text-gray-600">Unlimited projects</span>
+                </li>
+                <li className="flex items-start">
+                  <svg className="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                  </svg>
+                  <span className="text-gray-600">Enterprise AI features</span>
+                </li>
+                <li className="flex items-start">
+                  <svg className="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                  </svg>
+                  <span className="text-gray-600">24/7 priority support</span>
+                </li>
+                <li className="flex items-start">
+                  <svg className="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                  </svg>
+                  <span className="text-gray-600">Advanced analytics</span>
+                </li>
+                <li className="flex items-start">
+                  <svg className="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                  </svg>
+                  <span className="text-gray-600">Custom integrations</span>
+                </li>
+              </ul>
+              <a
+                href="#contact"
+                className="block w-full text-center px-6 py-3 bg-gray-100 text-gray-900 rounded-lg font-semibold hover:bg-gray-200 transition-colors"
+              >
+                Get Started
+              </a>
+            </div>
+
+            {/* Custom Tier */}
+            <div className="bg-gradient-to-br from-gray-900 to-gray-800 rounded-2xl border-2 border-gray-700 p-8 hover:border-blue-500 transition-all flex flex-col">
+              <div className="mb-6">
+                <h3 className="text-2xl font-bold text-white mb-2">Custom</h3>
+                <div className="flex items-baseline">
+                  <span className="text-4xl font-bold text-white">Custom</span>
+                </div>
+                <p className="text-sm text-gray-400 mt-1">10+ users</p>
+              </div>
+              <ul className="space-y-4 mb-8 flex-grow">
+                <li className="flex items-start">
+                  <svg className="w-5 h-5 text-green-400 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                  </svg>
+                  <span className="text-gray-300">Unlimited users</span>
+                </li>
+                <li className="flex items-start">
+                  <svg className="w-5 h-5 text-green-400 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                  </svg>
+                  <span className="text-gray-300">Everything in Large Team</span>
+                </li>
+                <li className="flex items-start">
+                  <svg className="w-5 h-5 text-green-400 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                  </svg>
+                  <span className="text-gray-300">Dedicated account manager</span>
+                </li>
+                <li className="flex items-start">
+                  <svg className="w-5 h-5 text-green-400 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                  </svg>
+                  <span className="text-gray-300">Custom AI training</span>
+                </li>
+                <li className="flex items-start">
+                  <svg className="w-5 h-5 text-green-400 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                  </svg>
+                  <span className="text-gray-300">SLA guarantees</span>
+                </li>
+                <li className="flex items-start">
+                  <svg className="w-5 h-5 text-green-400 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                  </svg>
+                  <span className="text-gray-300">On-premise deployment</span>
+                </li>
+              </ul>
+              <a
+                href="#contact"
+                className="block w-full text-center px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg font-semibold ai-glow-hover transition-all"
+              >
+                Contact Sales
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Section */}
+      <section
+        id="contact"
+        className="py-20 px-6 lg:px-8 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white"
+      >
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-4">
+              Forge Your next Move.
+            </h2>
+            <p className="text-xl text-gray-300">
+              Get in touch to see how Alchemy Lens can transform your
+              construction projects.
+            </p>
+          </div>
+
+          <form className="bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20">
+            <div className="space-y-6">
+              <div>
+                <label
+                  htmlFor="fullName"
+                  className="block text-sm font-semibold mb-2"
+                >
+                  Full Name
+                </label>
+                <input
+                  type="text"
+                  id="fullName"
+                  name="fullName"
+                  className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  placeholder="Enter your full name"
+                />
+              </div>
+              <div>
+                <label
+                  htmlFor="email"
+                  className="block text-sm font-semibold mb-2"
+                >
+                  Business Email
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  placeholder="your.email@company.com"
+                />
+              </div>
+              <div>
+                <label
+                  htmlFor="phone"
+                  className="block text-sm font-semibold mb-2"
+                >
+                  Phone Number
+                </label>
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  placeholder="+1 (555) 000-0000"
+                />
+              </div>
+              <div>
+                <label
+                  htmlFor="message"
+                  className="block text-sm font-semibold mb-2"
+                >
+                  How can we help?
+                </label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows={4}
+                  className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none"
+                  placeholder="Tell us about your construction project needs..."
+                ></textarea>
+              </div>
+              <button
+                type="submit"
+                className="w-full px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-xl font-semibold text-lg ai-glow-hover transition-all relative overflow-hidden group"
+              >
+                <span className="relative z-10">Send Message</span>
+                <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-cyan-600 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+              </button>
+            </div>
+          </form>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="bg-gray-900 text-gray-400 py-12 px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid md:grid-cols-4 gap-8 mb-8">
+            <div>
+              <h3 className="text-white font-bold text-lg mb-4">
+                Alchemy Forge
+              </h3>
+              <p className="text-sm">Reveal, Transmute, Forge results.</p>
+            </div>
+            <div>
+              <h4 className="text-white font-semibold mb-4">Product</h4>
+              <ul className="space-y-2 text-sm">
+                <li>
+                  <a href="#solutions" className="hover:text-white">
+                    Solutions
+                  </a>
+                </li>
+                <li>
+                  <a href="#how-it-works" className="hover:text-white">
+                    How it Works
+                  </a>
+                </li>
+                <li>
+                  <a href="#contact" className="hover:text-white">
+                    Request Demo
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="text-white font-semibold mb-4">Company</h4>
+              <ul className="space-y-2 text-sm">
+                <li>
+                  <a href="#about" className="hover:text-white">
+                    About
+                  </a>
+                </li>
+                <li>
+                  <a href="#contact" className="hover:text-white">
+                    Contact
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="text-white font-semibold mb-4">Connect</h4>
+              <div className="flex gap-4">
+                <a
+                  href="https://www.linkedin.com/company/alchemyforge"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-white"
+                >
+                  <span className="sr-only">LinkedIn</span>
+                  <svg
+                    className="w-6 h-6"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div className="border-t border-gray-800 pt-8 text-center text-sm">
+            <p>© 2025 Alchemy Forge. All rights reserved.</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+  );
+}
