@@ -34,53 +34,13 @@ jobs:
       - name: Build
         run: npm run build
 
-      - name: Debug - Check build output
-        run: |
-          echo "=== Build directory structure ==="
-          ls -la build/ 2>/dev/null || echo "No build directory"
-          echo ""
-          echo "=== Checking for index.html ==="
-          find build -name "index.html" -type f 2>/dev/null || echo "No index.html found"
-          echo ""
-          echo "=== build/client contents ==="
-          ls -la build/client/ 2>/dev/null || echo "No build/client directory"
-          if [ -d "build/client" ]; then
-            echo "Files in build/client:"
-            ls -la build/client/ | head -20
-          fi
-          echo ""
-          echo "=== build/server contents (if exists) ==="
-          ls -la build/server/ 2>/dev/null || echo "No build/server directory"
-          echo ""
-          echo "=== Checking for dist directory (Vite default) ==="
-          ls -la dist/ 2>/dev/null || echo "No dist directory"
-
-      - name: Determine deployment path
-        id: deploy_path
-        run: |
-          if [ -d "build/client" ] && [ -f "build/client/index.html" ]; then
-            echo "path=./build/client" >> $GITHUB_OUTPUT
-            echo "Using build/client (React Router with SSR disabled)"
-          elif [ -d "build" ] && [ -f "build/index.html" ]; then
-            echo "path=./build" >> $GITHUB_OUTPUT
-            echo "Using build root"
-          elif [ -d "dist" ] && [ -f "dist/index.html" ]; then
-            echo "path=./dist" >> $GITHUB_OUTPUT
-            echo "Using dist (Vite default)"
-          else
-            echo "ERROR: Could not find index.html in build output"
-            echo "Build structure:"
-            find build -type f -name "*.html" 2>/dev/null || echo "No HTML files found"
-            exit 1
-          fi
-
       - name: Setup Pages
         uses: actions/configure-pages@v4
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ${{ steps.deploy_path.outputs.path }}
+          path: "./build/client"
 
   deploy:
     environment:
