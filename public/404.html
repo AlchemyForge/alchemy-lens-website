@@ -6,13 +6,23 @@
   <title>Redirecting...</title>
   <script>
     // GitHub Pages 404.html fallback for React Router SPA
-    // Simple redirect to index.html - React Router will handle the routing
+    // This script handles redirects for GitHub Pages project sites
     var basePath = '/alchemy-lens-website';
-    var currentPath = window.location.pathname;
+    var path = window.location.pathname;
     var search = window.location.search;
     var hash = window.location.hash;
     
-    // Build redirect URL preserving the path for React Router
+    // Remove base path if present to get the relative path
+    if (path.startsWith(basePath)) {
+      path = path.slice(basePath.length);
+    }
+    
+    // Ensure path starts with /
+    if (!path.startsWith('/')) {
+      path = '/' + path;
+    }
+    
+    // Redirect to index.html at the base path
     var redirectUrl = basePath + '/index.html' + search + hash;
     window.location.replace(redirectUrl);
   </script>
