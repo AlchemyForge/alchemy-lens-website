@@ -597,7 +597,7 @@ export default function Home() {
                   id="phone"
                   name="phone"
                   className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                  placeholder="+1 (555) 000-0000"
+                  placeholder="+64 21 123 4567"
                 />
               </div>
               <div>
