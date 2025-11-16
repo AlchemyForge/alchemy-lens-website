@@ -6,6 +6,7 @@ import fieldTeamsImage from "../assets/Image-of-construction-workers-training-on
 import step1Image from "../assets/Screenshot 2025-11-12 201406.png";
 import step2Image from "../assets/Screenshot_12-11-2025_20931_localhost.jpeg";
 import step3Image from "../assets/Screenshot_12-11-2025_201457_localhost.jpeg";
+import logoImage from "../assets/logo.png";
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -93,12 +94,17 @@ export default function Home() {
             <div className="flex items-center gap-8">
               <a
                 href="/"
-                className="text-3xl font-bold text-slate-600"
+                className="flex items-center gap-2 text-3xl font-bold text-slate-600"
                 style={{
                   fontFamily: "var(--font-heading)",
                   letterSpacing: "0.05em",
                 }}
               >
+                <img
+                  src={logoImage}
+                  alt="Alchemy Forge Logo"
+                  className="h-12 w-12"
+                />
                 Alchemy Forge
               </a>
               <div className="hidden md:flex items-center gap-8">
@@ -989,9 +995,16 @@ export default function Home() {
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-4 gap-8 mb-8">
             <div>
-              <h3 className="text-white font-bold text-lg mb-4">
-                Alchemy Forge
-              </h3>
+              <div className="flex items-center gap-2 mb-4">
+                <img
+                  src={logoImage}
+                  alt="Alchemy Forge Logo"
+                  className="h-6 w-6"
+                />
+                <h3 className="text-white font-bold text-lg">
+                  Alchemy Forge
+                </h3>
+              </div>
               <p className="text-sm">Reveal, Transmute, Forge results.</p>
             </div>
             <div>

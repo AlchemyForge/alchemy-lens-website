@@ -9,6 +9,7 @@ import {
 
 import type { Route } from "./+types/root";
 import "./app.css";
+import logoUrl from "./assets/logo.png";
 
 export const links: Route.LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -24,6 +25,11 @@ export const links: Route.LinksFunction = () => [
   {
     rel: "stylesheet",
     href: "https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap",
+  },
+  {
+    rel: "icon",
+    type: "image/png",
+    href: logoUrl,
   },
 ];
 
