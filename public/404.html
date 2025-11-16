@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -11,27 +12,28 @@
     var path = window.location.pathname;
     var search = window.location.search;
     var hash = window.location.hash;
-    
+
     // Remove base path if present to get the relative path
     if (path.startsWith(basePath)) {
       path = path.slice(basePath.length);
     }
-    
+
     // Ensure path starts with /
     if (!path.startsWith('/')) {
       path = '/' + path;
     }
-    
+
     // Redirect to index.html at the base path
     var redirectUrl = basePath + '/index.html' + search + hash;
     window.location.replace(redirectUrl);
   </script>
   <noscript>
-    <meta http-equiv="refresh" content="0; url=/alchemy-lens-website/" />
+    <meta http-equiv="refresh" content="0; url=/alchemy-lens-website" />
   </noscript>
 </head>
-<body>
-  <p>If you are not redirected automatically, <a href="/alchemy-lens-website/">click here</a>.</p>
-</body>
-</html>
 
+<body>
+  <p>If you are not redirected automatically, <a href="/alchemy-lens-website">click here</a>.</p>
+</body>
+
+</html>
