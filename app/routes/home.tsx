@@ -1,7 +1,7 @@
 import { useState } from "react";
 import type { Route } from "./+types/home";
 import directorsImage from "../assets/68ded4c98e130e416f7fb1c1_field team-p-500.jpg";
-import projectManagersImage from "../assets/download.jpg";
+import projectManagersImage from "../assets/image-8155ba5f-d0fa-44a0-b6de-f8f987dd09dc.png";
 import fieldTeamsImage from "../assets/Image-of-construction-workers-training-on-site-2-800x445.jpeg";
 import step1Image from "../assets/Screenshot 2025-11-12 201406.png";
 import step2Image from "../assets/Screenshot_12-11-2025_20931_localhost.jpeg";
@@ -37,51 +37,63 @@ export default function Home() {
   const faqItems = [
     {
       question: "What is Alchemy Lens?",
-      answer: "Alchemy Lens is an AI-powered construction management platform that unifies project data, schedules, financials, and communications into a single source of truth. It uses artificial intelligence to provide predictive insights, automate routine tasks, and help construction teams finish projects on time and on budget.",
+      answer:
+        "Alchemy Lens is an AI-powered construction management platform that unifies project data, schedules, financials, and communications into a single source of truth. It uses artificial intelligence to provide predictive insights, automate routine tasks, and help construction teams finish projects on time and on budget.",
     },
     {
       question: "How does the AI chat assistant work?",
-      answer: 'Our AI chat assistant uses natural language processing and semantic search to understand your questions about projects, tasks, schedules, and financials. Simply ask questions like "Show me all tasks due this week" or "What\'s the budget status of Project X?" and get instant, accurate answers. The AI uses vector embeddings to find relevant information even when you don\'t use exact keywords.',
+      answer:
+        'Our AI chat assistant uses natural language processing and semantic search to understand your questions about projects, tasks, schedules, and financials. Simply ask questions like "Show me all tasks due this week" or "What\'s the budget status of Project X?" and get instant, accurate answers. The AI uses vector embeddings to find relevant information even when you don\'t use exact keywords.',
     },
     {
       question: "Can Alchemy Lens generate project schedules automatically?",
-      answer: "Yes! Alchemy Lens uses AI to automatically generate project schedules based on your project details, phases, and tasks. You can also adjust schedules through our chat interface by simply describing the changes you want to make. The system learns from your preferences and gets smarter over time.",
+      answer:
+        "Yes! Alchemy Lens uses AI to automatically generate project schedules based on your project details, phases, and tasks. You can also adjust schedules through our chat interface by simply describing the changes you want to make. The system learns from your preferences and gets smarter over time.",
     },
     {
       question: "What financial features does Alchemy Lens include?",
-      answer: "Alchemy Lens provides comprehensive financial management including budget creation with line items, expense tracking, invoice generation and payment tracking, estimates for sales, and financial dashboards that show real-time project profitability. All financial data is integrated with your project timeline and tasks.",
+      answer:
+        "Alchemy Lens provides comprehensive financial management including budget creation with line items, expense tracking, invoice generation and payment tracking, estimates for sales, and financial dashboards that show real-time project profitability. All financial data is integrated with your project timeline and tasks.",
     },
     {
       question: "Is there a mobile app?",
-      answer: 'Yes, Alchemy Lens includes a mobile app (iOS and Android) called "Digital Foreman" that allows field teams to capture photos with annotations, record voice notes, update task status, view schedules, and access project information on-site. All data syncs in real-time with the web platform.',
+      answer:
+        'Yes, Alchemy Lens includes a mobile app (iOS and Android) called "Digital Foreman" that allows field teams to capture photos with annotations, record voice notes, update task status, view schedules, and access project information on-site. All data syncs in real-time with the web platform.',
     },
     {
       question: "How does the automation system work?",
-      answer: "Our automation engine allows you to create rules that trigger actions based on events. For example, you can set up a rule that automatically notifies the project manager when a task is completed, or creates a new task when an invoice is paid. Rules can trigger notifications (email, SMS, push), create tasks, update records, or execute custom workflows.",
+      answer:
+        "Our automation engine allows you to create rules that trigger actions based on events. For example, you can set up a rule that automatically notifies the project manager when a task is completed, or creates a new task when an invoice is paid. Rules can trigger notifications (email, SMS, push), create tasks, update records, or execute custom workflows.",
     },
     {
       question: "Can I try Alchemy Lens before purchasing?",
-      answer: "Yes, we offer a free trial period for all new users. You can sign up and explore all features without any credit card required. We also offer live demos where our team will walk you through the platform and show you how it can work specifically for your construction projects.",
+      answer:
+        "Yes, we offer a free trial period for all new users. You can sign up and explore all features without any credit card required. We also offer live demos where our team will walk you through the platform and show you how it can work specifically for your construction projects.",
     },
     {
       question: "How secure is my project data?",
-      answer: "Security is our top priority. All data is encrypted in transit and at rest. We use industry-standard security practices including role-based access control, audit trails for all actions, and regular security audits. For enterprise customers, we offer on-premise deployment options for maximum data control.",
+      answer:
+        "Security is our top priority. All data is encrypted in transit and at rest. We use industry-standard security practices including role-based access control, audit trails for all actions, and regular security audits. For enterprise customers, we offer on-premise deployment options for maximum data control.",
     },
     {
       question: "Does Alchemy Lens integrate with other construction software?",
-      answer: "Alchemy Lens is designed to be a comprehensive platform that replaces the need for multiple tools. However, we do offer custom integrations for enterprise customers. Our API allows you to connect with accounting software, ERP systems, and other construction management tools as needed.",
+      answer:
+        "Alchemy Lens is designed to be a comprehensive platform that replaces the need for multiple tools. However, we do offer custom integrations for enterprise customers. Our API allows you to connect with accounting software, ERP systems, and other construction management tools as needed.",
     },
     {
       question: "What kind of support do you provide?",
-      answer: "Support varies by plan. Individual plans include email support, Small Team plans get priority support, Large Team plans include 24/7 priority support, and Custom/Enterprise plans include a dedicated account manager. All plans include access to our knowledge base and video tutorials.",
+      answer:
+        "Support varies by plan. Individual plans include email support, Small Team plans get priority support, Large Team plans include 24/7 priority support, and Custom/Enterprise plans include a dedicated account manager. All plans include access to our knowledge base and video tutorials.",
     },
     {
       question: "How long does it take to set up Alchemy Lens?",
-      answer: "Getting started is quick and easy. You can create your account and start adding projects within minutes. For teams migrating from other systems, we provide data import tools and migration assistance. Most teams are fully operational within a week, with full feature adoption typically taking 2-4 weeks.",
+      answer:
+        "Getting started is quick and easy. You can create your account and start adding projects within minutes. For teams migrating from other systems, we provide data import tools and migration assistance. Most teams are fully operational within a week, with full feature adoption typically taking 2-4 weeks.",
     },
     {
       question: "Can I customize Alchemy Lens for my company's workflow?",
-      answer: "Yes! Alchemy Lens is highly customizable. You can create custom automation rules, configure notification preferences, set up custom report templates, and define company-specific workflows. Enterprise customers can also request custom AI training to better understand your specific terminology and processes.",
+      answer:
+        "Yes! Alchemy Lens is highly customizable. You can create custom automation rules, configure notification preferences, set up custom report templates, and define company-specific workflows. Enterprise customers can also request custom AI training to better understand your specific terminology and processes.",
     },
   ];
 
@@ -165,7 +177,9 @@ export default function Home() {
                 href="#contact"
                 className="px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-xl font-semibold text-lg ai-glow-hover transition-all relative overflow-hidden group"
               >
-                <span className="relative z-10">See Alchemy Lens in Action</span>
+                <span className="relative z-10">
+                  See Alchemy Lens in Action
+                </span>
                 <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-cyan-600 opacity-0 group-hover:opacity-100 transition-opacity"></div>
               </a>
             </div>
@@ -245,57 +259,115 @@ export default function Home() {
 
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-gray-800 rounded-2xl border border-gray-700 overflow-hidden">
-              <img
-                src={directorsImage}
-                alt="Directors reviewing construction plans on site"
-                className="w-full h-48 object-cover"
-              />
+              <div className="relative overflow-hidden">
+                <img
+                  src={directorsImage}
+                  alt="Directors reviewing construction plans on site"
+                  className="w-full h-48 object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-gray-900/60 via-transparent to-transparent"></div>
+              </div>
               <div className="p-8">
-                <h3 className="text-2xl font-bold text-white mb-3">
-                  Directors
-                </h3>
-                <h4 className="text-lg font-semibold text-gray-300 mb-4">
+                <h4 className="text-2xl font-bold text-white mb-4">
                   Portfolio command center
                 </h4>
-                <p className="text-gray-400 italic">
-                  margin & risk at a glance
+                <p className="text-gray-400 mb-6 leading-relaxed">
+                  See margin, risk, and performance across all projects in one
+                  unified dashboard. Make strategic decisions with real-time
+                  financial insights and 12-month trend analysis.
                 </p>
+                <div className="border-t border-gray-700 pt-4">
+                  <ul className="text-sm text-gray-400 space-y-2.5">
+                    <li className="flex items-start gap-2">
+                      <span className="text-blue-500 mt-1">✓</span>
+                      <span>Revenue, expenses, and profit tracking</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-blue-500 mt-1">✓</span>
+                      <span>Portfolio-wide risk visibility</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-blue-500 mt-1">✓</span>
+                      <span>Financial trend analysis</span>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
 
             <div className="bg-gray-800 rounded-2xl border border-gray-700 overflow-hidden">
-              <img
-                src={projectManagersImage}
-                alt="Project managers collaborating on a construction site"
-                className="w-full h-48 object-cover"
-              />
+              <div className="relative overflow-hidden">
+                <img
+                  src={projectManagersImage}
+                  alt="Project managers collaborating on a construction site"
+                  className="w-full h-48 object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-gray-900/60 via-transparent to-transparent"></div>
+              </div>
               <div className="p-8">
-                <h3 className="text-2xl font-bold text-white mb-3">
-                  Project Managers
-                </h3>
-                <h4 className="text-lg font-semibold text-gray-300 mb-4">
+                <h4 className="text-2xl font-bold text-white mb-4">
                   AI-augmented daily brief
                 </h4>
-                <p className="text-gray-400 italic">top risks & next steps</p>
+                <p className="text-gray-400 mb-6 leading-relaxed">
+                  Get AI-powered insights on top risks and next steps. Chat with
+                  your data, manage multi-project schedules, and automate
+                  workflows to stay ahead of issues.
+                </p>
+                <div className="border-t border-gray-700 pt-4">
+                  <ul className="text-sm text-gray-400 space-y-2.5">
+                    <li className="flex items-start gap-2">
+                      <span className="text-purple-500 mt-1">✓</span>
+                      <span>AI chat assistant for instant answers</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-purple-500 mt-1">✓</span>
+                      <span>Multi-project Gantt chart scheduling</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-purple-500 mt-1">✓</span>
+                      <span>Automated risk alerts and workflows</span>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
 
             <div className="bg-gray-800 rounded-2xl border border-gray-700 overflow-hidden">
-              <img
-                src={fieldTeamsImage}
-                alt="Field team coordinating work on-site"
-                className="w-full h-48 object-cover"
-              />
+              <div className="relative overflow-hidden">
+                <img
+                  src={fieldTeamsImage}
+                  alt="Field team coordinating work on-site"
+                  className="w-full h-48 object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-gray-900/60 via-transparent to-transparent"></div>
+              </div>
               <div className="p-8">
-                <h3 className="text-2xl font-bold text-white mb-3">
-                  Field Teams
-                </h3>
-                <h4 className="text-lg font-semibold text-gray-300 mb-4">
+                <h4 className="text-2xl font-bold text-white mb-4">
                   Digital Foreman app
                 </h4>
-                <p className="text-gray-400 italic">
-                  voice/photo capture, clean handovers
+                <p className="text-gray-400 mb-6 leading-relaxed">
+                  Capture progress photos with annotations, record voice notes,
+                  and update tasks on-site. Everything syncs instantly for
+                  seamless handovers and real-time coordination.
                 </p>
+                <div className="border-t border-gray-700 pt-4">
+                  <ul className="text-sm text-gray-400 space-y-2.5">
+                    <li className="flex items-start gap-2">
+                      <span className="text-cyan-500 mt-1">✓</span>
+                      <span>
+                        Photo capture with drawing & measurement tools
+                      </span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-cyan-500 mt-1">✓</span>
+                      <span>Voice notes and task status updates</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-cyan-500 mt-1">✓</span>
+                      <span>Real-time sync with office teams</span>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
@@ -387,17 +459,21 @@ export default function Home() {
       </section>
 
       {/* Product Demo Section */}
-      <section id="demo" className="py-20 px-6 lg:px-8 bg-gradient-to-br from-slate-50 via-blue-50 to-purple-50">
+      <section
+        id="demo"
+        className="py-20 px-6 lg:px-8 bg-gradient-to-br from-slate-50 via-blue-50 to-purple-50"
+      >
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-4">
               See Alchemy Lens in Action
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Watch how Alchemy Lens transforms construction project management with AI-powered insights and unified data visualization.
+              Watch how Alchemy Lens transforms construction project management
+              with AI-powered insights and unified data visualization.
             </p>
           </div>
-          
+
           <div className="max-w-5xl mx-auto">
             <div className="relative aspect-video rounded-2xl overflow-hidden">
               <iframe
@@ -428,7 +504,8 @@ export default function Home() {
               Everything You Need to Succeed
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Compare Alchemy Lens with traditional construction management tools
+              Compare Alchemy Lens with traditional construction management
+              tools
             </p>
           </div>
 
@@ -436,56 +513,126 @@ export default function Home() {
             <table className="w-full border-collapse">
               <thead>
                 <tr className="bg-gradient-to-r from-blue-600 to-purple-600 text-white">
-                  <th className="px-6 py-4 text-left font-semibold text-lg">Feature</th>
-                  <th className="px-6 py-4 text-center font-semibold text-lg">Alchemy Lens</th>
-                  <th className="px-6 py-4 text-center font-semibold text-lg">Traditional Tools</th>
+                  <th className="px-6 py-4 text-left font-semibold text-lg">
+                    Feature
+                  </th>
+                  <th className="px-6 py-4 text-center font-semibold text-lg">
+                    Alchemy Lens
+                  </th>
+                  <th className="px-6 py-4 text-center font-semibold text-lg">
+                    Traditional Tools
+                  </th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-gray-200">
                 <tr className="hover:bg-gray-50">
-                  <td className="px-6 py-4 font-medium text-gray-900">AI-Powered Chat Assistant</td>
+                  <td className="px-6 py-4 font-medium text-gray-900">
+                    AI-Powered Chat Assistant
+                  </td>
                   <td className="px-6 py-4 text-center">
-                    <svg className="w-6 h-6 text-green-500 mx-auto" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    <svg
+                      className="w-6 h-6 text-green-500 mx-auto"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                        clipRule="evenodd"
+                      />
                     </svg>
                   </td>
                   <td className="px-6 py-4 text-center">
-                    <svg className="w-6 h-6 text-red-500 mx-auto" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clipRule="evenodd" />
+                    <svg
+                      className="w-6 h-6 text-red-500 mx-auto"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                        clipRule="evenodd"
+                      />
                     </svg>
                   </td>
                 </tr>
                 <tr className="hover:bg-gray-50 bg-gray-50">
-                  <td className="px-6 py-4 font-medium text-gray-900">AI Schedule Generation</td>
+                  <td className="px-6 py-4 font-medium text-gray-900">
+                    AI Schedule Generation
+                  </td>
                   <td className="px-6 py-4 text-center">
-                    <svg className="w-6 h-6 text-green-500 mx-auto" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    <svg
+                      className="w-6 h-6 text-green-500 mx-auto"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                        clipRule="evenodd"
+                      />
                     </svg>
                   </td>
                   <td className="px-6 py-4 text-center">
-                    <svg className="w-6 h-6 text-red-500 mx-auto" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clipRule="evenodd" />
+                    <svg
+                      className="w-6 h-6 text-red-500 mx-auto"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                        clipRule="evenodd"
+                      />
                     </svg>
                   </td>
                 </tr>
                 <tr className="hover:bg-gray-50">
-                  <td className="px-6 py-4 font-medium text-gray-900">Semantic Search (Vector Search)</td>
+                  <td className="px-6 py-4 font-medium text-gray-900">
+                    Semantic Search (Vector Search)
+                  </td>
                   <td className="px-6 py-4 text-center">
-                    <svg className="w-6 h-6 text-green-500 mx-auto" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    <svg
+                      className="w-6 h-6 text-green-500 mx-auto"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                        clipRule="evenodd"
+                      />
                     </svg>
                   </td>
                   <td className="px-6 py-4 text-center">
-                    <svg className="w-6 h-6 text-red-500 mx-auto" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clipRule="evenodd" />
+                    <svg
+                      className="w-6 h-6 text-red-500 mx-auto"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                        clipRule="evenodd"
+                      />
                     </svg>
                   </td>
                 </tr>
                 <tr className="hover:bg-gray-50 bg-gray-50">
-                  <td className="px-6 py-4 font-medium text-gray-900">Unified Project Dashboard</td>
+                  <td className="px-6 py-4 font-medium text-gray-900">
+                    Unified Project Dashboard
+                  </td>
                   <td className="px-6 py-4 text-center">
-                    <svg className="w-6 h-6 text-green-500 mx-auto" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    <svg
+                      className="w-6 h-6 text-green-500 mx-auto"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                        clipRule="evenodd"
+                      />
                     </svg>
                   </td>
                   <td className="px-6 py-4 text-center">
@@ -493,23 +640,51 @@ export default function Home() {
                   </td>
                 </tr>
                 <tr className="hover:bg-gray-50">
-                  <td className="px-6 py-4 font-medium text-gray-900">Automation Rules Engine</td>
+                  <td className="px-6 py-4 font-medium text-gray-900">
+                    Automation Rules Engine
+                  </td>
                   <td className="px-6 py-4 text-center">
-                    <svg className="w-6 h-6 text-green-500 mx-auto" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    <svg
+                      className="w-6 h-6 text-green-500 mx-auto"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                        clipRule="evenodd"
+                      />
                     </svg>
                   </td>
                   <td className="px-6 py-4 text-center">
-                    <svg className="w-6 h-6 text-red-500 mx-auto" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clipRule="evenodd" />
+                    <svg
+                      className="w-6 h-6 text-red-500 mx-auto"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                        clipRule="evenodd"
+                      />
                     </svg>
                   </td>
                 </tr>
                 <tr className="hover:bg-gray-50 bg-gray-50">
-                  <td className="px-6 py-4 font-medium text-gray-900">Financial Management (Budgets, Invoices, Expenses)</td>
+                  <td className="px-6 py-4 font-medium text-gray-900">
+                    Financial Management (Budgets, Invoices, Expenses)
+                  </td>
                   <td className="px-6 py-4 text-center">
-                    <svg className="w-6 h-6 text-green-500 mx-auto" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    <svg
+                      className="w-6 h-6 text-green-500 mx-auto"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                        clipRule="evenodd"
+                      />
                     </svg>
                   </td>
                   <td className="px-6 py-4 text-center">
@@ -517,10 +692,20 @@ export default function Home() {
                   </td>
                 </tr>
                 <tr className="hover:bg-gray-50">
-                  <td className="px-6 py-4 font-medium text-gray-900">Photo Management with Annotations</td>
+                  <td className="px-6 py-4 font-medium text-gray-900">
+                    Photo Management with Annotations
+                  </td>
                   <td className="px-6 py-4 text-center">
-                    <svg className="w-6 h-6 text-green-500 mx-auto" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    <svg
+                      className="w-6 h-6 text-green-500 mx-auto"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                        clipRule="evenodd"
+                      />
                     </svg>
                   </td>
                   <td className="px-6 py-4 text-center">
@@ -528,23 +713,51 @@ export default function Home() {
                   </td>
                 </tr>
                 <tr className="hover:bg-gray-50 bg-gray-50">
-                  <td className="px-6 py-4 font-medium text-gray-900">Gantt Chart Scheduling</td>
+                  <td className="px-6 py-4 font-medium text-gray-900">
+                    Gantt Chart Scheduling
+                  </td>
                   <td className="px-6 py-4 text-center">
-                    <svg className="w-6 h-6 text-green-500 mx-auto" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    <svg
+                      className="w-6 h-6 text-green-500 mx-auto"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                        clipRule="evenodd"
+                      />
                     </svg>
                   </td>
                   <td className="px-6 py-4 text-center">
-                    <svg className="w-6 h-6 text-green-500 mx-auto" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    <svg
+                      className="w-6 h-6 text-green-500 mx-auto"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                        clipRule="evenodd"
+                      />
                     </svg>
                   </td>
                 </tr>
                 <tr className="hover:bg-gray-50">
-                  <td className="px-6 py-4 font-medium text-gray-900">Mobile App (iOS & Android)</td>
+                  <td className="px-6 py-4 font-medium text-gray-900">
+                    Mobile App (iOS & Android)
+                  </td>
                   <td className="px-6 py-4 text-center">
-                    <svg className="w-6 h-6 text-green-500 mx-auto" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    <svg
+                      className="w-6 h-6 text-green-500 mx-auto"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                        clipRule="evenodd"
+                      />
                     </svg>
                   </td>
                   <td className="px-6 py-4 text-center">
@@ -552,10 +765,20 @@ export default function Home() {
                   </td>
                 </tr>
                 <tr className="hover:bg-gray-50 bg-gray-50">
-                  <td className="px-6 py-4 font-medium text-gray-900">Automated Report Generation</td>
+                  <td className="px-6 py-4 font-medium text-gray-900">
+                    Automated Report Generation
+                  </td>
                   <td className="px-6 py-4 text-center">
-                    <svg className="w-6 h-6 text-green-500 mx-auto" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    <svg
+                      className="w-6 h-6 text-green-500 mx-auto"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                        clipRule="evenodd"
+                      />
                     </svg>
                   </td>
                   <td className="px-6 py-4 text-center">
@@ -563,36 +786,82 @@ export default function Home() {
                   </td>
                 </tr>
                 <tr className="hover:bg-gray-50">
-                  <td className="px-6 py-4 font-medium text-gray-900">Task Management with Comments & Attachments</td>
+                  <td className="px-6 py-4 font-medium text-gray-900">
+                    Task Management with Comments & Attachments
+                  </td>
                   <td className="px-6 py-4 text-center">
-                    <svg className="w-6 h-6 text-green-500 mx-auto" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    <svg
+                      className="w-6 h-6 text-green-500 mx-auto"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                        clipRule="evenodd"
+                      />
                     </svg>
                   </td>
                   <td className="px-6 py-4 text-center">
-                    <svg className="w-6 h-6 text-green-500 mx-auto" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    <svg
+                      className="w-6 h-6 text-green-500 mx-auto"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                        clipRule="evenodd"
+                      />
                     </svg>
                   </td>
                 </tr>
                 <tr className="hover:bg-gray-50 bg-gray-50">
-                  <td className="px-6 py-4 font-medium text-gray-900">Document Management</td>
+                  <td className="px-6 py-4 font-medium text-gray-900">
+                    Document Management
+                  </td>
                   <td className="px-6 py-4 text-center">
-                    <svg className="w-6 h-6 text-green-500 mx-auto" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    <svg
+                      className="w-6 h-6 text-green-500 mx-auto"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                        clipRule="evenodd"
+                      />
                     </svg>
                   </td>
                   <td className="px-6 py-4 text-center">
-                    <svg className="w-6 h-6 text-green-500 mx-auto" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    <svg
+                      className="w-6 h-6 text-green-500 mx-auto"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                        clipRule="evenodd"
+                      />
                     </svg>
                   </td>
                 </tr>
                 <tr className="hover:bg-gray-50">
-                  <td className="px-6 py-4 font-medium text-gray-900">Contact Management</td>
+                  <td className="px-6 py-4 font-medium text-gray-900">
+                    Contact Management
+                  </td>
                   <td className="px-6 py-4 text-center">
-                    <svg className="w-6 h-6 text-green-500 mx-auto" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    <svg
+                      className="w-6 h-6 text-green-500 mx-auto"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                        clipRule="evenodd"
+                      />
                     </svg>
                   </td>
                   <td className="px-6 py-4 text-center">
@@ -600,10 +869,20 @@ export default function Home() {
                   </td>
                 </tr>
                 <tr className="hover:bg-gray-50 bg-gray-50">
-                  <td className="px-6 py-4 font-medium text-gray-900">Real-time Notifications</td>
+                  <td className="px-6 py-4 font-medium text-gray-900">
+                    Real-time Notifications
+                  </td>
                   <td className="px-6 py-4 text-center">
-                    <svg className="w-6 h-6 text-green-500 mx-auto" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    <svg
+                      className="w-6 h-6 text-green-500 mx-auto"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                        clipRule="evenodd"
+                      />
                     </svg>
                   </td>
                   <td className="px-6 py-4 text-center">
@@ -632,7 +911,9 @@ export default function Home() {
             {/* Individual Tier */}
             <div className="bg-white rounded-2xl border-2 border-gray-200 p-8 hover:border-blue-500 transition-all flex flex-col">
               <div className="mb-6">
-                <h3 className="text-2xl font-bold text-gray-900 mb-2">Individual</h3>
+                <h3 className="text-2xl font-bold text-gray-900 mb-2">
+                  Individual
+                </h3>
                 <div className="flex items-baseline">
                   <span className="text-4xl font-bold text-gray-900">$99</span>
                   <span className="text-gray-600 ml-2">/month</span>
@@ -640,26 +921,58 @@ export default function Home() {
               </div>
               <ul className="space-y-4 mb-8 flex-grow">
                 <li className="flex items-start">
-                  <svg className="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                  <svg
+                    className="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clipRule="evenodd"
+                    />
                   </svg>
                   <span className="text-gray-600">1 user</span>
                 </li>
                 <li className="flex items-start">
-                  <svg className="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                  <svg
+                    className="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clipRule="evenodd"
+                    />
                   </svg>
                   <span className="text-gray-600">Unlimited projects</span>
                 </li>
                 <li className="flex items-start">
-                  <svg className="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                  <svg
+                    className="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clipRule="evenodd"
+                    />
                   </svg>
                   <span className="text-gray-600">AI-powered insights</span>
                 </li>
                 <li className="flex items-start">
-                  <svg className="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                  <svg
+                    className="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clipRule="evenodd"
+                    />
                   </svg>
                   <span className="text-gray-600">Email support</span>
                 </li>
@@ -678,7 +991,9 @@ export default function Home() {
                 Popular
               </div>
               <div className="mb-6">
-                <h3 className="text-2xl font-bold text-gray-900 mb-2">Small Team</h3>
+                <h3 className="text-2xl font-bold text-gray-900 mb-2">
+                  Small Team
+                </h3>
                 <div className="flex items-baseline">
                   <span className="text-4xl font-bold text-gray-900">$299</span>
                   <span className="text-gray-600 ml-2">/month</span>
@@ -687,34 +1002,76 @@ export default function Home() {
               </div>
               <ul className="space-y-4 mb-8 flex-grow">
                 <li className="flex items-start">
-                  <svg className="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                  <svg
+                    className="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clipRule="evenodd"
+                    />
                   </svg>
                   <span className="text-gray-600">Up to 3 users</span>
                 </li>
                 <li className="flex items-start">
-                  <svg className="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                  <svg
+                    className="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clipRule="evenodd"
+                    />
                   </svg>
                   <span className="text-gray-600">Unlimited projects</span>
                 </li>
                 <li className="flex items-start">
-                  <svg className="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                  <svg
+                    className="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clipRule="evenodd"
+                    />
                   </svg>
                   <span className="text-gray-600">Advanced AI insights</span>
                 </li>
                 <li className="flex items-start">
-                  <svg className="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                  <svg
+                    className="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clipRule="evenodd"
+                    />
                   </svg>
                   <span className="text-gray-600">Priority support</span>
                 </li>
                 <li className="flex items-start">
-                  <svg className="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                  <svg
+                    className="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clipRule="evenodd"
+                    />
                   </svg>
-                  <span className="text-gray-600">Team collaboration tools</span>
+                  <span className="text-gray-600">
+                    Team collaboration tools
+                  </span>
                 </li>
               </ul>
               <a
@@ -728,7 +1085,9 @@ export default function Home() {
             {/* Large Team Tier */}
             <div className="bg-white rounded-2xl border-2 border-gray-200 p-8 hover:border-blue-500 transition-all flex flex-col">
               <div className="mb-6">
-                <h3 className="text-2xl font-bold text-gray-900 mb-2">Large Team</h3>
+                <h3 className="text-2xl font-bold text-gray-900 mb-2">
+                  Large Team
+                </h3>
                 <div className="flex items-baseline">
                   <span className="text-4xl font-bold text-gray-900">$799</span>
                   <span className="text-gray-600 ml-2">/month</span>
@@ -737,38 +1096,86 @@ export default function Home() {
               </div>
               <ul className="space-y-4 mb-8 flex-grow">
                 <li className="flex items-start">
-                  <svg className="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                  <svg
+                    className="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clipRule="evenodd"
+                    />
                   </svg>
                   <span className="text-gray-600">Up to 10 users</span>
                 </li>
                 <li className="flex items-start">
-                  <svg className="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                  <svg
+                    className="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clipRule="evenodd"
+                    />
                   </svg>
                   <span className="text-gray-600">Unlimited projects</span>
                 </li>
                 <li className="flex items-start">
-                  <svg className="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                  <svg
+                    className="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clipRule="evenodd"
+                    />
                   </svg>
                   <span className="text-gray-600">Enterprise AI features</span>
                 </li>
                 <li className="flex items-start">
-                  <svg className="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                  <svg
+                    className="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clipRule="evenodd"
+                    />
                   </svg>
                   <span className="text-gray-600">24/7 priority support</span>
                 </li>
                 <li className="flex items-start">
-                  <svg className="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                  <svg
+                    className="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clipRule="evenodd"
+                    />
                   </svg>
                   <span className="text-gray-600">Advanced analytics</span>
                 </li>
                 <li className="flex items-start">
-                  <svg className="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                  <svg
+                    className="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clipRule="evenodd"
+                    />
                   </svg>
                   <span className="text-gray-600">Custom integrations</span>
                 </li>
@@ -792,38 +1199,90 @@ export default function Home() {
               </div>
               <ul className="space-y-4 mb-8 flex-grow">
                 <li className="flex items-start">
-                  <svg className="w-5 h-5 text-green-400 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                  <svg
+                    className="w-5 h-5 text-green-400 mr-2 mt-0.5 flex-shrink-0"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clipRule="evenodd"
+                    />
                   </svg>
                   <span className="text-gray-300">Unlimited users</span>
                 </li>
                 <li className="flex items-start">
-                  <svg className="w-5 h-5 text-green-400 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                  <svg
+                    className="w-5 h-5 text-green-400 mr-2 mt-0.5 flex-shrink-0"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clipRule="evenodd"
+                    />
                   </svg>
-                  <span className="text-gray-300">Everything in Large Team</span>
+                  <span className="text-gray-300">
+                    Everything in Large Team
+                  </span>
                 </li>
                 <li className="flex items-start">
-                  <svg className="w-5 h-5 text-green-400 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                  <svg
+                    className="w-5 h-5 text-green-400 mr-2 mt-0.5 flex-shrink-0"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clipRule="evenodd"
+                    />
                   </svg>
-                  <span className="text-gray-300">Dedicated account manager</span>
+                  <span className="text-gray-300">
+                    Dedicated account manager
+                  </span>
                 </li>
                 <li className="flex items-start">
-                  <svg className="w-5 h-5 text-green-400 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                  <svg
+                    className="w-5 h-5 text-green-400 mr-2 mt-0.5 flex-shrink-0"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clipRule="evenodd"
+                    />
                   </svg>
                   <span className="text-gray-300">Custom AI training</span>
                 </li>
                 <li className="flex items-start">
-                  <svg className="w-5 h-5 text-green-400 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                  <svg
+                    className="w-5 h-5 text-green-400 mr-2 mt-0.5 flex-shrink-0"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clipRule="evenodd"
+                    />
                   </svg>
                   <span className="text-gray-300">SLA guarantees</span>
                 </li>
                 <li className="flex items-start">
-                  <svg className="w-5 h-5 text-green-400 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                  <svg
+                    className="w-5 h-5 text-green-400 mr-2 mt-0.5 flex-shrink-0"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clipRule="evenodd"
+                    />
                   </svg>
                   <span className="text-gray-300">On-premise deployment</span>
                 </li>
@@ -863,7 +1322,10 @@ export default function Home() {
                     onClick={() => toggleItem(index)}
                     className="w-full px-5 py-4 flex items-center justify-between text-left hover:bg-gray-50 transition-colors"
                   >
-                    <h3 className="text-xl font-bold text-gray-900 pr-4">
+                    <h3
+                      className="text-xl font-bold text-gray-900 pr-4"
+                      style={{ fontFamily: "Poppins, sans-serif" }}
+                    >
                       {item.question}
                     </h3>
                     <svg
@@ -1001,9 +1463,7 @@ export default function Home() {
                   alt="Alchemy Forge Logo"
                   className="h-6 w-6"
                 />
-                <h3 className="text-white font-bold text-lg">
-                  Alchemy Forge
-                </h3>
+                <h3 className="text-white font-bold text-lg">Alchemy Forge</h3>
               </div>
               <p className="text-sm">Reveal, Transmute, Forge results.</p>
             </div>
