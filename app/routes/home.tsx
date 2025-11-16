@@ -1,3 +1,4 @@
+import { useState } from "react";
 import type { Route } from "./+types/home";
 import directorsImage from "../assets/68ded4c98e130e416f7fb1c1_field team-p-500.jpg";
 import projectManagersImage from "../assets/download.jpg";
@@ -18,6 +19,71 @@ export function meta({}: Route.MetaArgs) {
 }
 
 export default function Home() {
+  const [openItems, setOpenItems] = useState<Set<number>>(new Set());
+
+  const toggleItem = (index: number) => {
+    setOpenItems((prev) => {
+      const newSet = new Set(prev);
+      if (newSet.has(index)) {
+        newSet.delete(index);
+      } else {
+        newSet.add(index);
+      }
+      return newSet;
+    });
+  };
+
+  const faqItems = [
+    {
+      question: "What is Alchemy Lens?",
+      answer: "Alchemy Lens is an AI-powered construction management platform that unifies project data, schedules, financials, and communications into a single source of truth. It uses artificial intelligence to provide predictive insights, automate routine tasks, and help construction teams finish projects on time and on budget.",
+    },
+    {
+      question: "How does the AI chat assistant work?",
+      answer: 'Our AI chat assistant uses natural language processing and semantic search to understand your questions about projects, tasks, schedules, and financials. Simply ask questions like "Show me all tasks due this week" or "What\'s the budget status of Project X?" and get instant, accurate answers. The AI uses vector embeddings to find relevant information even when you don\'t use exact keywords.',
+    },
+    {
+      question: "Can Alchemy Lens generate project schedules automatically?",
+      answer: "Yes! Alchemy Lens uses AI to automatically generate project schedules based on your project details, phases, and tasks. You can also adjust schedules through our chat interface by simply describing the changes you want to make. The system learns from your preferences and gets smarter over time.",
+    },
+    {
+      question: "What financial features does Alchemy Lens include?",
+      answer: "Alchemy Lens provides comprehensive financial management including budget creation with line items, expense tracking, invoice generation and payment tracking, estimates for sales, and financial dashboards that show real-time project profitability. All financial data is integrated with your project timeline and tasks.",
+    },
+    {
+      question: "Is there a mobile app?",
+      answer: 'Yes, Alchemy Lens includes a mobile app (iOS and Android) called "Digital Foreman" that allows field teams to capture photos with annotations, record voice notes, update task status, view schedules, and access project information on-site. All data syncs in real-time with the web platform.',
+    },
+    {
+      question: "How does the automation system work?",
+      answer: "Our automation engine allows you to create rules that trigger actions based on events. For example, you can set up a rule that automatically notifies the project manager when a task is completed, or creates a new task when an invoice is paid. Rules can trigger notifications (email, SMS, push), create tasks, update records, or execute custom workflows.",
+    },
+    {
+      question: "Can I try Alchemy Lens before purchasing?",
+      answer: "Yes, we offer a free trial period for all new users. You can sign up and explore all features without any credit card required. We also offer live demos where our team will walk you through the platform and show you how it can work specifically for your construction projects.",
+    },
+    {
+      question: "How secure is my project data?",
+      answer: "Security is our top priority. All data is encrypted in transit and at rest. We use industry-standard security practices including role-based access control, audit trails for all actions, and regular security audits. For enterprise customers, we offer on-premise deployment options for maximum data control.",
+    },
+    {
+      question: "Does Alchemy Lens integrate with other construction software?",
+      answer: "Alchemy Lens is designed to be a comprehensive platform that replaces the need for multiple tools. However, we do offer custom integrations for enterprise customers. Our API allows you to connect with accounting software, ERP systems, and other construction management tools as needed.",
+    },
+    {
+      question: "What kind of support do you provide?",
+      answer: "Support varies by plan. Individual plans include email support, Small Team plans get priority support, Large Team plans include 24/7 priority support, and Custom/Enterprise plans include a dedicated account manager. All plans include access to our knowledge base and video tutorials.",
+    },
+    {
+      question: "How long does it take to set up Alchemy Lens?",
+      answer: "Getting started is quick and easy. You can create your account and start adding projects within minutes. For teams migrating from other systems, we provide data import tools and migration assistance. Most teams are fully operational within a week, with full feature adoption typically taking 2-4 weeks.",
+    },
+    {
+      question: "Can I customize Alchemy Lens for my company's workflow?",
+      answer: "Yes! Alchemy Lens is highly customizable. You can create custom automation rules, configure notification preferences, set up custom report templates, and define company-specific workflows. Enterprise customers can also request custom AI training to better understand your specific terminology and processes.",
+    },
+  ];
+
   return (
     <div className="min-h-screen bg-white">
       {/* Navigation */}
@@ -37,22 +103,22 @@ export default function Home() {
               </a>
               <div className="hidden md:flex items-center gap-8">
                 <a
-                  href="#about"
-                  className="text-gray-700 hover:text-gray-900 font-medium"
-                >
-                  About
-                </a>
-                <a
                   href="#solutions"
                   className="text-gray-700 hover:text-gray-900 font-medium"
                 >
                   Solutions
                 </a>
                 <a
-                  href="#how-it-works"
+                  href="#pricing"
                   className="text-gray-700 hover:text-gray-900 font-medium"
                 >
-                  How it Works
+                  Pricing
+                </a>
+                <a
+                  href="#faq"
+                  className="text-gray-700 hover:text-gray-900 font-medium"
+                >
+                  FAQ
                 </a>
                 <a
                   href="#contact"
@@ -254,7 +320,7 @@ export default function Home() {
                   truth.
                 </p>
               </div>
-              <div className="overflow-hidden">
+              <div className="overflow-hidden rounded-2xl">
                 <img
                   src={step1Image}
                   alt="Reveal - Unified data visualization"
@@ -265,7 +331,7 @@ export default function Home() {
 
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div className="order-2 md:order-1">
-                <div className="overflow-hidden">
+                <div className="overflow-hidden rounded-2xl">
                   <img
                     src={step2Image}
                     alt="Transmute - AI-powered insights"
@@ -302,7 +368,7 @@ export default function Home() {
                   audit-ready trail of every decision to forge plans that last.
                 </p>
               </div>
-              <div className="overflow-hidden">
+              <div className="overflow-hidden rounded-2xl">
                 <img
                   src={step3Image}
                   alt="Forge - Actionable decisions"
@@ -310,6 +376,236 @@ export default function Home() {
                 />
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Product Demo Section */}
+      <section id="demo" className="py-20 px-6 lg:px-8 bg-gradient-to-br from-slate-50 via-blue-50 to-purple-50">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-4">
+              See Alchemy Lens in Action
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Watch how Alchemy Lens transforms construction project management with AI-powered insights and unified data visualization.
+            </p>
+          </div>
+          
+          <div className="max-w-5xl mx-auto">
+            <div className="relative aspect-video rounded-2xl overflow-hidden">
+              <iframe
+                className="absolute inset-0 w-full h-full"
+                src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                title="Alchemy Lens Product Demo"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              ></iframe>
+            </div>
+            <div className="mt-8 text-center">
+              <a
+                href="#contact"
+                className="inline-block px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-xl font-semibold text-lg ai-glow-hover transition-all"
+              >
+                Request a Live Demo
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Feature Comparison Section */}
+      <section id="features" className="py-20 px-6 lg:px-8 bg-white">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-4">
+              Everything You Need to Succeed
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Compare Alchemy Lens with traditional construction management tools
+            </p>
+          </div>
+
+          <div className="overflow-x-auto">
+            <table className="w-full border-collapse">
+              <thead>
+                <tr className="bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+                  <th className="px-6 py-4 text-left font-semibold text-lg">Feature</th>
+                  <th className="px-6 py-4 text-center font-semibold text-lg">Alchemy Lens</th>
+                  <th className="px-6 py-4 text-center font-semibold text-lg">Traditional Tools</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-gray-200">
+                <tr className="hover:bg-gray-50">
+                  <td className="px-6 py-4 font-medium text-gray-900">AI-Powered Chat Assistant</td>
+                  <td className="px-6 py-4 text-center">
+                    <svg className="w-6 h-6 text-green-500 mx-auto" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                  </td>
+                  <td className="px-6 py-4 text-center">
+                    <svg className="w-6 h-6 text-red-500 mx-auto" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clipRule="evenodd" />
+                    </svg>
+                  </td>
+                </tr>
+                <tr className="hover:bg-gray-50 bg-gray-50">
+                  <td className="px-6 py-4 font-medium text-gray-900">AI Schedule Generation</td>
+                  <td className="px-6 py-4 text-center">
+                    <svg className="w-6 h-6 text-green-500 mx-auto" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                  </td>
+                  <td className="px-6 py-4 text-center">
+                    <svg className="w-6 h-6 text-red-500 mx-auto" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clipRule="evenodd" />
+                    </svg>
+                  </td>
+                </tr>
+                <tr className="hover:bg-gray-50">
+                  <td className="px-6 py-4 font-medium text-gray-900">Semantic Search (Vector Search)</td>
+                  <td className="px-6 py-4 text-center">
+                    <svg className="w-6 h-6 text-green-500 mx-auto" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                  </td>
+                  <td className="px-6 py-4 text-center">
+                    <svg className="w-6 h-6 text-red-500 mx-auto" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clipRule="evenodd" />
+                    </svg>
+                  </td>
+                </tr>
+                <tr className="hover:bg-gray-50 bg-gray-50">
+                  <td className="px-6 py-4 font-medium text-gray-900">Unified Project Dashboard</td>
+                  <td className="px-6 py-4 text-center">
+                    <svg className="w-6 h-6 text-green-500 mx-auto" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                  </td>
+                  <td className="px-6 py-4 text-center">
+                    <span className="text-gray-500">Limited</span>
+                  </td>
+                </tr>
+                <tr className="hover:bg-gray-50">
+                  <td className="px-6 py-4 font-medium text-gray-900">Automation Rules Engine</td>
+                  <td className="px-6 py-4 text-center">
+                    <svg className="w-6 h-6 text-green-500 mx-auto" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                  </td>
+                  <td className="px-6 py-4 text-center">
+                    <svg className="w-6 h-6 text-red-500 mx-auto" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clipRule="evenodd" />
+                    </svg>
+                  </td>
+                </tr>
+                <tr className="hover:bg-gray-50 bg-gray-50">
+                  <td className="px-6 py-4 font-medium text-gray-900">Financial Management (Budgets, Invoices, Expenses)</td>
+                  <td className="px-6 py-4 text-center">
+                    <svg className="w-6 h-6 text-green-500 mx-auto" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                  </td>
+                  <td className="px-6 py-4 text-center">
+                    <span className="text-gray-500">Separate Tools</span>
+                  </td>
+                </tr>
+                <tr className="hover:bg-gray-50">
+                  <td className="px-6 py-4 font-medium text-gray-900">Photo Management with Annotations</td>
+                  <td className="px-6 py-4 text-center">
+                    <svg className="w-6 h-6 text-green-500 mx-auto" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                  </td>
+                  <td className="px-6 py-4 text-center">
+                    <span className="text-gray-500">Basic Only</span>
+                  </td>
+                </tr>
+                <tr className="hover:bg-gray-50 bg-gray-50">
+                  <td className="px-6 py-4 font-medium text-gray-900">Gantt Chart Scheduling</td>
+                  <td className="px-6 py-4 text-center">
+                    <svg className="w-6 h-6 text-green-500 mx-auto" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                  </td>
+                  <td className="px-6 py-4 text-center">
+                    <svg className="w-6 h-6 text-green-500 mx-auto" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                  </td>
+                </tr>
+                <tr className="hover:bg-gray-50">
+                  <td className="px-6 py-4 font-medium text-gray-900">Mobile App (iOS & Android)</td>
+                  <td className="px-6 py-4 text-center">
+                    <svg className="w-6 h-6 text-green-500 mx-auto" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                  </td>
+                  <td className="px-6 py-4 text-center">
+                    <span className="text-gray-500">Varies</span>
+                  </td>
+                </tr>
+                <tr className="hover:bg-gray-50 bg-gray-50">
+                  <td className="px-6 py-4 font-medium text-gray-900">Automated Report Generation</td>
+                  <td className="px-6 py-4 text-center">
+                    <svg className="w-6 h-6 text-green-500 mx-auto" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                  </td>
+                  <td className="px-6 py-4 text-center">
+                    <span className="text-gray-500">Manual</span>
+                  </td>
+                </tr>
+                <tr className="hover:bg-gray-50">
+                  <td className="px-6 py-4 font-medium text-gray-900">Task Management with Comments & Attachments</td>
+                  <td className="px-6 py-4 text-center">
+                    <svg className="w-6 h-6 text-green-500 mx-auto" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                  </td>
+                  <td className="px-6 py-4 text-center">
+                    <svg className="w-6 h-6 text-green-500 mx-auto" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                  </td>
+                </tr>
+                <tr className="hover:bg-gray-50 bg-gray-50">
+                  <td className="px-6 py-4 font-medium text-gray-900">Document Management</td>
+                  <td className="px-6 py-4 text-center">
+                    <svg className="w-6 h-6 text-green-500 mx-auto" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                  </td>
+                  <td className="px-6 py-4 text-center">
+                    <svg className="w-6 h-6 text-green-500 mx-auto" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                  </td>
+                </tr>
+                <tr className="hover:bg-gray-50">
+                  <td className="px-6 py-4 font-medium text-gray-900">Contact Management</td>
+                  <td className="px-6 py-4 text-center">
+                    <svg className="w-6 h-6 text-green-500 mx-auto" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                  </td>
+                  <td className="px-6 py-4 text-center">
+                    <span className="text-gray-500">Basic</span>
+                  </td>
+                </tr>
+                <tr className="hover:bg-gray-50 bg-gray-50">
+                  <td className="px-6 py-4 font-medium text-gray-900">Real-time Notifications</td>
+                  <td className="px-6 py-4 text-center">
+                    <svg className="w-6 h-6 text-green-500 mx-auto" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                  </td>
+                  <td className="px-6 py-4 text-center">
+                    <span className="text-gray-500">Limited</span>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </div>
       </section>
@@ -537,6 +833,67 @@ export default function Home() {
         </div>
       </section>
 
+      {/* FAQ Section */}
+      <section id="faq" className="py-16 px-6 lg:px-8 bg-gray-50">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-10">
+            <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-4">
+              Frequently Asked Questions
+            </h2>
+            <p className="text-xl text-gray-600">
+              Everything you need to know about Alchemy Lens
+            </p>
+          </div>
+
+          <div className="space-y-3">
+            {faqItems.map((item, index) => {
+              const isOpen = openItems.has(index);
+              return (
+                <div
+                  key={index}
+                  className="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden transition-all"
+                >
+                  <button
+                    onClick={() => toggleItem(index)}
+                    className="w-full px-5 py-4 flex items-center justify-between text-left hover:bg-gray-50 transition-colors"
+                  >
+                    <h3 className="text-xl font-bold text-gray-900 pr-4">
+                      {item.question}
+                    </h3>
+                    <svg
+                      className={`w-5 h-5 text-gray-500 flex-shrink-0 transition-transform duration-200 ${
+                        isOpen ? "rotate-180" : ""
+                      }`}
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M19 9l-7 7-7-7"
+                      />
+                    </svg>
+                  </button>
+                  <div
+                    className={`overflow-hidden transition-all duration-300 ease-in-out ${
+                      isOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+                    }`}
+                  >
+                    <div className="px-5 pt-4 pb-4">
+                      <p className="text-gray-600 leading-relaxed text-sm">
+                        {item.answer}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
       {/* Contact Section */}
       <section
         id="contact"
@@ -648,6 +1005,21 @@ export default function Home() {
                 <li>
                   <a href="#how-it-works" className="hover:text-white">
                     How it Works
+                  </a>
+                </li>
+                <li>
+                  <a href="#demo" className="hover:text-white">
+                    Product Demo
+                  </a>
+                </li>
+                <li>
+                  <a href="#pricing" className="hover:text-white">
+                    Pricing
+                  </a>
+                </li>
+                <li>
+                  <a href="#faq" className="hover:text-white">
+                    FAQ
                   </a>
                 </li>
                 <li>
