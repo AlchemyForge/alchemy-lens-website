@@ -27,8 +27,8 @@ export default function About() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center gap-8">
-              <a
-                href="/"
+              <Link
+                to="/"
                 className="flex items-center gap-2 text-3xl font-bold text-slate-600"
                 style={{
                   fontFamily: "var(--font-heading)",
@@ -41,32 +41,32 @@ export default function About() {
                   className="h-12 w-12"
                 />
                 Alchemy Forge
-              </a>
+              </Link>
               <div className="hidden md:flex items-center gap-8">
-                <a
-                  href="/#solutions"
+                <Link
+                  to="/#solutions"
                   className="text-gray-700 hover:text-gray-900 font-medium"
                 >
                   Solutions
-                </a>
-                <a
-                  href="/#pricing"
+                </Link>
+                <Link
+                  to="/#pricing"
                   className="text-gray-700 hover:text-gray-900 font-medium"
                 >
                   Pricing
-                </a>
-                <a
-                  href="/#faq"
+                </Link>
+                <Link
+                  to="/#faq"
                   className="text-gray-700 hover:text-gray-900 font-medium"
                 >
                   FAQ
-                </a>
-                <a
-                  href="/#contact"
+                </Link>
+                <Link
+                  to="/#contact"
                   className="text-gray-700 hover:text-gray-900 font-medium"
                 >
                   Contact
-                </a>
+                </Link>
                 <Link
                   to="/about"
                   className="text-gray-900 font-semibold"
@@ -571,34 +571,34 @@ export default function About() {
               <h4 className="text-white font-semibold mb-4">Product</h4>
               <ul className="space-y-2 text-sm">
                 <li>
-                  <a href="/#solutions" className="hover:text-white">
+                  <Link to="/#solutions" className="hover:text-white">
                     Solutions
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="/#how-it-works" className="hover:text-white">
+                  <Link to="/#how-it-works" className="hover:text-white">
                     How it Works
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="/#demo" className="hover:text-white">
+                  <Link to="/#demo" className="hover:text-white">
                     Product Demo
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="/#pricing" className="hover:text-white">
+                  <Link to="/#pricing" className="hover:text-white">
                     Pricing
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="/#faq" className="hover:text-white">
+                  <Link to="/#faq" className="hover:text-white">
                     FAQ
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="/#contact" className="hover:text-white">
+                  <Link to="/#contact" className="hover:text-white">
                     Request Demo
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -611,9 +611,9 @@ export default function About() {
                   </Link>
                 </li>
                 <li>
-                  <a href="/#contact" className="hover:text-white">
+                  <Link to="/#contact" className="hover:text-white">
                     Contact
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
