@@ -105,8 +105,8 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center gap-8">
-              <a
-                href="/"
+              <Link
+                to="/"
                 className="flex items-center gap-2 text-3xl font-bold text-slate-600"
                 style={{
                   fontFamily: "var(--font-heading)",
@@ -119,7 +119,7 @@ export default function Home() {
                   className="h-12 w-12"
                 />
                 Alchemy Forge
-              </a>
+              </Link>
               <div className="hidden md:flex items-center gap-8">
                 <a
                   href="#solutions"
