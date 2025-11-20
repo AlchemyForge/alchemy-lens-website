@@ -145,7 +145,7 @@ export default function Home() {
                   Contact
                 </a>
                 <a
-                  href="/about"
+                  href="/alchemy-lens-website/about"
                   className="text-gray-700 hover:text-gray-900 font-medium"
                 >
                   About
@@ -1512,7 +1512,7 @@ export default function Home() {
               <h4 className="text-white font-semibold mb-4">Company</h4>
               <ul className="space-y-2 text-sm">
                 <li>
-                  <a href="/about" className="hover:text-white">
+                  <a href="/alchemy-lens-website/about" className="hover:text-white">
                     About
                   </a>
                 </li>
