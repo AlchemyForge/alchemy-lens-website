@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router";
 import type { Route } from "./+types/home";
 import directorsImage from "../assets/68ded4c98e130e416f7fb1c1_field team-p-500.jpg";
 import projectManagersImage from "../assets/image-8155ba5f-d0fa-44a0-b6de-f8f987dd09dc.png";
@@ -144,12 +145,12 @@ export default function Home() {
                 >
                   Contact
                 </a>
-                <a
-                  href="/alchemy-lens-website/about"
+                <Link
+                  to="/about"
                   className="text-gray-700 hover:text-gray-900 font-medium"
                 >
                   About
-                </a>
+                </Link>
               </div>
             </div>
             <div className="flex items-center">
@@ -1512,9 +1513,9 @@ export default function Home() {
               <h4 className="text-white font-semibold mb-4">Company</h4>
               <ul className="space-y-2 text-sm">
                 <li>
-                  <a href="/alchemy-lens-website/about" className="hover:text-white">
+                  <Link to="/about" className="hover:text-white">
                     About
-                  </a>
+                  </Link>
                 </li>
                 <li>
                   <a href="#contact" className="hover:text-white">

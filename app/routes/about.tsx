@@ -1,3 +1,4 @@
+import { Link } from "react-router";
 import type { Route } from "./+types/about";
 import logoImage from "../assets/logo.png";
 import joshImage from "../assets/josh.jpg";
@@ -66,12 +67,12 @@ export default function About() {
                 >
                   Contact
                 </a>
-                <a
-                  href="/alchemy-lens-website/about"
+                <Link
+                  to="/about"
                   className="text-gray-900 font-semibold"
                 >
                   About
-                </a>
+                </Link>
               </div>
             </div>
             <div className="flex items-center">
@@ -605,9 +606,9 @@ export default function About() {
               <h4 className="text-white font-semibold mb-4">Company</h4>
               <ul className="space-y-2 text-sm">
                 <li>
-                  <a href="/alchemy-lens-website/about" className="hover:text-white">
+                  <Link to="/about" className="hover:text-white">
                     About
-                  </a>
+                  </Link>
                 </li>
                 <li>
                   <a href="/#contact" className="hover:text-white">
