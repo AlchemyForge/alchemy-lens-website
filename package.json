@@ -2,7 +2,7 @@
   "name": "website",
   "private": true,
   "type": "module",
-  "homepage": "https://alchemyforge.github.io/alchemy-lens-website",
+  "homepage": "https://alchemyforge.github.io",
   "scripts": {
     "build": "react-router build",
     "dev": "react-router dev",
