@@ -330,7 +330,7 @@ export default function Home() {
       </section>
 
       {/* Product Demo Section */}
-      <section
+      {/* <section
         id="demo"
         className="py-20 px-6 lg:px-8 bg-gradient-to-br from-slate-50 via-blue-50 to-purple-50"
       >
@@ -365,7 +365,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Feature Comparison Section */}
       <section id="features" className="py-20 px-6 lg:px-8 bg-white">
@@ -767,7 +767,7 @@ export default function Home() {
       </section>
 
       {/* Pricing Section */}
-      <section id="pricing" className="py-20 px-6 lg:px-8 bg-gray-50">
+      {/* <section id="pricing" className="py-20 px-6 lg:px-8 bg-gray-50">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-4">
@@ -784,7 +784,7 @@ export default function Home() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       <FAQAccordion items={faqItems} />
 
