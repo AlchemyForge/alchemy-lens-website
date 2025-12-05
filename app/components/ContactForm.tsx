@@ -1,3 +1,5 @@
+import { AnimatedSection } from "./AnimatedSection";
+
 interface ContactFormProps {
   title?: string;
   subtitle?: string;
@@ -8,7 +10,7 @@ export function ContactForm({
   subtitle = "Get in touch to see how Alchemy Lens can transform your construction projects.",
 }: ContactFormProps) {
   return (
-    <section
+    <AnimatedSection
       id="contact"
       className="py-20 px-6 lg:px-8 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white"
     >
@@ -33,7 +35,7 @@ export function ContactForm({
                 type="text"
                 id="fullName"
                 name="fullName"
-                className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all duration-200"
                 placeholder="Enter your full name"
               />
             </div>
@@ -48,7 +50,7 @@ export function ContactForm({
                 type="email"
                 id="email"
                 name="email"
-                className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all duration-200"
                 placeholder="your.email@company.com"
               />
             </div>
@@ -63,7 +65,7 @@ export function ContactForm({
                 type="tel"
                 id="phone"
                 name="phone"
-                className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all duration-200"
                 placeholder="+64 21 123 4567"
               />
             </div>
@@ -78,7 +80,7 @@ export function ContactForm({
                 id="message"
                 name="message"
                 rows={4}
-                className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none"
+                className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none transition-all duration-200"
                 placeholder="Tell us about your construction project needs..."
               ></textarea>
             </div>
@@ -92,7 +94,7 @@ export function ContactForm({
           </div>
         </form>
       </div>
-    </section>
+    </AnimatedSection>
   );
 }
 

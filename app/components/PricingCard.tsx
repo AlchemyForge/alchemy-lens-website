@@ -17,7 +17,7 @@ export function PricingCard({ tier }: PricingCardProps) {
           : "bg-white border-2"
       } ${
         isPopular ? "border-blue-500" : "border-gray-200"
-      } rounded-2xl p-8 hover:border-blue-500 transition-all relative flex flex-col`}
+      } rounded-2xl p-8 hover:border-blue-500 transition-all relative flex flex-col hover-lift`}
     >
       {isPopular && (
         <div className="absolute top-0 right-0 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-1 rounded-bl-lg rounded-tr-2xl text-sm font-semibold">

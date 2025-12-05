@@ -4,6 +4,7 @@ import { Footer } from "../components/Footer";
 import { ContactForm } from "../components/ContactForm";
 import { FAQAccordion } from "../components/FAQAccordion";
 import { PricingCard } from "../components/PricingCard";
+import { AnimatedSection } from "../components/AnimatedSection";
 import { faqItems } from "../data/faq";
 import { pricingTiers } from "../data/pricing";
 import directorsImage from "../assets/68ded4c98e130e416f7fb1c1_field team-p-500.jpg";
@@ -34,7 +35,7 @@ export default function Home() {
         <div className="absolute inset-0 bg-gradient-to-br from-slate-50 via-blue-50 to-purple-50 tech-grid"></div>
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600/5 via-purple-600/5 to-cyan-600/5"></div>
         <div className="max-w-7xl mx-auto relative z-10">
-          <div className="text-center max-w-4xl mx-auto">
+          <div className="text-center max-w-4xl mx-auto animate-fade-in-up">
             <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold mb-6 text-gray-900 leading-tight">
               Reveal, Transmute, Forge results.
             </h1>
@@ -59,7 +60,7 @@ export default function Home() {
       </section>
 
       {/* Problem Section */}
-      <section id="about" className="py-20 px-6 lg:px-8 bg-white">
+      <AnimatedSection id="about" className="py-20 px-6 lg:px-8 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-4">
@@ -72,7 +73,7 @@ export default function Home() {
           </div>
 
           <div className="grid md:grid-cols-3 gap-8 mb-12">
-            <div className="bg-gradient-to-br from-red-50 to-orange-50 p-8 rounded-2xl border border-red-100">
+            <div className="bg-gradient-to-br from-red-50 to-orange-50 p-8 rounded-2xl border border-red-100 hover-lift stagger-1">
               <div className="text-5xl font-bold text-red-600 mb-2">95%</div>
               <p className="text-gray-700 leading-relaxed">
                 Construction data goes unused, which leaves teams reacting
@@ -82,7 +83,7 @@ export default function Home() {
                 </span>
               </p>
             </div>
-            <div className="bg-gradient-to-br from-orange-50 to-yellow-50 p-8 rounded-2xl border border-orange-100">
+            <div className="bg-gradient-to-br from-orange-50 to-yellow-50 p-8 rounded-2xl border border-orange-100 hover-lift stagger-2">
               <div className="text-5xl font-bold text-orange-600 mb-2">
                 $1.85 Trillion
               </div>
@@ -94,7 +95,7 @@ export default function Home() {
                 </span>
               </p>
             </div>
-            <div className="bg-gradient-to-br from-yellow-50 to-amber-50 p-8 rounded-2xl border border-yellow-100">
+            <div className="bg-gradient-to-br from-yellow-50 to-amber-50 p-8 rounded-2xl border border-yellow-100 hover-lift stagger-3">
               <div className="text-5xl font-bold text-amber-600 mb-2">30%</div>
               <p className="text-gray-700 leading-relaxed">
                 Projects finish on time and on budget. Fewer than one third meet
@@ -113,10 +114,10 @@ export default function Home() {
             </p>
           </div>
         </div>
-      </section>
+      </AnimatedSection>
 
       {/* Built for Your Team Section */}
-      <section id="solutions" className="py-20 px-6 lg:px-8 bg-gray-900">
+      <AnimatedSection id="solutions" className="py-20 px-6 lg:px-8 bg-gray-900">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-4">
@@ -129,7 +130,7 @@ export default function Home() {
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-gray-800 rounded-2xl border border-gray-700 overflow-hidden">
+            <div className="bg-gray-800 rounded-2xl border border-gray-700 overflow-hidden hover-lift stagger-1">
               <div className="relative overflow-hidden">
                 <img
                   src={directorsImage}
@@ -166,7 +167,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="bg-gray-800 rounded-2xl border border-gray-700 overflow-hidden">
+            <div className="bg-gray-800 rounded-2xl border border-gray-700 overflow-hidden hover-lift stagger-2">
               <div className="relative overflow-hidden">
                 <img
                   src={projectManagersImage}
@@ -203,7 +204,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="bg-gray-800 rounded-2xl border border-gray-700 overflow-hidden">
+            <div className="bg-gray-800 rounded-2xl border border-gray-700 overflow-hidden hover-lift stagger-3">
               <div className="relative overflow-hidden">
                 <img
                   src={fieldTeamsImage}
@@ -243,10 +244,10 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>
+      </AnimatedSection>
 
       {/* How it Works Section */}
-      <section id="how-it-works" className="py-20 px-6 lg:px-8 bg-white">
+      <AnimatedSection id="how-it-works" className="py-20 px-6 lg:px-8 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-4">
@@ -255,9 +256,9 @@ export default function Home() {
           </div>
 
           <div className="space-y-16">
-            <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div className="grid md:grid-cols-2 gap-12 items-center stagger-1">
               <div>
-                <div className="inline-block px-4 py-2 bg-gradient-to-r from-blue-100 to-purple-100 text-blue-700 rounded-full font-semibold mb-4 border border-blue-200/50">
+                <div className="inline-block px-4 py-2 bg-gradient-to-r from-blue-100 to-purple-100 text-blue-700 rounded-full font-semibold mb-4 border border-blue-200/50 transition-transform duration-200 hover:scale-105">
                   Step 1
                 </div>
                 <h3 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -278,7 +279,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div className="grid md:grid-cols-2 gap-12 items-center stagger-2">
               <div className="order-2 md:order-1">
                 <div className="overflow-hidden rounded-2xl">
                   <img
@@ -289,7 +290,7 @@ export default function Home() {
                 </div>
               </div>
               <div className="order-1 md:order-2">
-                <div className="inline-block px-4 py-2 bg-gradient-to-r from-purple-100 to-cyan-100 text-purple-700 rounded-full font-semibold mb-4 border border-purple-200/50">
+                <div className="inline-block px-4 py-2 bg-gradient-to-r from-purple-100 to-cyan-100 text-purple-700 rounded-full font-semibold mb-4 border border-purple-200/50 transition-transform duration-200 hover:scale-105">
                   Step 2
                 </div>
                 <h3 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -304,9 +305,9 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div className="grid md:grid-cols-2 gap-12 items-center stagger-3">
               <div>
-                <div className="inline-block px-4 py-2 bg-gradient-to-r from-cyan-100 to-blue-100 text-cyan-700 rounded-full font-semibold mb-4 border border-cyan-200/50">
+                <div className="inline-block px-4 py-2 bg-gradient-to-r from-cyan-100 to-blue-100 text-cyan-700 rounded-full font-semibold mb-4 border border-cyan-200/50 transition-transform duration-200 hover:scale-105">
                   Step 3
                 </div>
                 <h3 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -327,7 +328,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>
+      </AnimatedSection>
 
       {/* Product Demo Section */}
       {/* <section
@@ -368,7 +369,7 @@ export default function Home() {
       </section> */}
 
       {/* Feature Comparison Section */}
-      <section id="features" className="py-20 px-6 lg:px-8 bg-white">
+      <AnimatedSection id="features" className="py-20 px-6 lg:px-8 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-4">
@@ -396,7 +397,7 @@ export default function Home() {
                 </tr>
               </thead>
               <tbody className="divide-y divide-gray-200">
-                <tr className="hover:bg-gray-50">
+                <tr className="hover:bg-gray-50 transition-colors duration-200">
                   <td className="px-6 py-4 font-medium text-gray-900">
                     AI-Powered Chat Assistant
                   </td>
@@ -427,7 +428,7 @@ export default function Home() {
                     </svg>
                   </td>
                 </tr>
-                <tr className="hover:bg-gray-50 bg-gray-50">
+                <tr className="hover:bg-gray-50 bg-gray-50 transition-colors duration-200">
                   <td className="px-6 py-4 font-medium text-gray-900">
                     AI Schedule Generation
                   </td>
@@ -489,7 +490,7 @@ export default function Home() {
                     </svg>
                   </td>
                 </tr>
-                <tr className="hover:bg-gray-50 bg-gray-50">
+                <tr className="hover:bg-gray-50 bg-gray-50 transition-colors duration-200">
                   <td className="px-6 py-4 font-medium text-gray-900">
                     Unified Project Dashboard
                   </td>
@@ -541,7 +542,7 @@ export default function Home() {
                     </svg>
                   </td>
                 </tr>
-                <tr className="hover:bg-gray-50 bg-gray-50">
+                <tr className="hover:bg-gray-50 bg-gray-50 transition-colors duration-200">
                   <td className="px-6 py-4 font-medium text-gray-900">
                     Financial Management (Budgets, Invoices, Expenses)
                   </td>
@@ -583,7 +584,7 @@ export default function Home() {
                     <span className="text-gray-500">Basic Only</span>
                   </td>
                 </tr>
-                <tr className="hover:bg-gray-50 bg-gray-50">
+                <tr className="hover:bg-gray-50 bg-gray-50 transition-colors duration-200">
                   <td className="px-6 py-4 font-medium text-gray-900">
                     Gantt Chart Scheduling
                   </td>
@@ -635,7 +636,7 @@ export default function Home() {
                     <span className="text-gray-500">Varies</span>
                   </td>
                 </tr>
-                <tr className="hover:bg-gray-50 bg-gray-50">
+                <tr className="hover:bg-gray-50 bg-gray-50 transition-colors duration-200">
                   <td className="px-6 py-4 font-medium text-gray-900">
                     Automated Report Generation
                   </td>
@@ -687,7 +688,7 @@ export default function Home() {
                     </svg>
                   </td>
                 </tr>
-                <tr className="hover:bg-gray-50 bg-gray-50">
+                <tr className="hover:bg-gray-50 bg-gray-50 transition-colors duration-200">
                   <td className="px-6 py-4 font-medium text-gray-900">
                     Document Management
                   </td>
@@ -739,7 +740,7 @@ export default function Home() {
                     <span className="text-gray-500">Basic</span>
                   </td>
                 </tr>
-                <tr className="hover:bg-gray-50 bg-gray-50">
+                <tr className="hover:bg-gray-50 bg-gray-50 transition-colors duration-200">
                   <td className="px-6 py-4 font-medium text-gray-900">
                     Real-time Notifications
                   </td>
@@ -764,7 +765,7 @@ export default function Home() {
             </table>
           </div>
         </div>
-      </section>
+      </AnimatedSection>
 
       {/* Pricing Section */}
       {/* <section id="pricing" className="py-20 px-6 lg:px-8 bg-gray-50">

@@ -31,11 +31,14 @@ export function FAQAccordion({
             return (
               <div
                 key={index}
-                className="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden transition-all"
+                className="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden transition-all hover:shadow-md hover:border-gray-300"
+                style={{
+                  animationDelay: `${index * 0.05}s`,
+                }}
               >
                 <button
                   onClick={() => toggleItem(index)}
-                  className="w-full px-5 py-4 flex items-center justify-between text-left hover:bg-gray-50 transition-colors"
+                  className="w-full px-5 py-4 flex items-center justify-between text-left hover:bg-gray-50 transition-all duration-200"
                   aria-expanded={open}
                   aria-controls={`faq-answer-${index}`}
                 >
@@ -46,7 +49,7 @@ export function FAQAccordion({
                     {item.question}
                   </h3>
                   <ChevronDownIcon
-                    className={`w-5 h-5 text-gray-500 flex-shrink-0 transition-transform duration-200 ${
+                    className={`w-5 h-5 text-gray-500 flex-shrink-0 transition-transform duration-300 ease-in-out ${
                       open ? "rotate-180" : ""
                     }`}
                   />
