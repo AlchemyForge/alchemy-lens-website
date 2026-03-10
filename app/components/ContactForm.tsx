@@ -35,7 +35,7 @@ export function ContactForm({
                 type="text"
                 id="fullName"
                 name="fullName"
-                className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all duration-200"
+                className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-orange-500 transition-all duration-200"
                 placeholder="Enter your full name"
               />
             </div>
@@ -50,7 +50,7 @@ export function ContactForm({
                 type="email"
                 id="email"
                 name="email"
-                className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all duration-200"
+                className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-orange-500 transition-all duration-200"
                 placeholder="your.email@company.com"
               />
             </div>
@@ -65,7 +65,7 @@ export function ContactForm({
                 type="tel"
                 id="phone"
                 name="phone"
-                className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all duration-200"
+                className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-orange-500 transition-all duration-200"
                 placeholder="+64 21 123 4567"
               />
             </div>
@@ -80,16 +80,16 @@ export function ContactForm({
                 id="message"
                 name="message"
                 rows={4}
-                className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none transition-all duration-200"
+                className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-orange-500 resize-none transition-all duration-200"
                 placeholder="Tell us about your construction project needs..."
               ></textarea>
             </div>
             <button
               type="submit"
-              className="w-full px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-xl font-semibold text-lg ai-glow-hover transition-all relative overflow-hidden group"
+              className="w-full px-8 py-4 bg-orange-600 hover:bg-orange-700 text-white rounded-xl font-semibold text-lg ai-glow-hover transition-all relative overflow-hidden group"
             >
               <span className="relative z-10">Send Message</span>
-              <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-cyan-600 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+              <div className="absolute inset-0 bg-orange-700 opacity-0 group-hover:opacity-100 transition-opacity"></div>
             </button>
           </div>
         </form>

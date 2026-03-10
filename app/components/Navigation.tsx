@@ -66,7 +66,7 @@ export function Navigation({ currentPath = "/" }: NavigationProps) {
           <div className="flex items-center">
             <a
               href="/login"
-              className="px-6 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg font-semibold ai-glow-hover transition-all duration-200"
+              className="px-6 py-2 bg-orange-600 hover:bg-orange-700 text-white rounded-lg font-semibold transition-all duration-200"
             >
               Login
             </a>

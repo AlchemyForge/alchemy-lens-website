@@ -1,9 +1,16 @@
 @import "tailwindcss";
 
 @theme {
-  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif,
+  --font-sans: 'Poppins', ui-sans-serif, system-ui, sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --font-heading: "Bebas Neue", ui-sans-serif, system-ui, sans-serif;
+  --font-heading: 'Poppins', ui-sans-serif, system-ui, sans-serif;
+
+  /* ── Brand palette ──────────────────────────────────────── */
+  --color-brand-orange: oklch(0.668 0.213 38);
+  --color-brand-slate:  oklch(0.394 0.044 243);
+  --color-brand-teal:   oklch(0.556 0.077 189);
+  --color-brand-black:  oklch(0.145 0 0);
+  --color-brand-beige:  oklch(0.98 0.005 240);
 }
 
 html {
@@ -25,10 +32,10 @@ a, button {
   transition: all 0.2s ease-in-out;
 }
 
-/* Construction-style headings */
+/* Brand headings – Poppins, no wide tracking */
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-heading);
-  letter-spacing: 0.05em;
+  letter-spacing: -0.01em;
 }
 
 /* AI-themed effects */
@@ -66,20 +73,20 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .ai-glow {
-  box-shadow: 0 0 20px rgba(59, 130, 246, 0.4), 0 0 40px rgba(147, 51, 234, 0.2);
+  box-shadow: 0 0 20px oklch(0.668 0.213 38 / 0.35), 0 0 40px oklch(0.556 0.077 189 / 0.15);
 }
 
 .ai-glow-hover:hover {
-  box-shadow: 0 0 30px rgba(59, 130, 246, 0.6), 0 0 60px rgba(147, 51, 234, 0.3);
+  box-shadow: 0 0 30px oklch(0.668 0.213 38 / 0.5), 0 0 60px oklch(0.556 0.077 189 / 0.2);
   transform: translateY(-2px);
   transition: all 0.3s ease;
 }
 
-/* Tech grid pattern background */
+/* Subtle grid pattern background */
 .tech-grid {
   background-image: 
-    linear-gradient(rgba(59, 130, 246, 0.1) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(59, 130, 246, 0.1) 1px, transparent 1px);
+    linear-gradient(oklch(0.394 0.044 243 / 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, oklch(0.394 0.044 243 / 0.06) 1px, transparent 1px);
   background-size: 50px 50px;
 }
 

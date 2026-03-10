@@ -32,8 +32,8 @@ export default function Home() {
 
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 px-6 lg:px-8 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-slate-50 via-blue-50 to-purple-50 tech-grid"></div>
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/5 via-purple-600/5 to-cyan-600/5"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-stone-50 via-orange-50/40 to-teal-50/30 tech-grid"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-orange-600/5 via-transparent to-teal-600/5"></div>
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="text-center max-w-4xl mx-auto animate-fade-in-up">
             <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold mb-6 text-gray-900 leading-tight">
@@ -47,12 +47,12 @@ export default function Home() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="#contact"
-                className="px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-xl font-semibold text-lg ai-glow-hover transition-all relative overflow-hidden group"
+                className="px-8 py-4 bg-orange-600 hover:bg-orange-700 text-white rounded-xl font-semibold text-lg ai-glow-hover transition-all relative overflow-hidden group"
               >
                 <span className="relative z-10">
                   See Alchemy Lens in Action
                 </span>
-                <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-cyan-600 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                <div className="absolute inset-0 bg-orange-700 opacity-0 group-hover:opacity-100 transition-opacity"></div>
               </a>
             </div>
           </div>
@@ -151,15 +151,15 @@ export default function Home() {
                 <div className="border-t border-gray-700 pt-4">
                   <ul className="text-sm text-gray-400 space-y-2.5">
                     <li className="flex items-start gap-2">
-                      <span className="text-blue-500 mt-1">✓</span>
+                      <span className="text-orange-500 mt-1">✓</span>
                       <span>Revenue, expenses, and profit tracking</span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <span className="text-blue-500 mt-1">✓</span>
+                      <span className="text-orange-500 mt-1">✓</span>
                       <span>Portfolio-wide risk visibility</span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <span className="text-blue-500 mt-1">✓</span>
+                      <span className="text-orange-500 mt-1">✓</span>
                       <span>Financial trend analysis</span>
                     </li>
                   </ul>
@@ -188,15 +188,15 @@ export default function Home() {
                 <div className="border-t border-gray-700 pt-4">
                   <ul className="text-sm text-gray-400 space-y-2.5">
                     <li className="flex items-start gap-2">
-                      <span className="text-purple-500 mt-1">✓</span>
+                      <span className="text-slate-500 mt-1">✓</span>
                       <span>AI chat assistant for instant answers</span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <span className="text-purple-500 mt-1">✓</span>
+                      <span className="text-slate-500 mt-1">✓</span>
                       <span>Multi-project Gantt chart scheduling</span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <span className="text-purple-500 mt-1">✓</span>
+                      <span className="text-slate-500 mt-1">✓</span>
                       <span>Automated risk alerts and workflows</span>
                     </li>
                   </ul>
@@ -225,17 +225,17 @@ export default function Home() {
                 <div className="border-t border-gray-700 pt-4">
                   <ul className="text-sm text-gray-400 space-y-2.5">
                     <li className="flex items-start gap-2">
-                      <span className="text-cyan-500 mt-1">✓</span>
+                      <span className="text-teal-600 mt-1">✓</span>
                       <span>
-                        Photo capture with drawing & measurement tools
+                        Photo capture with drawing &amp; measurement tools
                       </span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <span className="text-cyan-500 mt-1">✓</span>
+                      <span className="text-teal-600 mt-1">✓</span>
                       <span>Voice notes and task status updates</span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <span className="text-cyan-500 mt-1">✓</span>
+                      <span className="text-teal-600 mt-1">✓</span>
                       <span>Real-time sync with office teams</span>
                     </li>
                   </ul>
@@ -258,7 +258,7 @@ export default function Home() {
           <div className="space-y-16">
             <div className="grid md:grid-cols-2 gap-12 items-center stagger-1">
               <div>
-                <div className="inline-block px-4 py-2 bg-gradient-to-r from-blue-100 to-purple-100 text-blue-700 rounded-full font-semibold mb-4 border border-blue-200/50 transition-transform duration-200 hover:scale-105">
+                <div className="inline-block px-4 py-2 bg-orange-50 text-orange-700 rounded-full font-semibold mb-4 border border-orange-200/60 transition-transform duration-200 hover:scale-105">
                   Step 1
                 </div>
                 <h3 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -290,7 +290,7 @@ export default function Home() {
                 </div>
               </div>
               <div className="order-1 md:order-2">
-                <div className="inline-block px-4 py-2 bg-gradient-to-r from-purple-100 to-cyan-100 text-purple-700 rounded-full font-semibold mb-4 border border-purple-200/50 transition-transform duration-200 hover:scale-105">
+                <div className="inline-block px-4 py-2 bg-slate-100 text-slate-700 rounded-full font-semibold mb-4 border border-slate-200/60 transition-transform duration-200 hover:scale-105">
                   Step 2
                 </div>
                 <h3 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -307,7 +307,7 @@ export default function Home() {
 
             <div className="grid md:grid-cols-2 gap-12 items-center stagger-3">
               <div>
-                <div className="inline-block px-4 py-2 bg-gradient-to-r from-cyan-100 to-blue-100 text-cyan-700 rounded-full font-semibold mb-4 border border-cyan-200/50 transition-transform duration-200 hover:scale-105">
+                <div className="inline-block px-4 py-2 bg-teal-50 text-teal-700 rounded-full font-semibold mb-4 border border-teal-200/60 transition-transform duration-200 hover:scale-105">
                   Step 3
                 </div>
                 <h3 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -333,7 +333,7 @@ export default function Home() {
       {/* Product Demo Section */}
       {/* <section
         id="demo"
-        className="py-20 px-6 lg:px-8 bg-gradient-to-br from-slate-50 via-blue-50 to-purple-50"
+        className="py-20 px-6 lg:px-8 bg-gradient-to-br from-stone-50 via-orange-50/40 to-teal-50/30"
       >
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
@@ -359,7 +359,7 @@ export default function Home() {
             <div className="mt-8 text-center">
               <a
                 href="#contact"
-                className="inline-block px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-xl font-semibold text-lg ai-glow-hover transition-all"
+                className="inline-block px-8 py-4 bg-orange-600 hover:bg-orange-700 text-white rounded-xl font-semibold text-lg ai-glow-hover transition-all"
               >
                 Request a Live Demo
               </a>
@@ -384,7 +384,7 @@ export default function Home() {
           <div className="overflow-x-auto">
             <table className="w-full border-collapse">
               <thead>
-                <tr className="bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+                <tr className="bg-slate-700 text-white">
                   <th className="px-6 py-4 text-left font-semibold text-lg">
                     Feature
                   </th>

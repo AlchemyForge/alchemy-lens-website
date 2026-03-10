@@ -27,8 +27,8 @@ export default function About() {
 
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 px-6 lg:px-8 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-slate-50 via-blue-50 to-purple-50 tech-grid"></div>
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/5 via-purple-600/5 to-cyan-600/5"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-stone-50 via-orange-50/40 to-teal-50/30 tech-grid"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-orange-600/5 via-transparent to-teal-600/5"></div>
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="text-center max-w-4xl mx-auto">
             <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold mb-6 text-gray-900 leading-tight">
@@ -139,8 +139,8 @@ export default function About() {
 
       {/* Our Method Section */}
       <section className="relative py-32 md:py-40 lg:py-48 px-6 lg:px-8 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-slate-50 via-blue-50 to-purple-50 tech-grid"></div>
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/5 via-purple-600/5 to-cyan-600/5"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-stone-50 via-orange-50/40 to-teal-50/30 tech-grid"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-orange-600/5 via-transparent to-teal-600/5"></div>
         <div className="relative z-10 max-w-7xl mx-auto">
           <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
             <div className="flex-shrink-0">
@@ -175,182 +175,46 @@ export default function About() {
             </h2>
           </div>
 
-          <div className="columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6">
-            {/* Guiding Philosophy Principles */}
-            <div className="group bg-white rounded-2xl p-6 border-2 border-gray-100 hover:border-blue-300 hover:shadow-xl transition-all duration-300 break-inside-avoid mb-6 hover:-translate-y-1">
-              <div className="text-4xl font-bold bg-gradient-to-br from-blue-500 to-blue-600 bg-clip-text text-transparent mb-4 group-hover:scale-110 transition-transform duration-300">
-                01
+          {(() => {
+            const principles = [
+              { num: "01", title: "Augment, Don't Automate", desc: "We build tools that empower human judgment, not replace it. Our platform is a strategic co-pilot, designed to augment decision-making with AI-driven foresight." },
+              { num: "02", title: "Evidence Over Hype", desc: "Our product is grounded in delivering measurable, real-world value. We believe in explainable AI and audit-ready decisions, ensuring every insight is backed by evidence." },
+              { num: "03", title: "Forge What Lasts", desc: "We are focused on creating long-term, resilient outcomes. This applies to our software—which we are forcing to be practical, fast, and safe by testing it in tough environments." },
+              { num: "04", title: "Pragmatism by Design", desc: "Our design philosophy comes from tackling complex, real-world domains first. This forces us to be relentlessly practical and focused on what actually works on the ground." },
+              { num: "05", title: "People Stay in Control", desc: "Humans set goals, approve important actions, and can override the system at any time." },
+              { num: "06", title: "Explainable by Default", desc: "Every recommendation shows the inputs, the reasoning summary, and links to evidence." },
+              { num: "07", title: "Safe Failure", desc: "If data are missing or confidence is low, we degrade safely, flag uncertainty, and ask for help." },
+              { num: "08", title: "Provenance and Audit", desc: "We record sources, versions, prompts and who approved what, so decisions stand up to review." },
+              { num: "09", title: "Data Minimisation", desc: "We ingest only what we need, keep it only as long as needed, and delete it on request." },
+              { num: "10", title: "No Cross-Customer Training Without Consent", desc: "Your data are not used to train models for others unless you agree in writing." },
+              { num: "11", title: "Test Before Trust", desc: "Features run in offline tests, shadow mode and limited pilots before wider release." },
+              { num: "12", title: "Clear Ownership", desc: "Each model has an owner, on-call path and rollback plan." },
+              { num: "13", title: "Continuous Improvement", desc: "We iterate, learn, and evolve. Our platform improves through real-world use, user feedback, and our commitment to building what actually works." },
+            ];
+            const colors = [
+              { border: "hover:border-orange-300", gradient: "from-orange-500 to-orange-600", hover: "group-hover:text-orange-600" },
+              { border: "hover:border-slate-300",  gradient: "from-slate-500 to-slate-600",  hover: "group-hover:text-slate-600" },
+              { border: "hover:border-teal-300",   gradient: "from-teal-500 to-teal-600",    hover: "group-hover:text-teal-600" },
+            ];
+            return (
+              <div className="columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6">
+                {principles.map((p, i) => {
+                  const c = colors[i % 3];
+                  return (
+                    <div key={p.num} className={`group bg-white rounded-2xl p-6 border-2 border-gray-100 ${c.border} hover:shadow-xl transition-all duration-300 break-inside-avoid mb-6 hover:-translate-y-1`}>
+                      <div className={`text-4xl font-bold bg-gradient-to-br ${c.gradient} bg-clip-text text-transparent mb-4 group-hover:scale-110 transition-transform duration-300`}>
+                        {p.num}
+                      </div>
+                      <h3 className={`text-xl font-bold text-gray-900 mb-3 ${c.hover} transition-colors`}>
+                        {p.title}
+                      </h3>
+                      <p className="text-gray-600 leading-relaxed">{p.desc}</p>
+                    </div>
+                  );
+                })}
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
-                Augment, Don't Automate
-              </h3>
-              <p className="text-gray-600 leading-relaxed">
-                We build tools that empower human judgment, not replace it. Our
-                platform is a strategic co-pilot, designed to augment
-                decision-making with AI-driven foresight.
-              </p>
-            </div>
-
-            <div className="group bg-white rounded-2xl p-6 border-2 border-gray-100 hover:border-purple-300 hover:shadow-xl transition-all duration-300 break-inside-avoid mb-6 hover:-translate-y-1">
-              <div className="text-4xl font-bold bg-gradient-to-br from-purple-500 to-purple-600 bg-clip-text text-transparent mb-4 group-hover:scale-110 transition-transform duration-300">
-                02
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-purple-600 transition-colors">
-                Evidence Over Hype
-              </h3>
-              <p className="text-gray-600 leading-relaxed">
-                Our product is grounded in delivering measurable, real-world
-                value. We believe in explainable AI and audit-ready decisions,
-                ensuring every insight is backed by evidence.
-              </p>
-            </div>
-
-            <div className="group bg-white rounded-2xl p-6 border-2 border-gray-100 hover:border-cyan-300 hover:shadow-xl transition-all duration-300 break-inside-avoid mb-6 hover:-translate-y-1">
-              <div className="text-4xl font-bold bg-gradient-to-br from-cyan-500 to-cyan-600 bg-clip-text text-transparent mb-4 group-hover:scale-110 transition-transform duration-300">
-                03
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-cyan-600 transition-colors">
-                Forge What Lasts
-              </h3>
-              <p className="text-gray-600 leading-relaxed">
-                We are focused on creating long-term, resilient outcomes. This
-                applies to our software—which we are forcing to be practical,
-                fast, and safe by testing it in tough environments.
-              </p>
-            </div>
-
-            <div className="group bg-white rounded-2xl p-6 border-2 border-gray-100 hover:border-blue-300 hover:shadow-xl transition-all duration-300 break-inside-avoid mb-6 hover:-translate-y-1">
-              <div className="text-4xl font-bold bg-gradient-to-br from-blue-500 to-blue-600 bg-clip-text text-transparent mb-4 group-hover:scale-110 transition-transform duration-300">
-                04
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
-                Pragmatism by Design
-              </h3>
-              <p className="text-gray-600 leading-relaxed">
-                Our design philosophy comes from tackling complex, real-world
-                domains first. This forces us to be relentlessly practical and
-                focused on what actually works on the ground.
-              </p>
-            </div>
-
-            {/* Responsible AI Principles */}
-            <div className="group bg-white rounded-2xl p-6 border-2 border-gray-100 hover:border-purple-300 hover:shadow-xl transition-all duration-300 break-inside-avoid mb-6 hover:-translate-y-1">
-              <div className="text-4xl font-bold bg-gradient-to-br from-purple-500 to-purple-600 bg-clip-text text-transparent mb-4 group-hover:scale-110 transition-transform duration-300">
-                05
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-purple-600 transition-colors">
-                People Stay in Control
-              </h3>
-              <p className="text-gray-600 leading-relaxed">
-                Humans set goals, approve important actions, and can override
-                the system at any time.
-              </p>
-            </div>
-
-            <div className="group bg-white rounded-2xl p-6 border-2 border-gray-100 hover:border-cyan-300 hover:shadow-xl transition-all duration-300 break-inside-avoid mb-6 hover:-translate-y-1">
-              <div className="text-4xl font-bold bg-gradient-to-br from-cyan-500 to-cyan-600 bg-clip-text text-transparent mb-4 group-hover:scale-110 transition-transform duration-300">
-                06
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-cyan-600 transition-colors">
-                Explainable by Default
-              </h3>
-              <p className="text-gray-600 leading-relaxed">
-                Every recommendation shows the inputs, the reasoning summary,
-                and links to evidence.
-              </p>
-            </div>
-
-            <div className="group bg-white rounded-2xl p-6 border-2 border-gray-100 hover:border-blue-300 hover:shadow-xl transition-all duration-300 break-inside-avoid mb-6 hover:-translate-y-1">
-              <div className="text-4xl font-bold bg-gradient-to-br from-blue-500 to-blue-600 bg-clip-text text-transparent mb-4 group-hover:scale-110 transition-transform duration-300">
-                07
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
-                Safe Failure
-              </h3>
-              <p className="text-gray-600 leading-relaxed">
-                If data are missing or confidence is low, we degrade safely,
-                flag uncertainty, and ask for help.
-              </p>
-            </div>
-
-            <div className="group bg-white rounded-2xl p-6 border-2 border-gray-100 hover:border-purple-300 hover:shadow-xl transition-all duration-300 break-inside-avoid mb-6 hover:-translate-y-1">
-              <div className="text-4xl font-bold bg-gradient-to-br from-purple-500 to-purple-600 bg-clip-text text-transparent mb-4 group-hover:scale-110 transition-transform duration-300">
-                08
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-purple-600 transition-colors">
-                Provenance and Audit
-              </h3>
-              <p className="text-gray-600 leading-relaxed">
-                We record sources, versions, prompts and who approved what, so
-                decisions stand up to review.
-              </p>
-            </div>
-
-            <div className="group bg-white rounded-2xl p-6 border-2 border-gray-100 hover:border-cyan-300 hover:shadow-xl transition-all duration-300 break-inside-avoid mb-6 hover:-translate-y-1">
-              <div className="text-4xl font-bold bg-gradient-to-br from-cyan-500 to-cyan-600 bg-clip-text text-transparent mb-4 group-hover:scale-110 transition-transform duration-300">
-                09
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-cyan-600 transition-colors">
-                Data Minimisation
-              </h3>
-              <p className="text-gray-600 leading-relaxed">
-                We ingest only what we need, keep it only as long as needed, and
-                delete it on request.
-              </p>
-            </div>
-
-            <div className="group bg-white rounded-2xl p-6 border-2 border-gray-100 hover:border-blue-300 hover:shadow-xl transition-all duration-300 break-inside-avoid mb-6 hover:-translate-y-1">
-              <div className="text-4xl font-bold bg-gradient-to-br from-blue-500 to-blue-600 bg-clip-text text-transparent mb-4 group-hover:scale-110 transition-transform duration-300">
-                10
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
-                No Cross-Customer Training Without Consent
-              </h3>
-              <p className="text-gray-600 leading-relaxed">
-                Your data are not used to train models for others unless you
-                agree in writing.
-              </p>
-            </div>
-
-            <div className="group bg-white rounded-2xl p-6 border-2 border-gray-100 hover:border-purple-300 hover:shadow-xl transition-all duration-300 break-inside-avoid mb-6 hover:-translate-y-1">
-              <div className="text-4xl font-bold bg-gradient-to-br from-purple-500 to-purple-600 bg-clip-text text-transparent mb-4 group-hover:scale-110 transition-transform duration-300">
-                11
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-purple-600 transition-colors">
-                Test Before Trust
-              </h3>
-              <p className="text-gray-600 leading-relaxed">
-                Features run in offline tests, shadow mode and limited pilots
-                before wider release.
-              </p>
-            </div>
-
-            <div className="group bg-white rounded-2xl p-6 border-2 border-gray-100 hover:border-cyan-300 hover:shadow-xl transition-all duration-300 break-inside-avoid mb-6 hover:-translate-y-1">
-              <div className="text-4xl font-bold bg-gradient-to-br from-cyan-500 to-cyan-600 bg-clip-text text-transparent mb-4 group-hover:scale-110 transition-transform duration-300">
-                12
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-cyan-600 transition-colors">
-                Clear Ownership
-              </h3>
-              <p className="text-gray-600 leading-relaxed">
-                Each model has an owner, on-call path and rollback plan.
-              </p>
-            </div>
-
-            <div className="group bg-white rounded-2xl p-6 border-2 border-gray-100 hover:border-blue-300 hover:shadow-xl transition-all duration-300 break-inside-avoid mb-6 hover:-translate-y-1">
-              <div className="text-4xl font-bold bg-gradient-to-br from-blue-500 to-blue-600 bg-clip-text text-transparent mb-4 group-hover:scale-110 transition-transform duration-300">
-                13
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
-                Continuous Improvement
-              </h3>
-              <p className="text-gray-600 leading-relaxed">
-                We iterate, learn, and evolve. Our platform improves through
-                real-world use, user feedback, and our commitment to building
-                what actually works.
-              </p>
-            </div>
-          </div>
+            );
+          })()}
         </div>
       </section>
 
