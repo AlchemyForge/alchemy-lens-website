@@ -7,19 +7,20 @@ interface ContactFormProps {
 
 export function ContactForm({
   title = "Forge Your next Move.",
-  subtitle = "Get in touch to see how Alchemy Lens can transform your construction projects.",
+  subtitle = "Stop managing chaos and start forging results. Join top-tier construction firms leveraging the Alchemy advantage.",
 }: ContactFormProps) {
   return (
     <AnimatedSection
       id="contact"
       className="py-20 px-6 lg:px-8 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white"
     >
-      <div className="max-w-4xl mx-auto">
-        <div className="text-center mb-12">
-          <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-4">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+        <div className="lg:pt-4">
+          <span className="label-md text-teal-400 font-bold tracking-[0.18em] uppercase block mb-4">Contact</span>
+          <h2 className="type-display font-bold leading-[0.95] mb-8">
             {title}
           </h2>
-          <p className="text-xl text-gray-300">{subtitle}</p>
+          <p className="type-lead text-gray-300">{subtitle}</p>
         </div>
 
         <form className="bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20">
@@ -86,7 +87,7 @@ export function ContactForm({
             </div>
             <button
               type="submit"
-              className="w-full px-8 py-4 bg-orange-600 hover:bg-orange-700 text-white rounded-xl font-semibold text-lg ai-glow-hover transition-all relative overflow-hidden group"
+              className="w-full px-8 py-4 bg-orange-600 hover:bg-orange-700 text-white rounded-xl font-semibold ai-glow-hover transition-all relative overflow-hidden group"
             >
               <span className="relative z-10">Send Message</span>
               <div className="absolute inset-0 bg-orange-700 opacity-0 group-hover:opacity-100 transition-opacity"></div>

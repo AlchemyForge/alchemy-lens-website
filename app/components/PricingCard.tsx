@@ -26,7 +26,7 @@ export function PricingCard({ tier }: PricingCardProps) {
       )}
       <div className="mb-6">
         <h3
-          className={`text-2xl font-bold mb-2 ${
+          className={`type-card font-bold mb-2 ${
             isCustom ? "text-white" : "text-gray-900"
           }`}
         >
@@ -34,7 +34,7 @@ export function PricingCard({ tier }: PricingCardProps) {
         </h3>
         <div className="flex items-baseline">
           <span
-            className={`text-4xl font-bold ${
+            className={`type-sub font-bold ${
               isCustom ? "text-white" : "text-gray-900"
             }`}
           >

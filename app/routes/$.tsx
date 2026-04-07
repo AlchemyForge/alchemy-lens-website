@@ -24,16 +24,16 @@ export default function NotFound() {
 
         {/* Fun Message */}
         <div className="mb-8">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+          <h2 className="type-section font-bold text-gray-900 mb-4">
             Oops! Something went{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-teal-600">
               alchemy
             </span>
           </h2>
-          <p className="text-xl text-gray-600 mb-6">
+          <p className="type-lead text-gray-600 mb-6">
             Looks like this page got transmuted into something else! 🔮
           </p>
-          <p className="text-lg text-gray-500">
+          <p className="type-lead text-gray-500">
             The page you're looking for doesn't exist, or it's been moved to a
             different location.
           </p>
@@ -41,7 +41,7 @@ export default function NotFound() {
 
         {/* Fun Construction-themed Message */}
         <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 mb-8 border border-gray-200">
-          <p className="text-gray-700 text-lg mb-2">
+          <p className="text-gray-700 mb-2">
             <span className="font-semibold">Construction Site Notice:</span>
           </p>
           <p className="text-gray-600">
@@ -54,13 +54,13 @@ export default function NotFound() {
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Link
             to="/"
-            className="px-8 py-4 bg-orange-600 hover:bg-orange-700 text-white rounded-xl font-semibold text-lg ai-glow-hover transition-all hover:scale-105"
+            className="px-8 py-4 bg-orange-600 hover:bg-orange-700 text-white rounded-xl font-semibold ai-glow-hover transition-all hover:scale-105"
           >
             Return to Home
           </Link>
           <Link
             to="/#contact"
-            className="px-8 py-4 bg-white text-gray-900 border-2 border-gray-300 rounded-xl font-semibold text-lg hover:border-orange-500 hover:text-orange-600 transition-all"
+            className="px-8 py-4 bg-white text-gray-900 border-2 border-gray-300 rounded-xl font-semibold hover:border-orange-500 hover:text-orange-600 transition-all"
           >
             Contact Us
           </Link>

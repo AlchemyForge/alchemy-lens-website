@@ -18,20 +18,19 @@ export function FAQAccordion({
   return (
     <section id="faq" className="py-16 px-6 lg:px-8 bg-gray-50">
       <div className="max-w-4xl mx-auto">
-        <div className="text-center mb-10">
-          <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-4">
+        <div className="mb-12">
+          <h2 className="text-center type-display font-bold text-gray-900 leading-[0.95]">
             {title}
           </h2>
-          <p className="text-xl text-gray-600">{subtitle}</p>
         </div>
 
-        <div className="space-y-3">
+        <div className="space-y-3 divide-y divide-gray-200">
           {items.map((item, index) => {
             const open = isOpen(index);
             return (
               <div
                 key={index}
-                className="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden transition-all hover:shadow-md hover:border-gray-300"
+                className="overflow-hidden transition-all"
                 style={{
                   animationDelay: `${index * 0.05}s`,
                 }}
@@ -42,10 +41,7 @@ export function FAQAccordion({
                   aria-expanded={open}
                   aria-controls={`faq-answer-${index}`}
                 >
-                  <h3
-                    className="text-xl font-bold text-gray-900 pr-4"
-                    style={{ fontFamily: "Poppins, sans-serif" }}
-                  >
+                  <h3 className="type-card text-gray-900 pr-4">
                     {item.question}
                   </h3>
                   <ChevronDownIcon
@@ -60,8 +56,8 @@ export function FAQAccordion({
                     open ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
                   }`}
                 >
-                  <div className="px-5 pt-4 pb-4">
-                    <p className="text-gray-600 leading-relaxed text-sm">
+                  <div className="px-5 pt-4 pb-12">
+                    <p className="text-gray-600 leading-relaxed">
                       {item.answer}
                     </p>
                   </div>

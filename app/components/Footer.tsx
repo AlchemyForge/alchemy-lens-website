@@ -12,9 +12,8 @@ export function Footer() {
               <img
                 src={logoImage}
                 alt="Alchemy Forge Logo"
-                className="h-6 w-6"
+                className="h-12"
               />
-              <h3 className="text-white font-bold text-lg">Alchemy Forge</h3>
             </div>
             <p className="text-sm">Reveal, Transmute, Forge results.</p>
           </div>

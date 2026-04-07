@@ -31,10 +31,10 @@ export default function About() {
         <div className="absolute inset-0 bg-gradient-to-r from-orange-600/5 via-transparent to-teal-600/5"></div>
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="text-center max-w-4xl mx-auto">
-            <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold mb-6 text-gray-900 leading-tight">
+            <h1 className="type-display font-bold mb-6 text-gray-900 leading-tight">
               The foresight to forge what lasts.
             </h1>
-            <p className="text-xl md:text-2xl text-gray-600 mb-8 leading-relaxed">
+            <p className="type-lead text-gray-600 mb-8 leading-relaxed">
               We exist to close the gap between what's possible and what's being
               done.
             </p>
@@ -47,12 +47,12 @@ export default function About() {
         <div className="max-w-7xl mx-auto">
           <div className="mb-12">
             <div className="text-center mb-12">
-              <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-4">
+              <h2 className="type-section font-bold text-gray-900 mb-4">
                 Our Story
               </h2>
             </div>
             <div className="max-w-5xl mx-auto">
-              <p className="text-xl text-gray-600 leading-relaxed mb-6">
+              <p className="type-lead text-gray-600 leading-relaxed mb-6">
                 Our team's experience spans industries driven by data, including
                 technology, corporate, start-up, finance, and energy. Across all
                 of them, we saw the same pattern of waste. Not just wasted money
@@ -61,7 +61,7 @@ export default function About() {
                 and teams frustrated by manual processes and communication gaps,
                 resulting in a constant cycle of rework and delay.
               </p>
-              <p className="text-xl text-gray-600 leading-relaxed mb-6">
+              <p className="type-lead text-gray-600 leading-relaxed mb-6">
                 At the same time, we saw the immense power of AI being used for
                 trivial things: memes, deepfakes, and parlour tricks. The
                 technology that could solve our hardest problems was being used
@@ -69,7 +69,7 @@ export default function About() {
                 apply its power to real-world challenges and build something
                 meaningful.
               </p>
-              <p className="text-xl text-gray-600 leading-relaxed">
+              <p className="type-lead text-gray-600 leading-relaxed">
                 Alchemy Forge is our answer to that frustration.
               </p>
             </div>
@@ -81,7 +81,7 @@ export default function About() {
       <section className="py-20 px-6 lg:px-8 bg-gray-50">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-4">
+            <h2 className="type-section font-bold text-gray-900 mb-4">
               What we do
             </h2>
           </div>
@@ -89,10 +89,10 @@ export default function About() {
           <div className="space-y-16">
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div>
-                <h3 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                <h3 className="type-sub font-bold text-gray-900 mb-6">
                   Transform Data Into Predictive Insight
                 </h3>
-                <p className="text-xl text-gray-600 leading-relaxed">
+                <p className="type-lead text-gray-600 leading-relaxed">
                   We build decision-making software for teams who need to move
                   with clarity and confidence. Our platform pulls in raw data,
                   synthesises it into a single source of truth, and provides a
@@ -119,10 +119,10 @@ export default function About() {
                 </div>
               </div>
               <div className="order-1 md:order-2">
-                <h3 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                <h3 className="type-sub font-bold text-gray-900 mb-6">
                   Bridge Strategy and Execution
                 </h3>
-                <p className="text-xl text-gray-600 leading-relaxed">
+                <p className="type-lead text-gray-600 leading-relaxed">
                   We chose to tackle construction first because it's a complex,
                   real-world domain where decisions have tangible impacts and
                   the cost of bad data is immense. This isn't just a business
@@ -158,7 +158,7 @@ export default function About() {
               <p className="text-orange-500 font-semibold text-sm md:text-base mb-2 uppercase tracking-wide">
                 Our method is simple:
               </p>
-              <h3 className="text-5xl md:text-7xl lg:text-8xl font-bold text-gray-900 leading-tight">
+              <h3 className="type-display font-bold text-gray-900 leading-tight">
                 Reveal. Transmute. Forge.
               </h3>
             </div>
@@ -170,7 +170,7 @@ export default function About() {
       <section className="py-20 px-6 lg:px-8 bg-white">
         <div className="max-w-5xl mx-auto">
           <div className="mb-16 text-center">
-            <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-4">
+            <h2 className="type-section font-bold text-gray-900 mb-4">
               Our Principles
             </h2>
           </div>
@@ -202,10 +202,10 @@ export default function About() {
                   const c = colors[i % 3];
                   return (
                     <div key={p.num} className={`group bg-white rounded-2xl p-6 border-2 border-gray-100 ${c.border} hover:shadow-xl transition-all duration-300 break-inside-avoid mb-6 hover:-translate-y-1`}>
-                      <div className={`text-4xl font-bold bg-gradient-to-br ${c.gradient} bg-clip-text text-transparent mb-4 group-hover:scale-110 transition-transform duration-300`}>
+                      <div className={`type-sub font-bold bg-gradient-to-br ${c.gradient} bg-clip-text text-transparent mb-4 group-hover:scale-110 transition-transform duration-300`}>
                         {p.num}
                       </div>
-                      <h3 className={`text-xl font-bold text-gray-900 mb-3 ${c.hover} transition-colors`}>
+                      <h3 className={`type-card font-bold text-gray-900 mb-3 ${c.hover} transition-colors`}>
                         {p.title}
                       </h3>
                       <p className="text-gray-600 leading-relaxed">{p.desc}</p>
@@ -222,10 +222,10 @@ export default function About() {
       <section className="py-20 px-6 lg:px-8 bg-gray-50">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-4">
+            <h2 className="type-section font-bold text-gray-900 mb-4">
               Our Team
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="type-lead text-gray-600 max-w-3xl mx-auto">
               The minds behind the mission.
             </p>
           </div>
@@ -239,7 +239,7 @@ export default function About() {
                   className="w-full h-full object-cover"
                 />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-1">
+              <h3 className="type-card font-bold text-gray-900 mb-1">
                 Josh Mackenzie
               </h3>
               <p className="text-gray-600">CEO & Founder</p>
@@ -253,7 +253,7 @@ export default function About() {
                   className="w-full h-full object-cover"
                 />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-1">
+              <h3 className="type-card font-bold text-gray-900 mb-1">
                 Dominique Mackenzie
               </h3>
               <p className="text-gray-600">CFO & Founder</p>
@@ -267,7 +267,7 @@ export default function About() {
                   className="w-full h-full object-cover"
                 />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-1">
+              <h3 className="type-card font-bold text-gray-900 mb-1">
                 Michael Hoole
               </h3>
               <p className="text-gray-600">CTO & Co-Founder</p>
@@ -281,7 +281,7 @@ export default function About() {
                   className="w-full h-full object-cover"
                 />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-1">
+              <h3 className="type-card font-bold text-gray-900 mb-1">
                 Daniel Peek
               </h3>
               <p className="text-gray-600">Head of Development & Co-Founder</p>
