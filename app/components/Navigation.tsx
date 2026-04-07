@@ -24,30 +24,24 @@ export function Navigation({ currentPath = "/" }: NavigationProps) {
   useEffect(() => {
     if (isAboutPage) return;
 
-    const intersecting = new Set<string>();
-    const observers: IntersectionObserver[] = [];
+    const handleScroll = () => {
+      const midpoint = window.innerHeight / 2;
+      let active: string | null = null;
 
-    NAV_SECTIONS.forEach(({ id }) => {
-      const el = document.getElementById(id);
-      if (!el) return;
+      for (const { id } of NAV_SECTIONS) {
+        const el = document.getElementById(id);
+        if (!el) continue;
+        if (el.getBoundingClientRect().top <= midpoint) {
+          active = id;
+        }
+      }
 
-      const observer = new IntersectionObserver(
-        (entries) => {
-          for (const entry of entries) {
-            if (entry.isIntersecting) intersecting.add(id);
-            else intersecting.delete(id);
-          }
-          const active = NAV_SECTIONS.map((s) => s.id).find((s) => intersecting.has(s)) ?? null;
-          setActiveSection(active);
-        },
-        { rootMargin: "-64px 0px -50% 0px", threshold: 0 }
-      );
+      setActiveSection(active);
+    };
 
-      observer.observe(el);
-      observers.push(observer);
-    });
-
-    return () => observers.forEach((o) => o.disconnect());
+    handleScroll();
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
   }, [isAboutPage]);
 
   useEffect(() => {
