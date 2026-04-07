@@ -14,7 +14,7 @@ export function ContactForm({
       id="contact"
       className="py-20 px-6 lg:px-8 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white"
     >
-      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-start">
         <div className="lg:pt-4">
           <span className="label-md text-teal-400 font-bold tracking-[0.18em] uppercase block mb-4">Contact</span>
           <h2 className="type-display font-bold leading-[0.95] mb-8">
@@ -23,7 +23,7 @@ export function ContactForm({
           <p className="type-lead text-gray-300">{subtitle}</p>
         </div>
 
-        <form className="bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20">
+        <form className="bg-white/10 backdrop-blur-md rounded-2xl p-6 sm:p-8 border border-white/20">
           <div className="space-y-6">
             <div>
               <label

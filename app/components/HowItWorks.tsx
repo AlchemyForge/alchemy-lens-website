@@ -5,16 +5,16 @@ import step3Image from "../assets/forge.png";
 
 export const HowItWorks = () => {
     return (
-        <AnimatedSection id="how-it-works" className="py-24 px-6 lg:px-8 bg-gray-50">
+        <AnimatedSection id="how-it-works" className="py-16 lg:py-24 px-6 lg:px-8 bg-gray-50 overflow-hidden">
             <div className="max-w-7xl mx-auto">
-                <div className="mb-20">
+                <div className="mb-10 md:mb-20">
                     <span className="label-md text-teal-600 font-bold tracking-[0.18em] uppercase block mb-4">The Process</span>
                     <h2 className="type-display font-bold text-gray-900 leading-[0.95]">
                         How it Works
                     </h2>
                 </div>
 
-                <div className="space-y-32">
+                <div className="space-y-16 md:space-y-32">
                     {/* Step 1 */}
                     <div className="grid grid-cols-1 md:grid-cols-12 gap-12 items-center stagger-1">
                         <div className="md:col-span-5 order-2 md:order-1">
@@ -29,8 +29,8 @@ export const HowItWorks = () => {
                         </div>
                         <div className="md:col-span-7 order-1 md:order-2">
                             <div className="relative group">
-                                <div className="absolute -top-4 -right-4 w-20 h-20 border-t-2 border-r-2 border-teal-200/60" />
-                                <div className="absolute -bottom-4 -left-4 w-20 h-20 border-b-2 border-l-2 border-teal-200/60" />
+                                <div className="hidden md:block absolute -top-4 -right-4 w-20 h-20 border-t-2 border-r-2 border-teal-200/60" />
+                                <div className="hidden md:block absolute -bottom-4 -left-4 w-20 h-20 border-b-2 border-l-2 border-teal-200/60" />
                                 <div className="overflow-hidden rounded-2xl group">
                                     <img
                                         src={step1Image}
@@ -46,8 +46,8 @@ export const HowItWorks = () => {
                     <div className="grid grid-cols-1 md:grid-cols-12 gap-12 items-center stagger-2">
                         <div className="md:col-span-7 order-1">
                             <div className="relative group">
-                                <div className="absolute -top-4 -left-4 w-20 h-20 border-t-2 border-l-2 border-teal-200/60" />
-                                <div className="absolute -bottom-4 -right-4 w-20 h-20 border-b-2 border-r-2 border-teal-200/60" />
+                                <div className="hidden md:block absolute -top-4 -left-4 w-20 h-20 border-t-2 border-l-2 border-teal-200/60" />
+                                <div className="hidden md:block absolute -bottom-4 -right-4 w-20 h-20 border-b-2 border-r-2 border-teal-200/60" />
                                 <div className="overflow-hidden rounded-2xl group">
                                     <img
                                         src={step2Image}
@@ -86,8 +86,8 @@ export const HowItWorks = () => {
                         </div>
                         <div className="md:col-span-7 order-1 md:order-2">
                             <div className="relative group">
-                                <div className="absolute -top-4 -right-4 w-20 h-20 border-t-2 border-r-2 border-teal-200/60" />
-                                <div className="absolute -bottom-4 -left-4 w-20 h-20 border-b-2 border-l-2 border-teal-200/60" />
+                                <div className="hidden md:block absolute -top-4 -right-4 w-20 h-20 border-t-2 border-r-2 border-teal-200/60" />
+                                <div className="hidden md:block absolute -bottom-4 -left-4 w-20 h-20 border-b-2 border-l-2 border-teal-200/60" />
                                 <div className="overflow-hidden rounded-2xl group">
                                     <img
                                         src={step3Image}

@@ -70,7 +70,7 @@ export const Hero = () => {
 
             <div className="relative z-10 w-full max-w-7xl mx-auto px-6 lg:px-8 grid lg:grid-cols-12 gap-12 items-center">
                 {/* Left content */}
-                <div className="lg:col-span-7 flex flex-col items-start gap-6">
+                <div className="lg:col-span-7 flex flex-col items-center lg:items-start gap-6 text-center lg:text-left">
                     <div className="flex items-center gap-3">
                         <span className="h-[2px] w-12 bg-teal-600" />
                         <span className="text-teal-600 font-semibold uppercase tracking-widest text-sm inline-flex items-center">

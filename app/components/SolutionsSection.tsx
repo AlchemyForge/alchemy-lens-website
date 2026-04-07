@@ -3,7 +3,7 @@ import directorsImage from "../assets/68ded4c98e130e416f7fb1c1_field team-p-500.
 
 export function SolutionsSection() {
   return (
-    <AnimatedSection id="solutions" className="py-24 px-8 bg-gray-900">
+    <AnimatedSection id="solutions" className="py-24 px-6 lg:px-8 bg-gray-900">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
@@ -30,7 +30,7 @@ export function SolutionsSection() {
                 className="w-full h-full object-cover opacity-40 group-hover:scale-105 transition-transform duration-700"
               />
             </div>
-            <div className="relative z-10 p-10 h-full flex flex-col justify-end bg-gradient-to-t from-gray-900/90 to-transparent">
+            <div className="relative z-10 p-6 sm:p-10 h-full flex flex-col justify-end bg-gradient-to-t from-gray-900/90 to-transparent">
               <svg
                 className="w-10 h-10 text-teal-400 mb-4"
                 fill="currentColor"
@@ -50,7 +50,7 @@ export function SolutionsSection() {
           </div>
 
           {/* Feature 2 — AI-augmented daily brief */}
-          <div className="bg-gray-800 p-10 rounded-xl flex flex-col border border-gray-700/10 stagger-2">
+          <div className="bg-gray-800 p-6 sm:p-10 rounded-xl flex flex-col border border-gray-700/10 stagger-2">
             <div className="mb-auto">
               <svg
                 className="w-10 h-10 text-orange-400"
@@ -89,7 +89,7 @@ export function SolutionsSection() {
           </div>
 
           {/* Feature 3 — Digital Foreman app */}
-          <div className="bg-gray-800 p-10 rounded-xl flex flex-col border border-gray-700/10 stagger-3">
+          <div className="bg-gray-800 p-6 sm:p-10 rounded-xl flex flex-col border border-gray-700/10 stagger-3">
             <div className="mb-auto">
               <svg
                 className="w-10 h-10 text-slate-400"
@@ -117,7 +117,7 @@ export function SolutionsSection() {
 
           {/* Feature 4 — Real-time Transmutation */}
           <div className="md:col-span-2 relative h-[300px] bg-teal-900/20 rounded-xl overflow-hidden border border-teal-500/20 stagger-4">
-            <div className="p-10 flex items-center h-full gap-8">
+            <div className="p-6 sm:p-10 flex items-center h-full gap-8">
               <div className="hidden lg:block w-1/3 flex-shrink-0">
                 <div className="grid grid-cols-2 gap-2">
                   <div className="h-16 bg-teal-500/20 rounded" />

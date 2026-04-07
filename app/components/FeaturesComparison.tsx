@@ -11,8 +11,8 @@ export const FeaturesComparison = () => {
           </h2>
         </div>
 
-        <div className="overflow-x-auto">
-          <table className="w-full border-collapse">
+        <div className="overflow-x-auto -mx-6 lg:mx-0 px-6 lg:px-0">
+          <table className="w-full min-w-[600px] border-collapse">
             <thead>
               <tr className="bg-slate-700 text-white">
                 <th className="px-6 py-4 text-left font-semibold text-lg">
