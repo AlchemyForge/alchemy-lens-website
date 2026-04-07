@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import { AnimatedSection } from './AnimatedSection'
-
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL ?? ''
+import { config } from '../config'
 
 interface ContactFormProps {
   title?: string
@@ -31,7 +30,7 @@ export function ContactForm({
     }
 
     try {
-      const response = await fetch(`${API_BASE_URL}/api/v1/public/contact`, {
+      const response = await fetch(`${config.apiBaseUrl}/api/v1/public/contact`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(data),
