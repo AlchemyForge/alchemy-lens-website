@@ -1,6 +1,15 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { AnimatedSection } from './AnimatedSection'
 import { config } from '../config'
+
+declare global {
+  interface Window {
+    grecaptcha: {
+      ready: (cb: () => void) => void
+      execute: (siteKey: string, options: { action: string }) => Promise<string>
+    }
+  }
+}
 
 interface ContactFormProps {
   title?: string
@@ -16,17 +25,57 @@ export function ContactForm({
   const [submitState, setSubmitState] = useState<SubmitState>('idle')
   const [errorMessage, setErrorMessage] = useState<string | null>(null)
 
+  useEffect(() => {
+    if (!config.recaptchaSiteKey) return
+    if (document.getElementById('recaptcha-script')) return
+    const script = document.createElement('script')
+    script.id = 'recaptcha-script'
+    script.src = `https://www.google.com/recaptcha/api.js?render=${config.recaptchaSiteKey}`
+    script.async = true
+    document.head.appendChild(script)
+  }, [])
+
   async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault()
     setSubmitState('submitting')
     setErrorMessage(null)
 
     const form = event.currentTarget
+    const honeypot = (form.elements.namedItem('website') as HTMLInputElement).value
+
+    // Silently reject bot submissions that filled the honeypot field
+    if (honeypot) {
+      setSubmitState('success')
+      form.reset()
+      return
+    }
+
+    let recaptchaToken: string | null = null
+    if (config.recaptchaSiteKey) {
+      try {
+        recaptchaToken = await new Promise<string>((resolve, reject) => {
+          window.grecaptcha.ready(async () => {
+            try {
+              const token = await window.grecaptcha.execute(config.recaptchaSiteKey, { action: 'contact' })
+              resolve(token)
+            } catch (err) {
+              reject(err)
+            }
+          })
+        })
+      } catch {
+        setSubmitState('error')
+        setErrorMessage('Verification failed. Please refresh the page and try again.')
+        return
+      }
+    }
+
     const data = {
       fullName: (form.elements.namedItem('fullName') as HTMLInputElement).value,
       email: (form.elements.namedItem('email') as HTMLInputElement).value,
       phone: (form.elements.namedItem('phone') as HTMLInputElement).value || null,
       message: (form.elements.namedItem('message') as HTMLTextAreaElement).value,
+      recaptchaToken,
     }
 
     try {
@@ -65,6 +114,20 @@ export function ContactForm({
           onSubmit={handleSubmit}
           className="bg-white/10 backdrop-blur-md rounded-2xl p-6 sm:p-8 border border-white/20"
         >
+          {/* Honeypot — hidden from real users, traps bots that auto-fill all fields */}
+          <div
+            aria-hidden="true"
+            style={{ position: 'absolute', left: '-9999px', width: 0, height: 0, overflow: 'hidden', opacity: 0 }}
+          >
+            <label htmlFor="website">Website</label>
+            <input
+              type="text"
+              id="website"
+              name="website"
+              tabIndex={-1}
+              autoComplete="off"
+            />
+          </div>
           {submitState === 'success' ? (
             <div className="text-center py-8">
               <p className="text-xl font-semibold text-teal-400 mb-2">Message sent!</p>
