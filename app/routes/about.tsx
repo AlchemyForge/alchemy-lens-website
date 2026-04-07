@@ -2,12 +2,12 @@ import type { Route } from "./+types/about";
 import { Navigation } from "../components/Navigation";
 import { Footer } from "../components/Footer";
 import { ContactForm } from "../components/ContactForm";
-import joshImage from "../assets/josh.jpg";
-import domImage from "../assets/dom.jpg";
-import michaelImage from "../assets/michael.jpg";
-import danielImage from "../assets/daniel.jpg";
-import insightsImage from "../assets/insights.jpg";
-import strategyImage from "../assets/strategy.jpg";
+import joshImage from "../assets/josh.webp";
+import domImage from "../assets/dom.webp";
+import michaelImage from "../assets/michael.webp";
+import danielImage from "../assets/daniel.webp";
+import insightsImage from "../assets/insights.webp";
+import strategyImage from "../assets/strategy.webp";
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -104,6 +104,10 @@ export default function About() {
                   src={insightsImage}
                   alt="Transform Data Into Predictive Insight"
                   className="w-full h-auto object-cover"
+                  width={800}
+                  height={600}
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
             </div>
@@ -115,6 +119,10 @@ export default function About() {
                     src={strategyImage}
                     alt="Bridge Strategy and Execution"
                     className="w-full h-auto object-cover"
+                    width={800}
+                    height={600}
+                    loading="lazy"
+                    decoding="async"
                   />
                 </div>
               </div>
@@ -237,6 +245,10 @@ export default function About() {
                   src={joshImage}
                   alt="Josh Mackenzie"
                   className="w-full h-full object-cover"
+                  width={224}
+                  height={224}
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
               <h3 className="type-card font-bold text-gray-900 mb-1">
@@ -251,6 +263,10 @@ export default function About() {
                   src={domImage}
                   alt="Dominique Mackenzie"
                   className="w-full h-full object-cover"
+                  width={224}
+                  height={224}
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
               <h3 className="type-card font-bold text-gray-900 mb-1">
@@ -265,6 +281,10 @@ export default function About() {
                   src={michaelImage}
                   alt="Michael Hoole"
                   className="w-full h-full object-cover"
+                  width={224}
+                  height={224}
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
               <h3 className="type-card font-bold text-gray-900 mb-1">
@@ -279,6 +299,10 @@ export default function About() {
                   src={danielImage}
                   alt="Daniel Peek"
                   className="w-full h-full object-cover"
+                  width={224}
+                  height={224}
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
               <h3 className="type-card font-bold text-gray-900 mb-1">

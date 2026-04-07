@@ -10,6 +10,7 @@
     "typecheck": "react-router typegen && tsc"
   },
   "dependencies": {
+    "@fontsource/poppins": "^5.2.7",
     "@react-router/node": "^7.9.2",
     "@react-router/serve": "^7.9.2",
     "isbot": "^5.1.31",
@@ -23,6 +24,10 @@
     "@types/node": "^22",
     "@types/react": "^19.1.13",
     "@types/react-dom": "^19.1.9",
+    "compression": "^1.8.1",
+    "critters": "^0.0.23",
+    "express": "^5.2.1",
+    "sharp": "^0.34.5",
     "tailwindcss": "^4.1.13",
     "typescript": "^5.9.2",
     "vite": "^7.1.7",

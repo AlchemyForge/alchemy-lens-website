@@ -1,5 +1,5 @@
 import { AnimatedSection } from "./AnimatedSection";
-import directorsImage from "../assets/68ded4c98e130e416f7fb1c1_field team-p-500.jpg";
+import directorsImage from "../assets/68ded4c98e130e416f7fb1c1_field team-p-500.webp";
 
 export function SolutionsSection() {
   return (
@@ -28,6 +28,10 @@ export function SolutionsSection() {
                 src={directorsImage}
                 alt="Overview of multiple construction sites with data overlays"
                 className="w-full h-full object-cover opacity-40 group-hover:scale-105 transition-transform duration-700"
+                width={500}
+                height={450}
+                loading="lazy"
+                decoding="async"
               />
             </div>
             <div className="relative z-10 p-6 sm:p-10 h-full flex flex-col justify-end bg-gradient-to-t from-gray-900/90 to-transparent">

@@ -1,17 +1,17 @@
 import type { Route } from "./+types/home";
+import { lazy, Suspense } from "react";
 import { Navigation } from "../components/Navigation";
-import { Footer } from "../components/Footer";
-import { ContactForm } from "../components/ContactForm";
-import { FAQAccordion } from "../components/FAQAccordion";
-import { PricingCard } from "../components/PricingCard";
-import { AnimatedSection } from "../components/AnimatedSection";
-import { faqItems } from "../data/faq";
-import { pricingTiers } from "../data/pricing";
 import { Hero } from "../components/Hero";
-import { SolutionsSection } from "../components/SolutionsSection";
-import { ProblemStatement } from "~/components/ProblemStatement";
-import { HowItWorks } from "../components/HowItWorks";
-import { FeaturesComparison } from "../components/FeaturesComparison";
+import { faqItems } from "../data/faq";
+
+// Lazy-load all below-fold components to defer JS execution until after initial hydration
+const Footer = lazy(() => import("../components/Footer").then(m => ({ default: m.Footer })));
+const ProblemStatement = lazy(() => import("../components/ProblemStatement").then(m => ({ default: m.ProblemStatement })));
+const SolutionsSection = lazy(() => import("../components/SolutionsSection").then(m => ({ default: m.SolutionsSection })));
+const HowItWorks = lazy(() => import("../components/HowItWorks").then(m => ({ default: m.HowItWorks })));
+const FeaturesComparison = lazy(() => import("../components/FeaturesComparison").then(m => ({ default: m.FeaturesComparison })));
+const FAQAccordion = lazy(() => import("../components/FAQAccordion").then(m => ({ default: m.FAQAccordion })));
+const ContactForm = lazy(() => import("../components/ContactForm").then(m => ({ default: m.ContactForm })));
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -31,12 +31,15 @@ export default function Home() {
 
 
       <Hero />
-      <ProblemStatement />
-      <SolutionsSection />
-
-
-
-      <HowItWorks />
+      <Suspense fallback={null}>
+        <ProblemStatement />
+      </Suspense>
+      <Suspense fallback={null}>
+        <SolutionsSection />
+      </Suspense>
+      <Suspense fallback={null}>
+        <HowItWorks />
+      </Suspense>
 
 
       {/* Product Demo Section */}
@@ -78,33 +81,24 @@ export default function Home() {
       </section> */}
 
       {/* Feature Comparison Section */}
-      <FeaturesComparison />
+      <Suspense fallback={null}>
+        <FeaturesComparison />
+      </Suspense>
 
       {/* Pricing Section */}
-      {/* <section id="pricing" className="py-20 px-6 lg:px-8 bg-gray-50">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="type-section font-bold text-gray-900 mb-4">
-              Pricing
-            </h2>
-            <p className="type-lead text-gray-600 max-w-3xl mx-auto">
-              Choose the plan that fits your team size and needs
-            </p>
-          </div>
+      {/* <section id="pricing" ... /> */}
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {pricingTiers.map((tier, index) => (
-              <PricingCard key={index} tier={tier} />
-            ))}
-          </div>
-        </div>
-      </section> */}
+      <Suspense fallback={null}>
+        <FAQAccordion items={faqItems} />
+      </Suspense>
 
-      <FAQAccordion items={faqItems} />
+      <Suspense fallback={null}>
+        <ContactForm />
+      </Suspense>
 
-      <ContactForm />
-
-      <Footer />
+      <Suspense fallback={null}>
+        <Footer />
+      </Suspense>
     </div>
   );
 }

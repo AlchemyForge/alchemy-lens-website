@@ -1,6 +1,11 @@
-import { useEffect, useRef, useState } from "react";
-import heroBg from "../assets/hero.png";
+import { startTransition, useEffect, useRef, useState } from "react";
 import { RightArrowIcon } from "./icons";
+
+// Static fallback — avoids pulling hero.webp into the JS bundle
+const HERO_FALLBACK = "/images/hero-1920.webp";
+
+const HERO_SRCSET =
+  "/images/hero-412.webp 412w, /images/hero-800.webp 800w, /images/hero-1280.webp 1280w, /images/hero-1920.webp 1920w";
 
 const LABELS = [
     "Industrial Intelligence",
@@ -27,20 +32,22 @@ function useTypingRotation(labels: string[]) {
         if (phase === "typing") {
             if (displayed.length < current.length) {
                 timeoutRef.current = setTimeout(() => {
-                    setDisplayed(current.slice(0, displayed.length + 1));
+                    startTransition(() => setDisplayed(current.slice(0, displayed.length + 1)));
                 }, TYPING_SPEED);
             } else {
-                timeoutRef.current = setTimeout(() => setPhase("deleting"), PAUSE_AFTER_TYPE);
+                timeoutRef.current = setTimeout(() => startTransition(() => setPhase("deleting")), PAUSE_AFTER_TYPE);
             }
         } else if (phase === "deleting") {
             if (displayed.length > 0) {
                 timeoutRef.current = setTimeout(() => {
-                    setDisplayed(displayed.slice(0, -1));
+                    startTransition(() => setDisplayed(displayed.slice(0, -1)));
                 }, DELETING_SPEED);
             } else {
                 timeoutRef.current = setTimeout(() => {
-                    setLabelIndex((i) => (i + 1) % labels.length);
-                    setPhase("typing");
+                    startTransition(() => {
+                        setLabelIndex((i) => (i + 1) % labels.length);
+                        setPhase("typing");
+                    });
                 }, PAUSE_AFTER_DELETE);
             }
         }
@@ -61,9 +68,15 @@ export const Hero = () => {
             {/* Background image */}
             <div className="absolute inset-0 z-0">
                 <img
-                    src={heroBg}
+                    src={HERO_FALLBACK}
+                    srcSet={HERO_SRCSET}
+                    sizes="100vw"
                     alt="hero background"
                     className="w-full h-full object-cover opacity-60 hero-mask"
+                    width={1920}
+                    height={1080}
+                    fetchPriority="high"
+                    decoding="async"
                 />
                 <div className="absolute inset-0 bg-black/70" />
             </div>
@@ -103,7 +116,7 @@ export const Hero = () => {
                 <div className="lg:col-span-5 hidden lg:block relative">
                     <div className="relative group">
                         <div className="relative w-full aspect-[4/5] rounded-lg overflow-hidden bg-gray-800 shadow-2xl">
-                            <img src={heroBg} alt="hero visual" className="w-full h-full object-cover" />
+                            <img src={HERO_FALLBACK} alt="hero visual" className="w-full h-full object-cover" width={1920} height={1080} loading="eager" decoding="async" />
                               <div className="absolute inset-0 bg-black/20" />
                         </div>
 

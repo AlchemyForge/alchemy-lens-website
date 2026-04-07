@@ -1,4 +1,5 @@
 import { AnimatedSection } from "./AnimatedSection"
+import constructionImage from "../assets/construction.webp";
 
 export const ProblemStatement = () => {
     return (
@@ -19,9 +20,13 @@ export const ProblemStatement = () => {
                         <div className="absolute -top-12 -right-12 w-64 h-64 bg-teal-100/30 blur-[120px] rounded-full pointer-events-none" />
                         <div className="relative overflow-hidden aspect-[16/10] rounded-lg">
                             <img
-                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuA81lOgPS_3R_rgWU2biysNET1jvMS0Ayo3ctNrAdZkzYndpkhKBJpiMpePZrNROFGJpZ8N2l72KfitZTm1xY2wqduJRiKyPxNGjsuTqxwwDWLivPzClzwp2Aazj2Aoo4xBpD_DH6z2myezGdVnyHi7mBhRJ4IDV9ctgxibMnSBIUtptUTc60Uv0IBqyHTCrTHqRJzL_STkzrXI5TIB20yf_9eui38yIe_4xVckGs0_tBEUN3bIVaKSPU4H0njIowRPVY4yttjUnZuM"
+                                src={constructionImage}
                                 alt="construction"
                                 className="w-full h-full object-cover grayscale brightness-75 contrast-110"
+                                width={800}
+                                height={500}
+                                loading="lazy"
+                                decoding="async"
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-white/70 via-transparent to-transparent" />
 

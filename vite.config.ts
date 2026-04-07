@@ -7,5 +7,8 @@ export default defineConfig(({ command }) => {
   return {
     base: "/",
     plugins: [tailwindcss(), reactRouter(), tsconfigPaths()],
+    build: {
+      assetsInlineLimit: 0,
+    },
   };
 });

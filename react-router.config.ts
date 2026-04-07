@@ -1,6 +1,8 @@
 import type { Config } from "@react-router/dev/config";
 
 export default {
-  // Disable SSR for static hosting on GitHub Pages
+  // Pre-render routes at build time for static hosting (GitHub Pages)
+  // This dramatically improves FCP and LCP vs SPA mode
   ssr: false,
+  prerender: ["/", "/about"],
 } satisfies Config;

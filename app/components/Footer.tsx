@@ -1,5 +1,5 @@
 import { Link } from "react-router";
-import logoImage from "../assets/logo.png";
+import logoImage from "../assets/logo.webp";
 import { LinkedInIcon } from "./icons";
 
 export function Footer() {
@@ -13,12 +13,16 @@ export function Footer() {
                 src={logoImage}
                 alt="Alchemy Forge Logo"
                 className="h-12"
+                width={180}
+                height={48}
+                loading="lazy"
+                decoding="async"
               />
             </div>
             <p className="text-sm">Reveal, Transmute, Forge results.</p>
           </div>
           <div>
-            <h4 className="text-white font-semibold mb-4">Product</h4>
+            <h3 className="text-white font-semibold mb-4">Product</h3>
             <ul className="space-y-2 text-sm">
               <li>
                 <a href="/#solutions" className="hover:text-white">
@@ -53,7 +57,7 @@ export function Footer() {
             </ul>
           </div>
           <div>
-            <h4 className="text-white font-semibold mb-4">Company</h4>
+            <h3 className="text-white font-semibold mb-4">Company</h3>
             <ul className="space-y-2 text-sm">
               <li>
                 <Link to="/about" className="hover:text-white">
@@ -68,7 +72,7 @@ export function Footer() {
             </ul>
           </div>
           <div>
-            <h4 className="text-white font-semibold mb-4">Connect</h4>
+            <h3 className="text-white font-semibold mb-4">Connect</h3>
             <div className="flex gap-4">
               <a
                 href="https://www.linkedin.com/company/alchemyforge"

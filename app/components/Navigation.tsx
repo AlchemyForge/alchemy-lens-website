@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router";
-import logoImage from "../assets/logo.png";
+import logoImage from "../assets/logo.webp";
 
 interface NavigationProps {
   currentPath?: string;
@@ -82,6 +82,9 @@ export function Navigation({ currentPath = "/" }: NavigationProps) {
               src={logoImage}
               alt="Alchemy Forge Logo"
               className="h-13 transition-transform duration-200"
+              width={195}
+              height={52}
+              decoding="async"
             />
           </Link>
 

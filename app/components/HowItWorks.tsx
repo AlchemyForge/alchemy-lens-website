@@ -1,7 +1,7 @@
 import { AnimatedSection } from "./AnimatedSection";
-import step1Image from "../assets/reveal.png";
-import step2Image from "../assets/transmute.png";
-import step3Image from "../assets/forge.png";
+import step1Image from "../assets/reveal.webp";
+import step2Image from "../assets/transmute.webp";
+import step3Image from "../assets/forge.webp";
 
 export const HowItWorks = () => {
     return (
@@ -36,6 +36,10 @@ export const HowItWorks = () => {
                                         src={step1Image}
                                         alt="Reveal – Unified data visualization"
                                         className="w-full aspect-video object-cover grayscale filter transition-all duration-700 group-hover:grayscale-0"
+                                        width={1280}
+                                        height={720}
+                                        loading="lazy"
+                                        decoding="async"
                                     />
                                 </div>
                             </div>
@@ -53,6 +57,10 @@ export const HowItWorks = () => {
                                         src={step2Image}
                                         alt="Transmute – AI-powered insights"
                                         className="w-full aspect-video object-cover grayscale filter transition-all duration-700 group-hover:grayscale-0"
+                                        width={1280}
+                                        height={720}
+                                        loading="lazy"
+                                        decoding="async"
                                     />
                                 </div>
                             </div>
@@ -65,7 +73,7 @@ export const HowItWorks = () => {
                                 <p className="type-lead text-gray-600 leading-relaxed mb-8">
                                     Our human-augmented AI turns that unified data into predictive foresight, enabling smarter decisions with quantified outcomes.
                                 </p>
-                                <a href="#contact" className="inline-flex items-center gap-3 group/link">
+                                <a href="#contact" className="inline-flex items-center gap-3 group/link" aria-label="Contact us">
                                     <span className="h-px w-10 bg-teal-600 group-hover/link:w-16 transition-all duration-300" />
                                 </a>
                             </div>
@@ -93,6 +101,10 @@ export const HowItWorks = () => {
                                         src={step3Image}
                                         alt="Forge – Actionable decisions"
                                         className="w-full aspect-video object-cover contrast-125 grayscale filter transition-all duration-700 group-hover:grayscale-0"
+                                        width={1280}
+                                        height={720}
+                                        loading="lazy"
+                                        decoding="async"
                                     />
                                 </div>
                             </div>

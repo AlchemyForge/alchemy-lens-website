@@ -9,18 +9,20 @@ import {
 
 import type { Route } from "./+types/root";
 import "./app.css";
-import logoUrl from "./assets/logo-short.png";
+// Self-hosted Poppins (Latin subset only — avoids external Google Fonts dependency)
+import "@fontsource/poppins/latin-300.css";
+import "@fontsource/poppins/latin-400.css";
+import "@fontsource/poppins/latin-500.css";
+import "@fontsource/poppins/latin-700.css";
+import "@fontsource/poppins/latin-900.css";
+import logoUrl from "./assets/logo-short.webp";
 
 export const links: Route.LinksFunction = () => [
-  { rel: "preconnect", href: "https://fonts.googleapis.com" },
   {
-    rel: "preconnect",
-    href: "https://fonts.gstatic.com",
-    crossOrigin: "anonymous",
-  },
-  {
-    rel: "stylesheet",
-    href: "https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;900&display=swap",
+    rel: "preload",
+    href: "/images/hero-800.webp",
+    as: "image",
+    type: "image/webp",
   },
   {
     rel: "icon",
