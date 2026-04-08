@@ -16,6 +16,7 @@ import "@fontsource/poppins/latin-500.css";
 import "@fontsource/poppins/latin-700.css";
 import "@fontsource/poppins/latin-900.css";
 import logoUrl from "./assets/logo-short.webp";
+import { Scripts as AnalyticsScripts } from "./scripts";
 
 export const links: Route.LinksFunction = () => [
   {
@@ -39,7 +40,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <Meta />
         <Links />
-        <Scripts />
+        <AnalyticsScripts />
       </head>
       <body>
         {children}
