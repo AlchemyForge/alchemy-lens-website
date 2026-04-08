@@ -3,7 +3,10 @@ import { config } from './config'
 export const Scripts = () => {
 	const { gaTrackingId } = config
 
-	if (!gaTrackingId) return null
+	if (!gaTrackingId) {
+		console.log('[Scripts] GA tracking ID not set, skipping analytics script injection')
+		return null
+	}
 
 	return (
 		<>

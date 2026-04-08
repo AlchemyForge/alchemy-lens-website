@@ -44,7 +44,6 @@ export function Layout({ children }: { children: React.ReactNode }) {
       <body>
         {children}
         <ScrollRestoration />
-        <Scripts />
       </body>
     </html>
   );
