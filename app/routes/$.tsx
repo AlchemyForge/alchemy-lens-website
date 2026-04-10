@@ -1,103 +1,111 @@
-import { Link } from "react-router";
-import type { Route } from "./+types/$";
+import { Link } from 'react-router'
+import type { Route } from './+types/$'
+import { Navigation } from '~/components/Navigation'
+import { Footer } from '~/components/Footer'
 
 export function meta({}: Route.MetaArgs) {
   return [
-    { title: "404 - Page Not Found | Alchemy Lens" },
+    { title: '404 — Page Not Found · Alchemy Forge' },
     {
-      name: "description",
-      content: "Oops! The page you're looking for doesn't exist.",
+      name: 'description',
+      content: 'The page you are looking for does not exist.',
     },
-  ];
+  ]
 }
 
 export default function NotFound() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-stone-50 via-orange-50/40 to-teal-50/30 tech-grid flex items-center justify-center px-6">
-      <div className="max-w-2xl mx-auto text-center">
-        {/* Animated 404 */}
-        <div className="mb-8">
-          <h1 className="text-9xl md:text-[12rem] font-bold bg-gradient-to-r from-orange-500 via-orange-600 to-teal-600 bg-clip-text text-transparent animate-pulse">
-            404
-          </h1>
+    <div className="min-h-screen bg-white flex flex-col">
+      <Navigation />
+
+      <main className="flex-1 relative overflow-hidden bg-gray-900 flex flex-col justify-center">
+        {/* Grid overlay */}
+        <div className="absolute inset-0 tech-grid opacity-10 pointer-events-none" />
+
+        {/* AF watermark */}
+        <div className="absolute right-8 top-1/2 -translate-y-1/2 hidden lg:block select-none pointer-events-none">
+          <div className="text-white/5 font-bold text-[220px] leading-none tracking-tighter">AF</div>
         </div>
 
-        {/* Fun Message */}
-        <div className="mb-8">
-          <h2 className="type-section font-bold text-gray-900 mb-4">
-            Oops! Something went{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-teal-600">
-              alchemy
+        <div className="relative z-10 max-w-7xl mx-auto px-8 md:px-16 py-32 w-full">
+          {/* Coordinate marker */}
+          <div className="mb-10 flex items-center gap-4 text-orange-500 text-[10px] font-bold tracking-[0.3em] uppercase">
+            <span className="w-10 h-px bg-orange-500" />
+            <span>Error · Alchemy Forge</span>
+          </div>
+
+          {/* 404 number */}
+          <div className="flex items-end gap-6 mb-8">
+            <span className="font-bold text-[clamp(4rem,18vw,12rem)] leading-none tracking-tighter text-white/10 select-none">
+              404
             </span>
-          </h2>
-          <p className="type-lead text-gray-600 mb-6">
-            Looks like this page got transmuted into something else! 🔮
-          </p>
-          <p className="type-lead text-gray-500">
-            The page you're looking for doesn't exist, or it's been moved to a
-            different location.
-          </p>
-        </div>
+            <div className="mb-3 hidden sm:block">
+              <div className="h-px w-px bg-orange-500/0" />
+              <span className="text-orange-500 text-[10px] font-bold tracking-[0.3em] uppercase">
+                Not Found
+              </span>
+            </div>
+          </div>
 
-        {/* Fun Construction-themed Message */}
-        <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 mb-8 border border-gray-200">
-          <p className="text-gray-700 mb-2">
-            <span className="font-semibold">Construction Site Notice:</span>
+          {/* Heading */}
+          <h1 className="type-display font-bold text-white uppercase tracking-tight mb-6 max-w-2xl">
+            Page <span className="text-orange-400">Transmuted.</span>
+          </h1>
+          <p className="type-lead text-white/60 max-w-xl mb-12">
+            This page no longer exists or has been moved to a different location.
+            It may have been alchemised into something else entirely.
           </p>
-          <p className="text-gray-600">
-            This page is currently under construction. Our digital foreman is
-            working on it! 🚧
-          </p>
-        </div>
 
-        {/* Action Buttons */}
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Link
-            to="/"
-            className="px-8 py-4 bg-orange-600 hover:bg-orange-700 text-white rounded-xl font-semibold ai-glow-hover transition-all hover:scale-105"
-          >
-            Return to Home
-          </Link>
-          <Link
-            to="/#contact"
-            className="px-8 py-4 bg-white text-gray-900 border-2 border-gray-300 rounded-xl font-semibold hover:border-orange-500 hover:text-orange-600 transition-all"
-          >
-            Contact Us
-          </Link>
-        </div>
+          {/* Ruled divider */}
+          <div className="h-px w-16 bg-orange-500 mb-12" />
 
-        {/* Helpful Links */}
-        <div className="mt-12 pt-8 border-t border-gray-200">
-          <p className="text-sm text-gray-500 mb-4">You might be looking for:</p>
-          <div className="flex flex-wrap justify-center gap-4 text-sm">
+          {/* Actions */}
+          <div className="flex flex-col sm:flex-row gap-0">
             <Link
-              to="/#solutions"
-              className="text-orange-600 hover:text-orange-700 hover:underline"
+              to="/"
+              className="inline-flex items-center gap-3 bg-orange-500 hover:bg-orange-600 text-white px-10 py-4 font-bold text-sm uppercase tracking-widest transition-colors"
             >
-              Solutions
+              Return Home
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
             </Link>
             <Link
-              to="/#pricing"
-              className="text-orange-600 hover:text-orange-700 hover:underline"
+              to="/contact"
+              className="inline-flex items-center gap-3 border-2 border-white/20 hover:border-orange-400 text-white/70 hover:text-white px-10 py-4 font-bold text-sm uppercase tracking-widest transition-colors"
             >
-              Pricing
-            </Link>
-            <Link
-              to="/#faq"
-              className="text-orange-600 hover:text-orange-700 hover:underline"
-            >
-              FAQ
-            </Link>
-            <Link
-              to="/#contact"
-              className="text-orange-600 hover:text-orange-700 hover:underline"
-            >
-              Contact
+              Contact Us
             </Link>
           </div>
+
+          {/* Quick links */}
+          <div className="mt-16 pt-8 border-t border-white/10">
+            <span className="text-[10px] font-bold text-white/30 uppercase tracking-[0.3em] block mb-5">
+              You might be looking for
+            </span>
+            <div className="flex flex-wrap gap-x-8 gap-y-3">
+              {[
+                { to: '/about', label: 'About' },
+                { to: '/blog', label: 'Insights' },
+                { to: '/#solutions', label: 'Solutions' },
+                { to: '/#pricing', label: 'Pricing' },
+                { to: '/contact', label: 'Contact' },
+              ].map(({ to, label }) => (
+                <Link
+                  key={to}
+                  to={to}
+                  className="text-white/40 hover:text-orange-400 text-sm font-bold uppercase tracking-widest transition-colors"
+                >
+                  {label}
+                </Link>
+              ))}
+            </div>
+          </div>
         </div>
-      </div>
+      </main>
+
+      <Footer />
     </div>
-  );
+  )
 }
 
