@@ -3,6 +3,7 @@ import { lazy, Suspense } from "react";
 import { Navigation } from "../components/Navigation";
 import { Hero } from "../components/Hero";
 import { faqItems } from "../data/faq";
+import { Subscribe } from "~/components/Subscibe";
 
 // Lazy-load all below-fold components to defer JS execution until after initial hydration
 const Footer = lazy(() => import("../components/Footer").then(m => ({ default: m.Footer })));
@@ -93,6 +94,7 @@ export default function Home() {
       </Suspense>
 
       <Suspense fallback={null}>
+        <Subscribe />
         <ContactForm />
       </Suspense>
 

@@ -8,6 +8,7 @@ import michaelImage from "../assets/michael.webp";
 import danielImage from "../assets/daniel.webp";
 import insightsImage from "../assets/insights.webp";
 import strategyImage from "../assets/strategy.webp";
+import { Subscribe } from "~/components/Subscibe";
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -324,6 +325,7 @@ export default function About() {
         </div>
       </section>
 
+        <Subscribe />
       <ContactForm />
 
       <Footer />
