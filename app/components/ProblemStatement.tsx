@@ -17,8 +17,8 @@ export const ProblemStatement = () => {
                     </div>
 
                     <div className="lg:col-span-7 relative overflow-hidden">
-                        <div className="absolute -top-12 -right-12 w-64 h-64 bg-teal-100/30 blur-[120px] rounded-full pointer-events-none" />
-                        <div className="relative overflow-hidden aspect-[16/10] rounded-lg">
+                        <div className="absolute -top-12 -right-12 w-64 h-64 bg-teal-100/30 blur-[120px] pointer-events-none" />
+                        <div className="relative overflow-hidden aspect-[16/10]">
                             <img
                                 src={constructionImage}
                                 alt="construction"
@@ -31,12 +31,12 @@ export const ProblemStatement = () => {
                             <div className="absolute inset-0 bg-gradient-to-t from-white/70 via-transparent to-transparent" />
 
                             {/* Floating HUD Element */}
-                            <div className="absolute top-4 left-4 sm:top-8 sm:left-8 glass p-3 sm:p-6 rounded-lg border border-black/5 max-w-[220px] sm:max-w-xs">
+                            <div className="absolute top-4 left-4 sm:top-8 sm:left-8 glass p-3 sm:p-6 border border-black/5 max-w-[220px] sm:max-w-xs">
                                 <div className="flex items-center gap-3 mb-4">
                                     <span className="material-symbols-outlined text-teal-600">warning</span>
                                     <span className="font-semibold text-gray-900 text-xs uppercase tracking-widest text-white">Systemic Failure Detected</span>
                                 </div>
-                                <div className="h-1 w-full bg-gray-200 rounded-full overflow-hidden mb-4">
+                                <div className="h-1 w-full bg-gray-200 overflow-hidden mb-4">
                                     <div className="h-full bg-teal-600 w-3/4" />
                                 </div>
                                 <p className="text-[10px] uppercase tracking-tighter text-white/80 font-bold">Data Latency: Critical Status</p>
@@ -47,7 +47,7 @@ export const ProblemStatement = () => {
 
                 {/* Data Cards Grid */}
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-12 mb-12">
-                    <div className="group bg-white p-8 relative overflow-hidden transition-all duration-300 hover:bg-gray-50 rounded-xl shadow border border-gray-200">                        <div className="absolute top-4 right-4 p-4 opacity-10">
+                    <div className="group bg-white p-8 relative overflow-hidden transition-all duration-300 hover:bg-gray-50 shadow border border-gray-200">                        <div className="absolute top-4 right-4 p-4 opacity-10">
                             <span className="material-symbols-outlined text-7xl text-gray-300">analytics</span>
                         </div>
                         <div className="relative z-10">
@@ -61,7 +61,7 @@ export const ProblemStatement = () => {
                         <div className="absolute bottom-0 left-0 w-full h-1 bg-teal-100" />
                     </div>
 
-                    <div className="group bg-white p-8 relative overflow-hidden transition-all duration-300 hover:bg-gray-50 rounded-xl shadow border border-gray-200">
+                    <div className="group bg-white p-8 relative overflow-hidden transition-all duration-300 hover:bg-gray-50 shadow border border-gray-200">
                         <div className="absolute top-4 right-4 p-4 opacity-10">
                             <span className="material-symbols-outlined text-7xl text-gray-300">payments</span>
                         </div>
@@ -76,7 +76,7 @@ export const ProblemStatement = () => {
                         <div className="absolute bottom-0 left-0 w-full h-1 bg-teal-100" />
                     </div>
 
-                    <div className="group bg-white p-8 relative overflow-hidden transition-all duration-300 hover:bg-gray-50 rounded-xl shadow border border-gray-200">
+                    <div className="group bg-white p-8 relative overflow-hidden transition-all duration-300 hover:bg-gray-50 shadow border border-gray-200">
                         <div className="absolute top-4 right-4 p-4 opacity-10">
                             <span className="material-symbols-outlined text-7xl text-gray-300">schedule</span>
                         </div>

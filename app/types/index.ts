@@ -25,3 +25,30 @@ export interface NavLink {
   isExternal?: boolean;
 }
 
+export interface BlogAuthor {
+  name: string;
+  bio?: string;
+  avatar?: string;
+}
+
+export interface BlogPost {
+  id: string;
+  slug: string;
+  title: string;
+  subtitle?: string;
+  metaDescription?: string;
+  publishDate: string;
+  author: BlogAuthor;
+  tagIds: string[];
+  tagNames: string[];
+  featuredImage?: string;
+  featuredImageAlt?: string;
+  htmlBody: string;
+}
+
+export interface BlogListResponse {
+  posts: BlogPost[];
+  nextCursor?: string;
+  total: number;
+}
+

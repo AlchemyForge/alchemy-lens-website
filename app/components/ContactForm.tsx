@@ -112,7 +112,7 @@ export function ContactForm({
 
         <form
           onSubmit={handleSubmit}
-          className="bg-white/10 backdrop-blur-md rounded-2xl p-6 sm:p-8 border border-white/20"
+          className="bg-white/10 backdrop-blur-md p-6 sm:p-8 border border-white/20"
         >
           {/* Honeypot — hidden from real users, traps bots that auto-fill all fields */}
           <div
@@ -144,7 +144,7 @@ export function ContactForm({
                   id="fullName"
                   name="fullName"
                   required
-                  className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-orange-500 transition-all duration-200"
+                  className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-orange-500 transition-all duration-200"
                   placeholder="Enter your full name"
                 />
               </div>
@@ -157,7 +157,7 @@ export function ContactForm({
                   id="email"
                   name="email"
                   required
-                  className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-orange-500 transition-all duration-200"
+                  className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-orange-500 transition-all duration-200"
                   placeholder="your.email@company.com"
                 />
               </div>
@@ -169,7 +169,7 @@ export function ContactForm({
                   type="tel"
                   id="phone"
                   name="phone"
-                  className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-orange-500 transition-all duration-200"
+                  className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-orange-500 transition-all duration-200"
                   placeholder="+64 21 123 4567"
                 />
               </div>
@@ -182,7 +182,7 @@ export function ContactForm({
                   name="message"
                   rows={4}
                   required
-                  className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-orange-500 resize-none transition-all duration-200"
+                  className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-orange-500 resize-none transition-all duration-200"
                   placeholder="Tell us about your construction project needs..."
                 />
               </div>
@@ -192,7 +192,7 @@ export function ContactForm({
               <button
                 type="submit"
                 disabled={submitState === 'submitting'}
-                className="w-full px-8 py-4 bg-orange-600 hover:bg-orange-700 disabled:opacity-60 disabled:cursor-not-allowed text-white rounded-xl font-semibold ai-glow-hover transition-all relative overflow-hidden group"
+                className="w-full px-8 py-4 bg-orange-600 hover:bg-orange-700 disabled:opacity-60 disabled:cursor-not-allowed text-white font-semibold ai-glow-hover transition-all relative overflow-hidden group"
               >
                 <span className="relative z-10">
                   {submitState === 'submitting' ? 'Sending...' : 'Send Message'}

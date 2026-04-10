@@ -22,7 +22,7 @@ export function SolutionsSection() {
         {/* Bento Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {/* Feature 1 — Portfolio command center */}
-          <div className="md:col-span-2 relative h-[450px] bg-gray-800 rounded-xl overflow-hidden group stagger-1">
+          <div className="md:col-span-2 relative h-[450px] bg-gray-800 overflow-hidden group stagger-1">
             <div className="absolute inset-0 z-0">
               <img
                 src={directorsImage}
@@ -54,7 +54,7 @@ export function SolutionsSection() {
           </div>
 
           {/* Feature 2 — AI-augmented daily brief */}
-          <div className="bg-gray-800 p-6 sm:p-10 rounded-xl flex flex-col border border-gray-700/10 stagger-2">
+          <div className="bg-gray-800 p-6 sm:p-10 flex flex-col border border-gray-700/10 stagger-2">
             <div className="mb-auto">
               <svg
                 className="w-10 h-10 text-orange-400"
@@ -78,9 +78,9 @@ export function SolutionsSection() {
               Wake up to a predictive summary of yesterday's progress and
               today's critical bottlenecks, delivered automatically.
             </p>
-            <div className="p-4 rounded-lg bg-gray-900/50 border border-orange-500/20">
+            <div className="p-4 bg-gray-900/50 border border-orange-500/20">
               <div className="flex items-center gap-3 mb-2">
-                <div className="w-2 h-2 rounded-full bg-orange-500 animate-pulse" />
+                <div className="w-2 h-2 bg-orange-500 animate-pulse" />
                 <span className="text-xs font-bold text-orange-400 uppercase tracking-wide">
                   Live Insight
                 </span>
@@ -93,7 +93,7 @@ export function SolutionsSection() {
           </div>
 
           {/* Feature 3 — Digital Foreman app */}
-          <div className="bg-gray-800 p-6 sm:p-10 rounded-xl flex flex-col border border-gray-700/10 stagger-3">
+          <div className="bg-gray-800 p-6 sm:p-10 flex flex-col border border-gray-700/10 stagger-3">
             <div className="mb-auto">
               <svg
                 className="w-10 h-10 text-slate-400"
@@ -120,14 +120,14 @@ export function SolutionsSection() {
           </div>
 
           {/* Feature 4 — Real-time Transmutation */}
-          <div className="md:col-span-2 relative h-[300px] bg-teal-900/20 rounded-xl overflow-hidden border border-teal-500/20 stagger-4">
+          <div className="md:col-span-2 relative h-[300px] bg-teal-900/20 overflow-hidden border border-teal-500/20 stagger-4">
             <div className="p-6 sm:p-10 flex items-center h-full gap-8">
               <div className="hidden lg:block w-1/3 flex-shrink-0">
                 <div className="grid grid-cols-2 gap-2">
-                  <div className="h-16 bg-teal-500/20 rounded" />
-                  <div className="h-16 bg-teal-500/10 rounded" />
-                  <div className="h-16 bg-teal-500/10 rounded" />
-                  <div className="h-16 bg-teal-500/40 rounded" />
+                  <div className="h-16 bg-teal-500/20" />
+                  <div className="h-16 bg-teal-500/10" />
+                  <div className="h-16 bg-teal-500/10" />
+                  <div className="h-16 bg-teal-500/40" />
                 </div>
               </div>
               <div>

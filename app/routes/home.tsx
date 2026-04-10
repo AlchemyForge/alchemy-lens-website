@@ -59,7 +59,7 @@ export default function Home() {
           </div>
 
           <div className="max-w-5xl mx-auto">
-            <div className="relative aspect-video rounded-2xl overflow-hidden">
+            <div className="relative aspect-video overflow-hidden">
               <iframe
                 className="absolute inset-0 w-full h-full"
                 src="https://www.youtube.com/embed/dQw4w9WgXcQ"
@@ -71,7 +71,7 @@ export default function Home() {
             <div className="mt-8 text-center">
               <a
                 href="#contact"
-                className="inline-block px-8 py-4 bg-orange-600 hover:bg-orange-700 text-white rounded-xl font-semibold ai-glow-hover transition-all"
+                className="inline-block px-8 py-4 bg-orange-600 hover:bg-orange-700 text-white font-semibold ai-glow-hover transition-all"
               >
                 Request a Live Demo
               </a>

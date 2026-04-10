@@ -31,7 +31,7 @@ export const HowItWorks = () => {
                             <div className="relative group">
                                 <div className="hidden md:block absolute -top-4 -right-4 w-20 h-20 border-t-2 border-r-2 border-teal-200/60" />
                                 <div className="hidden md:block absolute -bottom-4 -left-4 w-20 h-20 border-b-2 border-l-2 border-teal-200/60" />
-                                <div className="overflow-hidden rounded-2xl group">
+                                <div className="overflow-hidden group">
                                     <img
                                         src={step1Image}
                                         alt="Reveal – Unified data visualization"
@@ -52,7 +52,7 @@ export const HowItWorks = () => {
                             <div className="relative group">
                                 <div className="hidden md:block absolute -top-4 -left-4 w-20 h-20 border-t-2 border-l-2 border-teal-200/60" />
                                 <div className="hidden md:block absolute -bottom-4 -right-4 w-20 h-20 border-b-2 border-r-2 border-teal-200/60" />
-                                <div className="overflow-hidden rounded-2xl group">
+                                <div className="overflow-hidden group">
                                     <img
                                         src={step2Image}
                                         alt="Transmute – AI-powered insights"
@@ -96,7 +96,7 @@ export const HowItWorks = () => {
                             <div className="relative group">
                                 <div className="hidden md:block absolute -top-4 -right-4 w-20 h-20 border-t-2 border-r-2 border-teal-200/60" />
                                 <div className="hidden md:block absolute -bottom-4 -left-4 w-20 h-20 border-b-2 border-l-2 border-teal-200/60" />
-                                <div className="overflow-hidden rounded-2xl group">
+                                <div className="overflow-hidden group">
                                     <img
                                         src={step3Image}
                                         alt="Forge – Actionable decisions"

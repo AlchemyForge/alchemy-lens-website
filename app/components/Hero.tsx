@@ -115,12 +115,12 @@ export const Hero = () => {
                 {/* Right visual panel */}
                 <div className="lg:col-span-5 hidden lg:block relative">
                     <div className="relative group">
-                        <div className="relative w-full aspect-[4/5] rounded-lg overflow-hidden bg-gray-800 shadow-2xl">
+                        <div className="relative w-full aspect-[4/5] overflow-hidden bg-gray-800 shadow-2xl">
                             <img src={HERO_FALLBACK} alt="hero visual" className="w-full h-full object-cover" width={1920} height={1080} loading="eager" decoding="async" />
                               <div className="absolute inset-0 bg-black/20" />
                         </div>
 
-                        <div className="absolute -top-6 -left-12 glass p-6 rounded-lg shadow-2xl w-64">
+                        <div className="absolute -top-6 -left-12 glass p-6 shadow-2xl w-64">
                             <div className="flex justify-between items-center mb-4">
                                 <span className="text-xs font-bold text-teal-600 uppercase tracking-widest">Site Progress</span>
                                 <span className="material-symbols-outlined text-teal-600 text-sm">analytics</span>
@@ -131,8 +131,8 @@ export const Hero = () => {
                                         <span className="text-white/80">Foundation</span>
                                         <span className="text-white">92%</span>
                                     </div>
-                                    <div className="h-1 bg-white/10 w-full rounded">
-                                        <div className="h-full bg-teal-600 w-[92%] rounded" />
+                                    <div className="h-1 bg-white/10 w-full">
+                                        <div className="h-full bg-teal-600 w-[92%]" />
                                     </div>
                                 </div>
                                 <div>
@@ -140,16 +140,16 @@ export const Hero = () => {
                                         <span className="text-white/80">Structural</span>
                                         <span className="text-white">45%</span>
                                     </div>
-                                    <div className="h-1 bg-white/10 w-full rounded">
-                                        <div className="h-full bg-orange-500 w-[45%] rounded" />
+                                    <div className="h-1 bg-white/10 w-full">
+                                        <div className="h-full bg-orange-500 w-[45%]" />
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        <div className="absolute -bottom-10 -right-8 glass p-6 rounded-lg shadow-2xl w-72">
+                        <div className="absolute -bottom-10 -right-8 glass p-6 shadow-2xl w-72">
                             <div className="flex items-center gap-3 mb-4">
-                                <div className="w-2 h-2 rounded-full bg-orange-500 animate-pulse" />
+                                <div className="w-2 h-2 bg-orange-500 animate-pulse" />
                                 <span className="text-sm font-bold text-white uppercase tracking-tight">Alchemy Alert</span>
                             </div>
                             <p className="text-xs text-gray-300 leading-relaxed italic mb-4">

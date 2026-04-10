@@ -17,10 +17,10 @@ export function PricingCard({ tier }: PricingCardProps) {
           : "bg-white border-2"
       } ${
         isPopular ? "border-orange-500" : "border-gray-200"
-      } rounded-2xl p-8 hover:border-orange-500 transition-all relative flex flex-col hover-lift`}
+      } p-8 hover:border-orange-500 transition-all relative flex flex-col hover-lift`}
     >
       {isPopular && (
-        <div className="absolute top-0 right-0 bg-orange-600 text-white px-4 py-1 rounded-bl-lg rounded-tr-2xl text-sm font-semibold">
+        <div className="absolute top-0 right-0 bg-orange-600 text-white px-4 py-1 text-sm font-semibold">
           Popular
         </div>
       )}
@@ -68,7 +68,7 @@ export function PricingCard({ tier }: PricingCardProps) {
       </ul>
       <a
         href={tier.ctaHref}
-        className={`block w-full text-center px-6 py-3 rounded-lg font-semibold transition-all ${
+        className={`block w-full text-center px-6 py-3 font-semibold transition-all ${
           isPopular || isCustom
             ? "bg-orange-600 hover:bg-orange-700 text-white ai-glow-hover"
             : "bg-gray-100 text-gray-900 hover:bg-gray-200"
