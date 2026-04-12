@@ -2,8 +2,9 @@ import { useEffect, useState } from 'react'
 import { Link, useParams } from 'react-router'
 import { Navigation } from '~/components/Navigation'
 import { Footer } from '~/components/Footer'
-import { fetchBlogPostBySlug, fetchRelatedPosts } from '~/services/hubspot'
+import { fetchBlogPostBySlug, fetchRelatedPosts } from '~/services/alchemy'
 import type { BlogPost } from '~/types'
+import { Subscribe } from '~/components/Subscibe'
 
 export function meta() {
   return [{ title: 'Blog - Alchemy Forge' }]
@@ -140,7 +141,7 @@ export default function BlogArticle() {
               <span className="w-8 h-px bg-orange-500" />
               <span>Alchemy Forge Insights</span>
             </div>
-            
+
             <h1 className="type-display font-bold text-gray-900 uppercase tracking-tight max-w-3xl">
               {post.title}
             </h1>
@@ -177,21 +178,20 @@ export default function BlogArticle() {
             {/* Main article — 2/3 */}
             <article className="lg:col-span-2">
               {post && post.tagNames.length > 0 && (
-              <div className="flex flex-wrap gap-2 mb-5">
-                {post.tagNames.map((tag, i) => (
-                  <span
-                    key={tag}
-                    className={`px-3 py-1 text-[10px] font-bold uppercase tracking-widest rounded-full ${
-                      i === 0
-                        ? 'bg-orange-500 text-white'
-                        : 'bg-orange-50 text-orange-600 border border-orange-100'
-                    }`}
-                  >
-                    {tag}
-                  </span>
-                ))}
-              </div>
-            )}
+                <div className="flex flex-wrap gap-2 mb-5">
+                  {post.tagNames.map((tag, i) => (
+                    <span
+                      key={tag}
+                      className={`px-3 py-1 text-[10px] font-bold uppercase tracking-widest rounded-full ${i === 0
+                          ? 'bg-orange-500 text-white'
+                          : 'bg-orange-50 text-orange-600 border border-orange-100'
+                        }`}
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              )}
 
               {loading ? (
                 <ArticleSkeleton />
@@ -216,7 +216,7 @@ export default function BlogArticle() {
 
                   {/* Meta divider */}
                   <div className="flex flex-wrap items-center gap-4 mb-10 pb-8 border-t-2 border-b border-gray-100 pt-6">
-                    <div className="flex items-center gap-3">    
+                    <div className="flex items-center gap-3">
                       <div>
                         <p className="text-sm font-bold text-gray-900 uppercase tracking-wide">{post.author.name}</p>
                         {post.author.bio && (
@@ -285,6 +285,9 @@ export default function BlogArticle() {
           </div>
         )}
       </div>
+
+
+      <Subscribe />
 
       <Footer />
     </div>

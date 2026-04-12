@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react'
 import { Link, useNavigate, useSearchParams } from 'react-router'
 import { Navigation } from '~/components/Navigation'
 import { Footer } from '~/components/Footer'
-import { fetchBlogPosts } from '~/services/hubspot'
+import { fetchBlogPosts } from '~/services/alchemy'
 import type { BlogListResponse, BlogPost } from '~/types'
 import insightsImage from '~/assets/insights.webp'
 import { Subscribe } from '~/components/Subscibe'
@@ -438,7 +438,7 @@ export default function Blog() {
             </section>
 
             {/* ── Monthly Technical Digest ──────────────────────────── */}
-            <section className="py-24 px-8 md:px-16 relative overflow-hidden bg-white">
+            {/* <section className="py-24 px-8 md:px-16 relative overflow-hidden bg-white">
                 <div className="absolute inset-0 tech-grid opacity-20 pointer-events-none" />
                 <div className="relative z-10 max-w-7xl mx-auto">
                     <div className="flex flex-col md:flex-row gap-12 items-start">
@@ -484,7 +484,7 @@ export default function Blog() {
                         </div>
                     </div>
                 </div>
-            </section>
+            </section> */}
 
             <Subscribe />
 
