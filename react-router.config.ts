@@ -1,8 +1,23 @@
 import type { Config } from "@react-router/dev/config";
 
 export default {
-  // Pre-render routes at build time for static hosting (GitHub Pages)
-  // This dramatically improves FCP and LCP vs SPA mode
   ssr: false,
-  prerender: ["/", "/about", "/survey", "/blog"],
+  prerender: async () => {
+    const staticRoutes = ["/", "/about", "/survey", "/blog"];
+
+    try {
+      const res = await fetch(
+        `${process.env.VITE_API_BASE_URL}/api/v1/blog/posts?pageSize=100`,
+      );
+      if (!res.ok) return staticRoutes;
+
+      const data = await res.json();
+      const slugRoutes = (data.items ?? []).map(
+        (p: { slug: string }) => `/blog/${p.slug}`,
+      );
+      return [...staticRoutes, ...slugRoutes];
+    } catch {
+      return staticRoutes;
+    }
+  },
 } satisfies Config;
