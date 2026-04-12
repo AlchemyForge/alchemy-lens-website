@@ -35,16 +35,6 @@ export function Footer() {
                 </a>
               </li>
               <li>
-                <a href="/#demo" className="hover:text-white">
-                  Product Demo
-                </a>
-              </li>
-              <li>
-                <a href="/#pricing" className="hover:text-white">
-                  Pricing
-                </a>
-              </li>
-              <li>
                 <a href="/#faq" className="hover:text-white">
                   FAQ
                 </a>

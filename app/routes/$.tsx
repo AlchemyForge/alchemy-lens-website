@@ -88,7 +88,6 @@ export default function NotFound() {
                 { to: '/about', label: 'About' },
                 { to: '/blog', label: 'Insights' },
                 { to: '/#solutions', label: 'Solutions' },
-                { to: '/#pricing', label: 'Pricing' },
                 { to: '/contact', label: 'Contact' },
               ].map(({ to, label }) => (
                 <Link
