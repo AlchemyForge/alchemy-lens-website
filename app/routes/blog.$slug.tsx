@@ -218,7 +218,7 @@ export default function BlogArticle() {
                   <div className="flex flex-wrap items-center gap-4 mb-10 pb-8 border-t-2 border-b border-gray-100 pt-6">
                     <div className="flex items-center gap-3">
                       <div>
-                        <p className="text-sm font-bold text-gray-900 uppercase tracking-wide">{post.author.name}</p>
+                        <p className="text-sm font-bold text-gray-900 uppercase tracking-wide">Alchemy Forge Team</p>
                         {post.author.bio && (
                           <p className="text-xs text-gray-400">{post.author.bio}</p>
                         )}

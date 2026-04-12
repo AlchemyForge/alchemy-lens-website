@@ -113,7 +113,7 @@ function FeaturedPost({ post }: { post: BlogPost }) {
                     </Link>
                     <div className="flex items-center gap-3 text-sm text-gray-400">
                         <div className="flex items-center gap-1.5">
-                            <span className="font-medium text-gray-600">{post.author.name}</span>
+                            <span className="font-medium text-gray-600">Alchemy Forge Team</span>
                         </div>
                         <span className="text-gray-200">·</span>
                         <time dateTime={post.publishDate}>{formatDate(post.publishDate)}</time>
@@ -155,7 +155,7 @@ function SecondaryPost({ post }: { post: BlogPost }) {
             )}
             <div className="flex items-center gap-2 text-xs text-gray-400 mt-4 pt-4 border-t border-gray-100">
 
-                <span className="font-medium text-gray-500">{post.author.name}</span>
+                <span className="font-medium text-gray-500">Alchemy Forge Team</span>
                 <span>·</span>
                 <time dateTime={post.publishDate}>{formatDate(post.publishDate)}</time>
             </div>
@@ -195,7 +195,7 @@ function GridPost({ post }: { post: BlogPost }) {
                 )}
                 <div className="flex items-center gap-2 text-xs text-gray-400 pt-4 border-t border-gray-100 mt-auto">
 
-                    <span className="font-medium text-gray-500">{post.author.name}</span>
+                    <span className="font-medium text-gray-500">Alchemy Forge Team</span>
                     <span>·</span>
                     <time dateTime={post.publishDate}>{formatDate(post.publishDate)}</time>
                 </div>
