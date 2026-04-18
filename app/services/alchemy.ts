@@ -98,12 +98,13 @@ export async function fetchBlogPosts(options: {
   }
 }
 
-export async function fetchBlogPostBySlug(slug: string): Promise<BlogPost | null> {
+export async function fetchBlogPostBySlug(slug: string, previewToken?: string): Promise<BlogPost | null> {
   if (!config.apiBaseUrl) {
     return MOCK_POSTS.find((p) => p.slug === slug) ?? null
   }
 
-  const res = await fetch(apiUrl(`/${encodeURIComponent(slug)}`))
+  const params = previewToken ? `?preview=${encodeURIComponent(previewToken)}` : ''
+  const res = await fetch(apiUrl(`/${encodeURIComponent(slug)}${params}`))
   if (res.status === 404) return null
   if (!res.ok) throw new Error(`Alchemy API error: ${res.status}`)
 

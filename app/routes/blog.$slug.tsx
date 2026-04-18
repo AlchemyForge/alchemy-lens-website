@@ -1,13 +1,39 @@
+import type { Route } from './+types/blog.$slug'
 import { useEffect, useState } from 'react'
-import { Link, useParams } from 'react-router'
+import { Link, useParams, useSearchParams } from 'react-router'
 import { Navigation } from '~/components/Navigation'
 import { Footer } from '~/components/Footer'
 import { fetchBlogPostBySlug, fetchRelatedPosts } from '~/services/alchemy'
 import type { BlogPost } from '~/types'
 import { Subscribe } from '~/components/Subscibe'
 
-export function meta() {
-  return [{ title: 'Blog - Alchemy Forge' }]
+export async function loader({ params }: Route.LoaderArgs) {
+  const post = await fetchBlogPostBySlug(params.slug!)
+  return { post }
+}
+
+export async function clientLoader({ params, request }: Route.ClientLoaderArgs) {
+  const url = new URL(request.url)
+  const previewToken = url.searchParams.get('preview') ?? undefined
+  const post = await fetchBlogPostBySlug(params.slug!, previewToken)
+  return { post }
+}
+
+export function meta({ data }: Route.MetaArgs) {
+  const post = data?.post
+  if (!post) return [{ title: 'Blog - Alchemy Forge' }]
+
+  const tags: Array<Record<string, string>> = [
+    { title: `${post.title} - Alchemy Forge` },
+    { name: 'description', content: post.metaDescription ?? post.subtitle ?? '' },
+    { property: 'og:type', content: 'article' },
+    { property: 'og:title', content: post.title },
+    { property: 'og:description', content: post.metaDescription ?? post.subtitle ?? '' },
+  ]
+  if (post.featuredImage) {
+    tags.push({ property: 'og:image', content: post.featuredImage })
+  }
+  return tags
 }
 
 function formatDate(iso: string): string {
@@ -82,6 +108,8 @@ function RelatedPostCard({ post }: { post: BlogPost }) {
 
 export default function BlogArticle() {
   const { slug } = useParams<{ slug: string }>()
+  const [searchParams] = useSearchParams()
+  const previewToken = searchParams.get('preview') ?? undefined
 
   const [post, setPost] = useState<BlogPost | null>(null)
   const [related, setRelated] = useState<BlogPost[]>([])
@@ -97,7 +125,7 @@ export default function BlogArticle() {
     setNotFound(false)
     setError(null)
 
-    fetchBlogPostBySlug(slug)
+    fetchBlogPostBySlug(slug, previewToken)
       .then(async (result) => {
         if (cancelled) return
         if (!result) {
@@ -122,13 +150,8 @@ export default function BlogArticle() {
     return () => { cancelled = true }
   }, [slug])
 
-  const pageTitle = post ? `${post.title} - Alchemy Forge` : 'Blog - Alchemy Forge'
-
   return (
     <div className="min-h-screen bg-white">
-      <title>{pageTitle}</title>
-      {post?.metaDescription && <meta name="description" content={post.metaDescription} />}
-
       <Navigation />
 
       {/* Article header band */}
