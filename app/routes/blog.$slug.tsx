@@ -19,19 +19,34 @@ export async function clientLoader({ params, request }: Route.ClientLoaderArgs) 
   return { post }
 }
 
-export function meta({ data }: Route.MetaArgs) {
+const SITE_ORIGIN = 'https://www.alchemy-forge.com'
+
+function absoluteUrl(url: string): string {
+  if (url.startsWith('http://') || url.startsWith('https://')) return url
+  return `${SITE_ORIGIN}${url.startsWith('/') ? '' : '/'}${url}`
+}
+
+export function meta({ data, location }: Route.MetaArgs) {
   const post = data?.post
   if (!post) return [{ title: 'Blog - Alchemy Forge' }]
 
+  const description = post.metaDescription ?? post.subtitle ?? ''
   const tags: Array<Record<string, string>> = [
     { title: `${post.title} - Alchemy Forge` },
-    { name: 'description', content: post.metaDescription ?? post.subtitle ?? '' },
+    { name: 'description', content: description },
     { property: 'og:type', content: 'article' },
+    { property: 'og:site_name', content: 'Alchemy Forge' },
+    { property: 'og:url', content: `${SITE_ORIGIN}${location.pathname}` },
     { property: 'og:title', content: post.title },
-    { property: 'og:description', content: post.metaDescription ?? post.subtitle ?? '' },
+    { property: 'og:description', content: description },
+    { name: 'twitter:card', content: post.featuredImage ? 'summary_large_image' : 'summary' },
+    { name: 'twitter:title', content: post.title },
+    { name: 'twitter:description', content: description },
   ]
   if (post.featuredImage) {
-    tags.push({ property: 'og:image', content: post.featuredImage })
+    const imageUrl = absoluteUrl(post.featuredImage)
+    tags.push({ property: 'og:image', content: imageUrl })
+    tags.push({ name: 'twitter:image', content: imageUrl })
   }
   return tags
 }
