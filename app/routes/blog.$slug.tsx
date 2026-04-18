@@ -34,7 +34,10 @@ function ArticleSkeleton() {
 
 function SidebarCTA() {
   return (
-    <div className="bg-gradient-to-br from-orange-500 to-orange-600 p-8 text-white">
+    <div
+      className="p-8 text-white"
+      style={{ backgroundImage: 'linear-gradient(135deg, var(--color-brand-slate), var(--color-brand-teal))' }}
+    >
       <div className="flex items-center gap-2 mb-4">
         <span className="w-2 h-2 rounded-full bg-white animate-pulse" />
         <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-white/80">Live Platform</span>
@@ -45,7 +48,7 @@ function SidebarCTA() {
       </p>
       <a
         href="/#contact"
-        className="block w-full text-center bg-white text-orange-600 font-bold py-3 px-4 uppercase tracking-widest text-sm hover:bg-orange-50 transition-colors"
+        className="block w-full text-center bg-white text-[var(--color-brand-slate)] font-bold py-3 px-4 uppercase tracking-widest text-sm hover:bg-white/90 transition-colors"
       >
         Request a Demo
       </a>
