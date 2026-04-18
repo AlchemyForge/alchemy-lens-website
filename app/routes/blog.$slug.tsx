@@ -30,7 +30,7 @@ export function meta({ data, location }: Route.MetaArgs) {
   const post = data?.post
   if (!post) return [{ title: 'Blog - Alchemy Forge' }]
 
-  const description = post.metaDescription ?? post.subtitle ?? ''
+  const description = post.metaDescription ?? post.subtitle ?? 'Insights, updates, and industry thinking from the Alchemy Forge team.'
   const tags: Array<Record<string, string>> = [
     { title: `${post.title} - Alchemy Forge` },
     { name: 'description', content: description },
