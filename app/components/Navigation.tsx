@@ -5,6 +5,7 @@ import logoImage from "../assets/logo.webp";
 const NAV_LINKS = [
   { to: "/", label: "Home", exact: true },
   { to: "/about", label: "About", exact: false },
+  { to: "/blog", label: "Blog", exact: false },
   { to: "/contact", label: "Contact", exact: false },
 ] as const;
 
