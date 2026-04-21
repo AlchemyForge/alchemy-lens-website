@@ -39,6 +39,8 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <AnalyticsScripts />
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        {/* Restore path saved by 404.html before React Router reads window.location */}
+        <script dangerouslySetInnerHTML={{ __html: `(function(){var r=sessionStorage.getItem('spa_redirect');if(r){sessionStorage.removeItem('spa_redirect');try{var u=new URL(r);if(u.pathname!==window.location.pathname||u.search!==window.location.search){history.replaceState(null,'',u.pathname+u.search+u.hash);}}catch(e){}}})();` }} />
         <Meta />
         <Links />
         <Scripts />
